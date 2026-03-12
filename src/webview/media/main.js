@@ -36,7 +36,6 @@
       personaLabels: { pro: 'FOR', neutral: 'NEUTRAL', con: 'AGAINST' },
       character: 'CHARACTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     ko: {
       checking: '확인 중...',
@@ -67,7 +66,6 @@
       personaLabels: { pro: '찬성', neutral: '중립', con: '반대' },
       character: '캐릭터:',
       charMaskDude: '마스크 듀드', charNinjaFrog: '닌자 프로그', charPinkMan: '핑크맨', charVirtualGuy: '버추얼 가이',
-      charAngryPig: '화난 돼지', charBat: '박쥐', charBee: '벌', charBlueBird: '파랑새', charBunny: '토끼', charChameleon: '카멜레온', charChicken: '닭', charDuck: '오리', charFatBird: '뚱새', charGhost: '유령', charMushroom: '버섯', charPlant: '식물', charRadish: '무', charRino: '코뿔소', charRock: '바위', charSkull: '해골', charSlime: '슬라임', charSnail: '달팽이', charTrunk: '나무둥치', charTurtle: '거북이',
     },
     ja: {
       checking: '確認中...',
@@ -98,7 +96,6 @@
       personaLabels: { pro: '賛成', neutral: '中立', con: '反対' },
       character: 'キャラ:',
       charMaskDude: 'マスクデュード', charNinjaFrog: 'ニンジャフロッグ', charPinkMan: 'ピンクマン', charVirtualGuy: 'バーチャルガイ',
-      charAngryPig: '怒りブタ', charBat: 'コウモリ', charBee: 'ハチ', charBlueBird: '青い鳥', charBunny: 'ウサギ', charChameleon: 'カメレオン', charChicken: 'ニワトリ', charDuck: 'アヒル', charFatBird: 'デブ鳥', charGhost: 'おばけ', charMushroom: 'キノコ', charPlant: '植物', charRadish: 'ダイコン', charRino: 'サイ', charRock: '岩', charSkull: 'ドクロ', charSlime: 'スライム', charSnail: 'カタツムリ', charTrunk: '切り株', charTurtle: 'カメ',
     },
     zh: {
       checking: '检查中...',
@@ -129,7 +126,6 @@
       personaLabels: { pro: '赞成', neutral: '中立', con: '反对' },
       character: '角色:',
       charMaskDude: '面具侠', charNinjaFrog: '忍者蛙', charPinkMan: '粉红人', charVirtualGuy: '虚拟侠',
-      charAngryPig: '愤怒猪', charBat: '蝙蝠', charBee: '蜜蜂', charBlueBird: '蓝鸟', charBunny: '兔子', charChameleon: '变色龙', charChicken: '小鸡', charDuck: '鸭子', charFatBird: '胖鸟', charGhost: '幽灵', charMushroom: '蘑菇', charPlant: '植物', charRadish: '萝卜', charRino: '犀牛', charRock: '石头', charSkull: '骷髅', charSlime: '史莱姆', charSnail: '蜗牛', charTrunk: '树桩', charTurtle: '乌龟',
     },
     // === European Languages ===
     de: {
@@ -147,7 +143,6 @@
       personaLabels: { pro: 'DAFÜR', neutral: 'NEUTRAL', con: 'DAGEGEN' },
       character: 'CHARAKTER:',
       charMaskDude: 'Maskentyp', charNinjaFrog: 'Ninja-Frosch', charPinkMan: 'Pinkmann', charVirtualGuy: 'Virtueller Typ',
-      charAngryPig: 'Wütendes Schwein', charBat: 'Fledermaus', charBee: 'Biene', charBlueBird: 'Blauer Vogel', charBunny: 'Hase', charChameleon: 'Chamäleon', charChicken: 'Huhn', charDuck: 'Ente', charFatBird: 'Dicker Vogel', charGhost: 'Geist', charMushroom: 'Pilz', charPlant: 'Pflanze', charRadish: 'Rettich', charRino: 'Nashorn', charRock: 'Felsen', charSkull: 'Schädel', charSlime: 'Schleim', charSnail: 'Schnecke', charTrunk: 'Baumstumpf', charTurtle: 'Schildkröte',
     },
     fr: {
       checking: 'VÉRIFICATION...', connected: 'CONNECTÉ', disconnected: 'DÉCONNECTÉ', notConnected: 'NON CONNECTÉ !',
@@ -164,7 +159,6 @@
       personaLabels: { pro: 'POUR', neutral: 'NEUTRE', con: 'CONTRE' },
       character: 'PERSONNAGE :',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     es: {
       checking: 'VERIFICANDO...', connected: 'CONECTADO', disconnected: 'DESCONECTADO', notConnected: '¡NO CONECTADO!',
@@ -181,7 +175,6 @@
       personaLabels: { pro: 'A FAVOR', neutral: 'NEUTRAL', con: 'EN CONTRA' },
       character: 'PERSONAJE:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     pt: {
       checking: 'VERIFICANDO...', connected: 'CONECTADO', disconnected: 'DESCONECTADO', notConnected: 'NÃO CONECTADO!',
@@ -198,7 +191,6 @@
       personaLabels: { pro: 'A FAVOR', neutral: 'NEUTRO', con: 'CONTRA' },
       character: 'PERSONAGEM:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     it: {
       checking: 'VERIFICA...', connected: 'CONNESSO', disconnected: 'DISCONNESSO', notConnected: 'NON CONNESSO!',
@@ -215,7 +207,6 @@
       personaLabels: { pro: 'A FAVORE', neutral: 'NEUTRALE', con: 'CONTRO' },
       character: 'PERSONAGGIO:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     nl: {
       checking: 'CONTROLEREN...', connected: 'VERBONDEN', disconnected: 'NIET VERBONDEN', notConnected: 'NIET VERBONDEN!',
@@ -232,7 +223,6 @@
       personaLabels: { pro: 'VOOR', neutral: 'NEUTRAAL', con: 'TEGEN' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     pl: {
       checking: 'SPRAWDZANIE...', connected: 'POŁĄCZONO', disconnected: 'ROZŁĄCZONO', notConnected: 'NIE POŁĄCZONO!',
@@ -249,7 +239,6 @@
       personaLabels: { pro: 'ZA', neutral: 'NEUTRALNY', con: 'PRZECIW' },
       character: 'POSTAĆ:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     ru: {
       checking: 'ПРОВЕРКА...', connected: 'ПОДКЛЮЧЕНО', disconnected: 'ОТКЛЮЧЕНО', notConnected: 'НЕ ПОДКЛЮЧЕНО!',
@@ -266,7 +255,6 @@
       personaLabels: { pro: 'ЗА', neutral: 'НЕЙТРАЛЬНО', con: 'ПРОТИВ' },
       character: 'ПЕРСОНАЖ:',
       charMaskDude: 'Маск Дюд', charNinjaFrog: 'Ниндзя Фрог', charPinkMan: 'Пинк Мэн', charVirtualGuy: 'Виртуал Гай',
-      charAngryPig: 'Злой кабан', charBat: 'Летучая мышь', charBee: 'Пчела', charBlueBird: 'Синяя птица', charBunny: 'Кролик', charChameleon: 'Хамелеон', charChicken: 'Курица', charDuck: 'Утка', charFatBird: 'Толстая птица', charGhost: 'Призрак', charMushroom: 'Гриб', charPlant: 'Растение', charRadish: 'Редиска', charRino: 'Носорог', charRock: 'Камень', charSkull: 'Череп', charSlime: 'Слайм', charSnail: 'Улитка', charTrunk: 'Пень', charTurtle: 'Черепаха',
     },
     uk: {
       checking: 'ПЕРЕВІРКА...', connected: 'ПІДКЛЮЧЕНО', disconnected: 'ВІДКЛЮЧЕНО', notConnected: 'НЕ ПІДКЛЮЧЕНО!',
@@ -283,7 +271,6 @@
       personaLabels: { pro: 'ЗА', neutral: 'НЕЙТРАЛЬНО', con: 'ПРОТИ' },
       character: 'ПЕРСОНАЖ:',
       charMaskDude: 'Маск Дюд', charNinjaFrog: 'Ниндзя Фрог', charPinkMan: 'Пинк Мэн', charVirtualGuy: 'Виртуал Гай',
-      charAngryPig: 'Злий кабан', charBat: 'Кажан', charBee: 'Бджола', charBlueBird: 'Синій птах', charBunny: 'Кролик', charChameleon: 'Хамелеон', charChicken: 'Курка', charDuck: 'Качка', charFatBird: 'Товстий птах', charGhost: 'Привид', charMushroom: 'Гриб', charPlant: 'Рослина', charRadish: 'Редиска', charRino: 'Носоріг', charRock: 'Камінь', charSkull: 'Череп', charSlime: 'Слайм', charSnail: 'Равлик', charTrunk: 'Пень', charTurtle: 'Черепаха',
     },
     cs: {
       checking: 'KONTROLA...', connected: 'PŘIPOJENO', disconnected: 'ODPOJENO', notConnected: 'NEPŘIPOJENO!',
@@ -300,7 +287,6 @@
       personaLabels: { pro: 'PRO', neutral: 'NEUTRÁLNÍ', con: 'PROTI' },
       character: 'POSTAVA:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     sv: {
       checking: 'KONTROLLERAR...', connected: 'ANSLUTEN', disconnected: 'FRÅNKOPPLAD', notConnected: 'EJ ANSLUTEN!',
@@ -317,7 +303,6 @@
       personaLabels: { pro: 'FÖR', neutral: 'NEUTRAL', con: 'EMOT' },
       character: 'KARAKTÄR:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     da: {
       checking: 'KONTROLLERER...', connected: 'FORBUNDET', disconnected: 'AFBRUDT', notConnected: 'IKKE FORBUNDET!',
@@ -334,7 +319,6 @@
       personaLabels: { pro: 'FOR', neutral: 'NEUTRAL', con: 'IMOD' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     fi: {
       checking: 'TARKISTETAAN...', connected: 'YHDISTETTY', disconnected: 'YHTEYS KATKAISTU', notConnected: 'EI YHTEYTTÄ!',
@@ -351,7 +335,6 @@
       personaLabels: { pro: 'PUOLESTA', neutral: 'NEUTRAALI', con: 'VASTAAN' },
       character: 'HAHMO:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     nb: {
       checking: 'SJEKKER...', connected: 'TILKOBLET', disconnected: 'FRAKOBLET', notConnected: 'IKKE TILKOBLET!',
@@ -368,7 +351,6 @@
       personaLabels: { pro: 'FOR', neutral: 'NØYTRAL', con: 'MOT' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     tr: {
       checking: 'KONTROL EDİLİYOR...', connected: 'BAĞLI', disconnected: 'BAĞLI DEĞİL', notConnected: 'BAĞLI DEĞİL!',
@@ -385,7 +367,6 @@
       personaLabels: { pro: 'LEHTE', neutral: 'TARAFSIZ', con: 'ALEYHTE' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     el: {
       checking: 'ΕΛΕΓΧΟΣ...', connected: 'ΣΥΝΔΕΔΕΜΕΝΟ', disconnected: 'ΑΠΟΣΥΝΔΕΜΕΝΟ', notConnected: 'ΜΗ ΣΥΝΔΕΔΕΜΕΝΟ!',
@@ -402,7 +383,6 @@
       personaLabels: { pro: 'ΥΠΕΡ', neutral: 'ΟΥΔΕΤΕΡΟ', con: 'ΚΑΤΑ' },
       character: 'ΧΑΡΑΚΤΗΡΑΣ:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     hu: {
       checking: 'ELLENŐRZÉS...', connected: 'CSATLAKOZVA', disconnected: 'LEVÁLASZTVA', notConnected: 'NINCS CSATLAKOZVA!',
@@ -419,7 +399,6 @@
       personaLabels: { pro: 'MELLETTE', neutral: 'SEMLEGES', con: 'ELLENE' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     ro: {
       checking: 'VERIFICARE...', connected: 'CONECTAT', disconnected: 'DECONECTAT', notConnected: 'NECONECTAT!',
@@ -436,7 +415,6 @@
       personaLabels: { pro: 'PENTRU', neutral: 'NEUTRU', con: 'CONTRA' },
       character: 'PERSONAJE:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     // === Additional Asian Languages ===
     th: {
@@ -454,7 +432,6 @@
       personaLabels: { pro: 'เห็นด้วย', neutral: 'เป็นกลาง', con: 'ไม่เห็นด้วย' },
       character: 'ตัวละคร:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     vi: {
       checking: 'ĐANG KIỂM TRA...', connected: 'ĐÃ KẾT NỐI', disconnected: 'NGẮT KẾT NỐI', notConnected: 'CHƯA KẾT NỐI!',
@@ -471,7 +448,6 @@
       personaLabels: { pro: 'ỦNG HỘ', neutral: 'TRUNG LẬP', con: 'PHẢN ĐỐI' },
       character: 'NHÂN VẬT:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     id: {
       checking: 'MEMERIKSA...', connected: 'TERHUBUNG', disconnected: 'TERPUTUS', notConnected: 'TIDAK TERHUBUNG!',
@@ -488,7 +464,6 @@
       personaLabels: { pro: 'SETUJU', neutral: 'NETRAL', con: 'MENOLAK' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     ms: {
       checking: 'MENYEMAK...', connected: 'DISAMBUNG', disconnected: 'TERPUTUS', notConnected: 'TIDAK DISAMBUNG!',
@@ -505,7 +480,6 @@
       personaLabels: { pro: 'SETUJU', neutral: 'NEUTRAL', con: 'MENENTANG' },
       character: 'WATAK:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     hi: {
       checking: 'जाँच हो रही है...', connected: 'कनेक्टेड', disconnected: 'डिस्कनेक्टेड', notConnected: 'कनेक्ट नहीं!',
@@ -522,7 +496,6 @@
       personaLabels: { pro: 'पक्ष', neutral: 'तटस्थ', con: 'विपक्ष' },
       character: 'चरित्र:',
       charMaskDude: 'मास्क ड्यूड', charNinjaFrog: 'निंजा फ्रॉग', charPinkMan: 'पिंक मैन', charVirtualGuy: 'वर्चुअल गाय',
-      charAngryPig: 'गुस्सैल सुअर', charBat: 'चमगादड़', charBee: 'मधुमक्खी', charBlueBird: 'नीली चिड़िया', charBunny: 'खरगोश', charChameleon: 'गिरगिट', charChicken: 'मुर्गी', charDuck: 'बतख', charFatBird: 'मोटी चिड़िया', charGhost: 'भूत', charMushroom: 'मशरूम', charPlant: 'पौधा', charRadish: 'मूली', charRino: 'गैंडा', charRock: 'पत्थर', charSkull: 'खोपड़ी', charSlime: 'स्लाइम', charSnail: 'घोंघा', charTrunk: 'तना', charTurtle: 'कछुआ',
     },
     bn: {
       checking: 'যাচাই হচ্ছে...', connected: 'সংযুক্ত', disconnected: 'সংযোগ বিচ্ছিন্ন', notConnected: 'সংযুক্ত নয়!',
@@ -539,7 +512,6 @@
       personaLabels: { pro: 'পক্ষে', neutral: 'নিরপেক্ষ', con: 'বিপক্ষে' },
       character: 'চরিত্র:',
       charMaskDude: 'মাস্ক ডিউড', charNinjaFrog: 'নিনজা ফ্রগ', charPinkMan: 'পিংক ম্যান', charVirtualGuy: 'ভার্চুয়াল গাই',
-      charAngryPig: 'রাগী শূকর', charBat: 'বাদুড়', charBee: 'মৌমাছি', charBlueBird: 'নীল পাখি', charBunny: 'খরগোশ', charChameleon: 'গিরগিটি', charChicken: 'মুরগি', charDuck: 'হাঁস', charFatBird: 'মোটা পাখি', charGhost: 'ভূত', charMushroom: 'মাশরুম', charPlant: 'গাছ', charRadish: 'মূলা', charRino: 'গণ্ডার', charRock: 'পাথর', charSkull: 'মাথার খুলি', charSlime: 'স্লাইম', charSnail: 'শামুক', charTrunk: 'গুঁড়ি', charTurtle: 'কচ্ছপ',
     },
     // === Middle Eastern Languages ===
     ar: {
@@ -557,7 +529,6 @@
       personaLabels: { pro: 'مؤيد', neutral: 'محايد', con: 'معارض' },
       character: 'الشخصية:',
       charMaskDude: 'رجل القناع', charNinjaFrog: 'ضفدع النينجا', charPinkMan: 'الرجل الوردي', charVirtualGuy: 'الرجل الافتراضي',
-      charAngryPig: 'الخنزير الغاضب', charBat: 'الخفاش', charBee: 'النحلة', charBlueBird: 'الطائر الأزرق', charBunny: 'الأرنب', charChameleon: 'الحرباء', charChicken: 'الدجاجة', charDuck: 'البطة', charFatBird: 'الطائر السمين', charGhost: 'الشبح', charMushroom: 'الفطر', charPlant: 'النبتة', charRadish: 'الفجل', charRino: 'وحيد القرن', charRock: 'الصخرة', charSkull: 'الجمجمة', charSlime: 'السلايم', charSnail: 'الحلزون', charTrunk: 'الجذع', charTurtle: 'السلحفاة',
     },
     he: {
       checking: 'בודק...', connected: 'מחובר', disconnected: 'מנותק', notConnected: 'לא מחובר!',
@@ -574,7 +545,6 @@
       personaLabels: { pro: 'בעד', neutral: 'ניטרלי', con: 'נגד' },
       character: 'דמות:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      charAngryPig: 'Angry Pig', charBat: 'Bat', charBee: 'Bee', charBlueBird: 'Blue Bird', charBunny: 'Bunny', charChameleon: 'Chameleon', charChicken: 'Chicken', charDuck: 'Duck', charFatBird: 'Fat Bird', charGhost: 'Ghost', charMushroom: 'Mushroom', charPlant: 'Plant', charRadish: 'Radish', charRino: 'Rino', charRock: 'Rock', charSkull: 'Skull', charSlime: 'Slime', charSnail: 'Snail', charTrunk: 'Trunk', charTurtle: 'Turtle',
     },
     fa: {
       checking: 'در حال بررسی...', connected: 'متصل', disconnected: 'قطع شده', notConnected: 'متصل نیست!',
@@ -591,7 +561,6 @@
       personaLabels: { pro: 'موافق', neutral: 'بی‌طرف', con: 'مخالف' },
       character: 'شخصیت:',
       charMaskDude: 'مرد نقابدار', charNinjaFrog: 'قورباغه نینجا', charPinkMan: 'مرد صورتی', charVirtualGuy: 'مرد مجازی',
-      charAngryPig: 'خوک عصبانی', charBat: 'خفاش', charBee: 'زنبور', charBlueBird: 'پرنده آبی', charBunny: 'خرگوش', charChameleon: 'آفتاب‌پرست', charChicken: 'مرغ', charDuck: 'اردک', charFatBird: 'پرنده چاق', charGhost: 'روح', charMushroom: 'قارچ', charPlant: 'گیاه', charRadish: 'تربچه', charRino: 'کرگدن', charRock: 'سنگ', charSkull: 'جمجمه', charSlime: 'اسلایم', charSnail: 'حلزون', charTrunk: 'تنه', charTurtle: 'لاک‌پشت',
     },
   };
 
@@ -671,32 +640,10 @@
 
   // PA1 character config: frames = sheet_width / frame_width
   const PA1_CHARS = {
-    // Main Characters (32x32)
     'mask-dude':   { frames: 11, hitFrames: 7, w: 32, h: 32, color: '#3a86ff' },
     'ninja-frog':  { frames: 11, hitFrames: 7, w: 32, h: 32, color: '#4aaa3a' },
     'pink-man':    { frames: 11, hitFrames: 7, w: 32, h: 32, color: '#ff6b9d' },
     'virtual-guy': { frames: 11, hitFrames: 7, w: 32, h: 32, color: '#6bc5ff' },
-    // Enemies
-    'angry-pig':   { frames: 9, hitFrames: 5, w: 36, h: 30, color: '#e85d75' },
-    'bat':         { frames: 12, hitFrames: 5, w: 46, h: 30, color: '#7a6b8a' },
-    'bee':         { frames: 6, hitFrames: 5, w: 36, h: 34, color: '#f5c842' },
-    'blue-bird':   { frames: 9, hitFrames: 5, w: 32, h: 32, color: '#5b9bd5' },
-    'bunny':       { frames: 8, hitFrames: 5, w: 34, h: 44, color: '#d4a5a5' },
-    'chameleon':   { frames: 13, hitFrames: 5, w: 84, h: 38, color: '#66bb6a' },
-    'chicken':     { frames: 13, hitFrames: 5, w: 32, h: 34, color: '#f0f0f0' },
-    'duck':        { frames: 10, hitFrames: 5, w: 36, h: 36, color: '#fdd835' },
-    'fat-bird':    { frames: 8, hitFrames: 5, w: 40, h: 48, color: '#e57373' },
-    'ghost':       { frames: 10, hitFrames: 5, w: 44, h: 30, color: '#b0bec5' },
-    'mushroom':    { frames: 14, hitFrames: 5, w: 32, h: 32, color: '#d32f2f' },
-    'plant':       { frames: 11, hitFrames: 5, w: 44, h: 42, color: '#43a047' },
-    'radish':      { frames: 6, hitFrames: 5, w: 30, h: 38, color: '#ce93d8' },
-    'rino':        { frames: 11, hitFrames: 5, w: 52, h: 34, color: '#78909c' },
-    'rock':        { frames: 14, hitFrames: 1, w: 38, h: 34, color: '#8d6e63' },
-    'skull':       { frames: 8, hitFrames: 5, w: 52, h: 54, color: '#e0e0e0' },
-    'slime':       { frames: 10, hitFrames: 5, w: 44, h: 30, color: '#4caf50' },
-    'snail':       { frames: 15, hitFrames: 5, w: 38, h: 24, color: '#ff8a65' },
-    'trunk':       { frames: 18, hitFrames: 5, w: 64, h: 32, color: '#795548' },
-    'turtle':      { frames: 14, hitFrames: 5, w: 44, h: 26, color: '#26a69a' },
   };
 
   // Pre-load sprite sheet images (idle + hit)

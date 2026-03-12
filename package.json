@@ -1,12 +1,24 @@
 {
-  "name": "ai-debate",
+  "name": "ai-debate-arena",
   "displayName": "AI Debate Arena",
   "description": "Two AI agents debate topics in a retro RPG style interface using Claude CLI",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "publisher": "STUDIOCOOLKID",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studio90scoolkid/claude-debate-arena"
+  },
+  "icon": "icon.png",
+  "keywords": ["ai", "debate", "claude", "rpg", "arena"],
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Other"],
+  "categories": ["Entertainment"],
+  "galleryBanner": {
+    "color": "#1a1a2e",
+    "theme": "dark"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {

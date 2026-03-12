@@ -94,34 +94,10 @@ export function getWebviewContent(
           <div class="persona-group">
             <label data-i18n="character"></label>
             <select id="charA" class="persona-select char-select">
-              <optgroup label="Heroes">
                 <option value="mask-dude" selected data-i18n="charMaskDude"></option>
                 <option value="ninja-frog" data-i18n="charNinjaFrog"></option>
                 <option value="pink-man" data-i18n="charPinkMan"></option>
                 <option value="virtual-guy" data-i18n="charVirtualGuy"></option>
-              </optgroup>
-              <optgroup label="Creatures">
-                <option value="angry-pig" data-i18n="charAngryPig"></option>
-                <option value="bat" data-i18n="charBat"></option>
-                <option value="bee" data-i18n="charBee"></option>
-                <option value="blue-bird" data-i18n="charBlueBird"></option>
-                <option value="bunny" data-i18n="charBunny"></option>
-                <option value="chameleon" data-i18n="charChameleon"></option>
-                <option value="chicken" data-i18n="charChicken"></option>
-                <option value="duck" data-i18n="charDuck"></option>
-                <option value="fat-bird" data-i18n="charFatBird"></option>
-                <option value="ghost" data-i18n="charGhost"></option>
-                <option value="mushroom" data-i18n="charMushroom"></option>
-                <option value="plant" data-i18n="charPlant"></option>
-                <option value="radish" data-i18n="charRadish"></option>
-                <option value="rino" data-i18n="charRino"></option>
-                <option value="rock" data-i18n="charRock"></option>
-                <option value="skull" data-i18n="charSkull"></option>
-                <option value="slime" data-i18n="charSlime"></option>
-                <option value="snail" data-i18n="charSnail"></option>
-                <option value="trunk" data-i18n="charTrunk"></option>
-                <option value="turtle" data-i18n="charTurtle"></option>
-              </optgroup>
             </select>
           </div>
           <div class="persona-group">
@@ -151,34 +127,10 @@ export function getWebviewContent(
           <div class="persona-group">
             <label data-i18n="character"></label>
             <select id="charB" class="persona-select char-select">
-              <optgroup label="Heroes">
                 <option value="mask-dude" data-i18n="charMaskDude"></option>
                 <option value="ninja-frog" selected data-i18n="charNinjaFrog"></option>
                 <option value="pink-man" data-i18n="charPinkMan"></option>
                 <option value="virtual-guy" data-i18n="charVirtualGuy"></option>
-              </optgroup>
-              <optgroup label="Creatures">
-                <option value="angry-pig" data-i18n="charAngryPig"></option>
-                <option value="bat" data-i18n="charBat"></option>
-                <option value="bee" data-i18n="charBee"></option>
-                <option value="blue-bird" data-i18n="charBlueBird"></option>
-                <option value="bunny" data-i18n="charBunny"></option>
-                <option value="chameleon" data-i18n="charChameleon"></option>
-                <option value="chicken" data-i18n="charChicken"></option>
-                <option value="duck" data-i18n="charDuck"></option>
-                <option value="fat-bird" data-i18n="charFatBird"></option>
-                <option value="ghost" data-i18n="charGhost"></option>
-                <option value="mushroom" data-i18n="charMushroom"></option>
-                <option value="plant" data-i18n="charPlant"></option>
-                <option value="radish" data-i18n="charRadish"></option>
-                <option value="rino" data-i18n="charRino"></option>
-                <option value="rock" data-i18n="charRock"></option>
-                <option value="skull" data-i18n="charSkull"></option>
-                <option value="slime" data-i18n="charSlime"></option>
-                <option value="snail" data-i18n="charSnail"></option>
-                <option value="trunk" data-i18n="charTrunk"></option>
-                <option value="turtle" data-i18n="charTurtle"></option>
-              </optgroup>
             </select>
           </div>
           <div class="persona-group">
