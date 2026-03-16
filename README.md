@@ -5,7 +5,7 @@
 <h1 align="center">Claude Talk</h1>
 
 <p align="center">
-  <strong>Watch two AI agents debate any topic in a retro RPG-style interface — right inside VS Code.</strong>
+  <strong>Two AI agents debate any topic — right inside VS Code.</strong>
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 
 ## What is this?
 
-**Claude Talk** pits two Claude-powered AI agents against each other to debate any topic you choose. Each agent takes a stance (Pro, Neutral, or Con) and argues its position in real-time — all rendered in a pixel-art RPG battle interface.
+**Claude Talk** pits two Claude-powered AI agents against each other to debate any topic you choose. Each agent takes a stance (Pro, Neutral, or Con) and argues its position in real-time.
 
 > Pick a topic. Choose your fighters. Hit START. Grab some popcorn.
 
@@ -44,12 +44,11 @@ Two AI agents debating from different perspectives can do more than entertain:
 | Feature | Description |
 |---------|-------------|
 | **Real-time AI Debate** | Two Claude agents argue back and forth automatically |
-| **Retro RPG Interface** | Pixel-art characters with sprite animations in a classic battle layout |
-| **4 Hero Characters** | Mask Dude, Ninja Frog, Pink Man, Virtual Guy — each with unique sprites |
+| **Seek Consensus Mode** | Agents gradually find common ground instead of arguing forever |
 | **3 Stance Modes** | Set each agent as **Pro**, **Neutral**, or **Con** |
 | **Model Selection** | Mix and match **Haiku**, **Sonnet**, or **Opus** per agent |
 | **Custom Agent Names** | Name your debaters anything you want |
-| **Smart Context** | History summarization keeps long debates fresh and non-repetitive |
+| **Persistent Sessions** | Each agent maintains its own Claude CLI session with full context retention |
 | **30+ Languages** | Full UI localization — Korean, Japanese, Chinese, Spanish, French, and more |
 | **Auto-save Settings** | Your last configuration is restored automatically |
 | **Debate Controls** | Pause, resume, or stop debates at any time |

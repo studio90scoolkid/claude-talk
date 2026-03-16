@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.2] - 2026-03-16
+
+### Changed
+- Updated keywords for better marketplace discoverability
+- Cleaned up README descriptions
+
 ## [0.2.1] - 2026-03-16
 
 ### Changed
