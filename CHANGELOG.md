@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.1] - 2026-03-16
+
+### Changed
+- Session-based debate architecture — each agent maintains its own persistent Claude CLI session across turns
+- All prompts converted to English for language-neutral behavior — agents now respond in the same language as the debate topic
+- No-markdown rule enforced in system prompt
+
+### Added
+- Screenshot added to README
+
 ## [0.2.0] - 2026-03-15
 
 ### Added

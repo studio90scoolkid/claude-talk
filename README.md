@@ -75,12 +75,13 @@ Two AI agents debating from different perspectives can do more than entertain:
 └─────────────┘                       └─────────────┘
 ```
 
-Each agent uses **Claude CLI one-shot mode** to generate responses. The extension manages context by:
-- **Summarizing older turns** (first sentence only) to save tokens
-- **Keeping recent turns in full** for coherent back-and-forth
-- **Injecting turn-aware strategy hints** so arguments evolve over time
+Each agent maintains its own **persistent Claude CLI session** throughout the debate. This means:
+- **Full context retention** — Claude natively remembers the entire debate history per agent
+- **Language-neutral prompts** — agents automatically respond in the same language as your topic
+- **Turn-aware strategy hints** — arguments evolve over time with new angles each turn
+- **Lower token usage** — no need to resend history every turn
 
-This means debates stay interesting even after 10+ exchanges.
+This means debates stay coherent and on-topic even after 10+ exchanges.
 
 ---
 
