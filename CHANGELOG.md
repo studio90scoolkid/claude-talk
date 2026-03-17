@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-03-17
+
+### Added
+- Moderator summary — when a debate ends (by stop or consensus), a Claude Haiku agent automatically summarizes the entire debate as a moderator
+- Loading indicator while summary is being generated
+- Blue-themed summary banner with glow animation
+- i18n support for moderator summary (EN/KO, others fallback to English)
+
 ## [0.2.2] - 2026-03-16
 
 ### Changed
