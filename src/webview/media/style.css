@@ -403,18 +403,18 @@ html[data-lang="fa"] .btn-group {
 .consensus-label {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 5px;
   cursor: pointer;
   font-size: 10px;
   color: var(--accent-yellow);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 4px 8px;
+  padding: 2px 8px;
   border: 2px solid #4a4a3a;
   background: rgba(255, 213, 79, 0.08);
   transition: border-color 0.2s, background 0.2s;
-  margin-top: 2px;
+  margin-top: 0;
 }
 
 .consensus-label:hover {

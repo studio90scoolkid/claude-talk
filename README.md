@@ -46,6 +46,7 @@ Two AI agents debating from different perspectives can do more than entertain:
 | **Multi-Provider Support** | Use **Claude** and **Google Gemini** — mix providers per agent (e.g., Claude vs Gemini) |
 | **Real-time AI Debate** | Two AI agents argue back and forth automatically |
 | **Seek Consensus Mode** | Agents gradually find common ground instead of arguing forever |
+| **Moderator Summary** | Optional AI-generated debate summary at the end (toggleable, uses top-tier models) |
 | **3 Stance Modes** | Set each agent as **Pro**, **Neutral**, or **Con** |
 | **Model Selection** | Claude: **Haiku / Sonnet / Opus** — Gemini: **2.5 Flash / 2.5 Pro** |
 | **Per-Provider Status** | Separate connection indicators for each provider with 3-state display (connected / not authenticated / not installed) |

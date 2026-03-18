@@ -55,6 +55,7 @@ export interface WebviewMessage {
   nameA?: string;
   nameB?: string;
   seekConsensus?: boolean;
+  showSummary?: boolean;
   settings?: Record<string, string>;
 }
 

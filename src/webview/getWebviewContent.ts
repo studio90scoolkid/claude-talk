@@ -174,6 +174,10 @@ export function getWebviewContent(
           <input type="checkbox" id="seekConsensus">
           <span data-i18n="seekConsensus"></span>
         </label>
+        <label class="consensus-label">
+          <input type="checkbox" id="showSummary" checked>
+          <span data-i18n="showSummary"></span>
+        </label>
       </div>
     </div>
   </div>

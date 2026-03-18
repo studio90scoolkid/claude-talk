@@ -168,6 +168,7 @@ export class DebatePanel {
             message.seekConsensus || false,
             (message.providerA as Provider) || 'claude',
             (message.providerB as Provider) || 'claude',
+            message.showSummary !== false,
           );
         }
         break;

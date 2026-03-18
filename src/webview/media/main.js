@@ -40,6 +40,7 @@
       character: 'CHARACTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Seek Consensus',
+      showSummary: 'Moderator Summary',
       consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
       moderatorSummary: 'MODERATOR SUMMARY',
       summaryLoading: 'The moderator is preparing a summary...',
@@ -77,6 +78,7 @@
       character: '캐릭터:',
       charMaskDude: '마스크 듀드', charNinjaFrog: '닌자 프로그', charPinkMan: '핑크맨', charVirtualGuy: '버추얼 가이',
       seekConsensus: '합의점 찾기',
+      showSummary: '토론 정리',
       consensusReached: '합의 도달 — 양측이 공통점을 찾았습니다.',
       moderatorSummary: '사회자 정리',
       summaryLoading: '사회자가 토론을 정리하고 있습니다...',
@@ -110,8 +112,9 @@
       personaLabels: { pro: '賛成', neutral: '中立', con: '反対' },
       character: 'キャラ:',
       charMaskDude: 'マスクデュード', charNinjaFrog: 'ニンジャフロッグ', charPinkMan: 'ピンクマン', charVirtualGuy: 'バーチャルガイ',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: '合意を目指す',
+      showSummary: '司会者まとめ',
+      consensusReached: '合意に達しました — 両者が共通点を見つけました。',
     },
     zh: {
       checking: '检查中...',
@@ -142,8 +145,9 @@
       personaLabels: { pro: '赞成', neutral: '中立', con: '反对' },
       character: '角色:',
       charMaskDude: '面具侠', charNinjaFrog: '忍者蛙', charPinkMan: '粉红人', charVirtualGuy: '虚拟侠',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: '寻求共识',
+      showSummary: '主持人总结',
+      consensusReached: '达成共识 — 双方找到了共同点。',
     },
     // === European Languages ===
     de: {
@@ -161,8 +165,9 @@
       personaLabels: { pro: 'DAFÜR', neutral: 'NEUTRAL', con: 'DAGEGEN' },
       character: 'CHARAKTER:',
       charMaskDude: 'Maskentyp', charNinjaFrog: 'Ninja-Frosch', charPinkMan: 'Pinkmann', charVirtualGuy: 'Virtueller Typ',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Konsens suchen',
+      showSummary: 'Moderator-Zusammenfassung',
+      consensusReached: 'KONSENS ERREICHT — Beide Seiten haben Gemeinsamkeiten gefunden.',
     },
     fr: {
       checking: 'VÉRIFICATION...', connected: 'CONNECTÉ', disconnected: 'DÉCONNECTÉ', notConnected: 'NON CONNECTÉ !',
@@ -179,8 +184,9 @@
       personaLabels: { pro: 'POUR', neutral: 'NEUTRE', con: 'CONTRE' },
       character: 'PERSONNAGE :',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Chercher un consensus',
+      showSummary: 'Résumé du modérateur',
+      consensusReached: 'CONSENSUS ATTEINT — Les deux agents ont trouvé un terrain d\'entente.',
     },
     es: {
       checking: 'VERIFICANDO...', connected: 'CONECTADO', disconnected: 'DESCONECTADO', notConnected: '¡NO CONECTADO!',
@@ -197,8 +203,9 @@
       personaLabels: { pro: 'A FAVOR', neutral: 'NEUTRAL', con: 'EN CONTRA' },
       character: 'PERSONAJE:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Buscar consenso',
+      showSummary: 'Resumen del moderador',
+      consensusReached: 'CONSENSO ALCANZADO — Ambos agentes han encontrado puntos en común.',
     },
     pt: {
       checking: 'VERIFICANDO...', connected: 'CONECTADO', disconnected: 'DESCONECTADO', notConnected: 'NÃO CONECTADO!',
@@ -215,8 +222,9 @@
       personaLabels: { pro: 'A FAVOR', neutral: 'NEUTRO', con: 'CONTRA' },
       character: 'PERSONAGEM:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Buscar consenso',
+      showSummary: 'Resumo do moderador',
+      consensusReached: 'CONSENSO ALCANÇADO — Ambos os agentes encontraram pontos em comum.',
     },
     it: {
       checking: 'VERIFICA...', connected: 'CONNESSO', disconnected: 'DISCONNESSO', notConnected: 'NON CONNESSO!',
@@ -233,8 +241,9 @@
       personaLabels: { pro: 'A FAVORE', neutral: 'NEUTRALE', con: 'CONTRO' },
       character: 'PERSONAGGIO:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Cercare consenso',
+      showSummary: 'Riepilogo del moderatore',
+      consensusReached: 'CONSENSO RAGGIUNTO — Entrambi gli agenti hanno trovato un terreno comune.',
     },
     nl: {
       checking: 'CONTROLEREN...', connected: 'VERBONDEN', disconnected: 'NIET VERBONDEN', notConnected: 'NIET VERBONDEN!',
@@ -251,8 +260,9 @@
       personaLabels: { pro: 'VOOR', neutral: 'NEUTRAAL', con: 'TEGEN' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Consensus zoeken',
+      showSummary: 'Samenvatting moderator',
+      consensusReached: 'CONSENSUS BEREIKT — Beide agenten hebben een gemeenschappelijke basis gevonden.',
     },
     pl: {
       checking: 'SPRAWDZANIE...', connected: 'POŁĄCZONO', disconnected: 'ROZŁĄCZONO', notConnected: 'NIE POŁĄCZONO!',
@@ -269,8 +279,9 @@
       personaLabels: { pro: 'ZA', neutral: 'NEUTRALNY', con: 'PRZECIW' },
       character: 'POSTAĆ:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Szukaj konsensusu',
+      showSummary: 'Podsumowanie moderatora',
+      consensusReached: 'KONSENSUS OSIĄGNIĘTY — Obie strony znalazły wspólny grunt.',
     },
     ru: {
       checking: 'ПРОВЕРКА...', connected: 'ПОДКЛЮЧЕНО', disconnected: 'ОТКЛЮЧЕНО', notConnected: 'НЕ ПОДКЛЮЧЕНО!',
@@ -287,8 +298,9 @@
       personaLabels: { pro: 'ЗА', neutral: 'НЕЙТРАЛЬНО', con: 'ПРОТИВ' },
       character: 'ПЕРСОНАЖ:',
       charMaskDude: 'Маск Дюд', charNinjaFrog: 'Ниндзя Фрог', charPinkMan: 'Пинк Мэн', charVirtualGuy: 'Виртуал Гай',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Искать консенсус',
+      showSummary: 'Итоги модератора',
+      consensusReached: 'КОНСЕНСУС ДОСТИГНУТ — Обе стороны нашли общую позицию.',
     },
     uk: {
       checking: 'ПЕРЕВІРКА...', connected: 'ПІДКЛЮЧЕНО', disconnected: 'ВІДКЛЮЧЕНО', notConnected: 'НЕ ПІДКЛЮЧЕНО!',
@@ -305,8 +317,9 @@
       personaLabels: { pro: 'ЗА', neutral: 'НЕЙТРАЛЬНО', con: 'ПРОТИ' },
       character: 'ПЕРСОНАЖ:',
       charMaskDude: 'Маск Дюд', charNinjaFrog: 'Ниндзя Фрог', charPinkMan: 'Пинк Мэн', charVirtualGuy: 'Виртуал Гай',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Шукати консенсус',
+      showSummary: 'Підсумки модератора',
+      consensusReached: 'КОНСЕНСУС ДОСЯГНУТО — Обидві сторони знайшли спільну позицію.',
     },
     cs: {
       checking: 'KONTROLA...', connected: 'PŘIPOJENO', disconnected: 'ODPOJENO', notConnected: 'NEPŘIPOJENO!',
@@ -323,8 +336,9 @@
       personaLabels: { pro: 'PRO', neutral: 'NEUTRÁLNÍ', con: 'PROTI' },
       character: 'POSTAVA:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Hledat konsensus',
+      showSummary: 'Shrnutí moderátora',
+      consensusReached: 'KONSENSUS DOSAŽEN — Obě strany našly společnou řeč.',
     },
     sv: {
       checking: 'KONTROLLERAR...', connected: 'ANSLUTEN', disconnected: 'FRÅNKOPPLAD', notConnected: 'EJ ANSLUTEN!',
@@ -341,8 +355,9 @@
       personaLabels: { pro: 'FÖR', neutral: 'NEUTRAL', con: 'EMOT' },
       character: 'KARAKTÄR:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Sök konsensus',
+      showSummary: 'Moderatorsammanfattning',
+      consensusReached: 'KONSENSUS UPPNÅDD — Båda sidor har hittat gemensam mark.',
     },
     da: {
       checking: 'KONTROLLERER...', connected: 'FORBUNDET', disconnected: 'AFBRUDT', notConnected: 'IKKE FORBUNDET!',
@@ -359,8 +374,9 @@
       personaLabels: { pro: 'FOR', neutral: 'NEUTRAL', con: 'IMOD' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Søg konsensus',
+      showSummary: 'Moderatoropsummering',
+      consensusReached: 'KONSENSUS OPNÅET — Begge sider har fundet fælles grund.',
     },
     fi: {
       checking: 'TARKISTETAAN...', connected: 'YHDISTETTY', disconnected: 'YHTEYS KATKAISTU', notConnected: 'EI YHTEYTTÄ!',
@@ -377,8 +393,9 @@
       personaLabels: { pro: 'PUOLESTA', neutral: 'NEUTRAALI', con: 'VASTAAN' },
       character: 'HAHMO:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Etsi yhteisymmärrystä',
+      showSummary: 'Moderaattorin yhteenveto',
+      consensusReached: 'YHTEISYMMÄRRYS SAAVUTETTU — Molemmat osapuolet löysivät yhteisen pohjan.',
     },
     nb: {
       checking: 'SJEKKER...', connected: 'TILKOBLET', disconnected: 'FRAKOBLET', notConnected: 'IKKE TILKOBLET!',
@@ -395,8 +412,9 @@
       personaLabels: { pro: 'FOR', neutral: 'NØYTRAL', con: 'MOT' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Søk konsensus',
+      showSummary: 'Moderatoroppsummering',
+      consensusReached: 'KONSENSUS OPPNÅDD — Begge sider har funnet felles grunn.',
     },
     tr: {
       checking: 'KONTROL EDİLİYOR...', connected: 'BAĞLI', disconnected: 'BAĞLI DEĞİL', notConnected: 'BAĞLI DEĞİL!',
@@ -413,8 +431,9 @@
       personaLabels: { pro: 'LEHTE', neutral: 'TARAFSIZ', con: 'ALEYHTE' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Uzlaşı ara',
+      showSummary: 'Moderatör özeti',
+      consensusReached: 'UZLAŞI SAĞLANDI — Her iki taraf da ortak bir zemin buldu.',
     },
     el: {
       checking: 'ΕΛΕΓΧΟΣ...', connected: 'ΣΥΝΔΕΔΕΜΕΝΟ', disconnected: 'ΑΠΟΣΥΝΔΕΜΕΝΟ', notConnected: 'ΜΗ ΣΥΝΔΕΔΕΜΕΝΟ!',
@@ -431,8 +450,9 @@
       personaLabels: { pro: 'ΥΠΕΡ', neutral: 'ΟΥΔΕΤΕΡΟ', con: 'ΚΑΤΑ' },
       character: 'ΧΑΡΑΚΤΗΡΑΣ:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Αναζήτηση συναίνεσης',
+      showSummary: 'Σύνοψη συντονιστή',
+      consensusReached: 'ΣΥΝΑΙΝΕΣΗ ΕΠΙΤΕΥΧΘΗΚΕ — Και οι δύο πλευρές βρήκαν κοινό έδαφος.',
     },
     hu: {
       checking: 'ELLENŐRZÉS...', connected: 'CSATLAKOZVA', disconnected: 'LEVÁLASZTVA', notConnected: 'NINCS CSATLAKOZVA!',
@@ -449,8 +469,9 @@
       personaLabels: { pro: 'MELLETTE', neutral: 'SEMLEGES', con: 'ELLENE' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Konszenzust keresni',
+      showSummary: 'Moderátor összefoglalója',
+      consensusReached: 'KONSZENZUS ELÉRVE — Mindkét fél közös alapot talált.',
     },
     ro: {
       checking: 'VERIFICARE...', connected: 'CONECTAT', disconnected: 'DECONECTAT', notConnected: 'NECONECTAT!',
@@ -467,8 +488,9 @@
       personaLabels: { pro: 'PENTRU', neutral: 'NEUTRU', con: 'CONTRA' },
       character: 'PERSONAJE:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Căutare consens',
+      showSummary: 'Rezumatul moderatorului',
+      consensusReached: 'CONSENS ATINS — Ambele părți au găsit un teren comun.',
     },
     // === Additional Asian Languages ===
     th: {
@@ -486,8 +508,9 @@
       personaLabels: { pro: 'เห็นด้วย', neutral: 'เป็นกลาง', con: 'ไม่เห็นด้วย' },
       character: 'ตัวละคร:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'หาฉันทามติ',
+      showSummary: 'สรุปจากผู้ดำเนินรายการ',
+      consensusReached: 'บรรลุฉันทามติ — ทั้งสองฝ่ายพบจุดร่วม',
     },
     vi: {
       checking: 'ĐANG KIỂM TRA...', connected: 'ĐÃ KẾT NỐI', disconnected: 'NGẮT KẾT NỐI', notConnected: 'CHƯA KẾT NỐI!',
@@ -504,8 +527,9 @@
       personaLabels: { pro: 'ỦNG HỘ', neutral: 'TRUNG LẬP', con: 'PHẢN ĐỐI' },
       character: 'NHÂN VẬT:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Tìm đồng thuận',
+      showSummary: 'Tóm tắt của người điều hành',
+      consensusReached: 'ĐẠT ĐỒNG THUẬN — Cả hai bên đã tìm được tiếng nói chung.',
     },
     id: {
       checking: 'MEMERIKSA...', connected: 'TERHUBUNG', disconnected: 'TERPUTUS', notConnected: 'TIDAK TERHUBUNG!',
@@ -522,8 +546,9 @@
       personaLabels: { pro: 'SETUJU', neutral: 'NETRAL', con: 'MENOLAK' },
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Cari konsensus',
+      showSummary: 'Ringkasan moderator',
+      consensusReached: 'KONSENSUS TERCAPAI — Kedua agen menemukan titik temu.',
     },
     ms: {
       checking: 'MENYEMAK...', connected: 'DISAMBUNG', disconnected: 'TERPUTUS', notConnected: 'TIDAK DISAMBUNG!',
@@ -540,8 +565,9 @@
       personaLabels: { pro: 'SETUJU', neutral: 'NEUTRAL', con: 'MENENTANG' },
       character: 'WATAK:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'Cari konsensus',
+      showSummary: 'Rumusan moderator',
+      consensusReached: 'KONSENSUS DICAPAI — Kedua-dua pihak menemui titik persamaan.',
     },
     hi: {
       checking: 'जाँच हो रही है...', connected: 'कनेक्टेड', disconnected: 'डिस्कनेक्टेड', notConnected: 'कनेक्ट नहीं!',
@@ -558,8 +584,9 @@
       personaLabels: { pro: 'पक्ष', neutral: 'तटस्थ', con: 'विपक्ष' },
       character: 'चरित्र:',
       charMaskDude: 'मास्क ड्यूड', charNinjaFrog: 'निंजा फ्रॉग', charPinkMan: 'पिंक मैन', charVirtualGuy: 'वर्चुअल गाय',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'सहमति खोजें',
+      showSummary: 'संचालक सारांश',
+      consensusReached: 'सहमति प्राप्त — दोनों पक्षों ने समान आधार पाया।',
     },
     bn: {
       checking: 'যাচাই হচ্ছে...', connected: 'সংযুক্ত', disconnected: 'সংযোগ বিচ্ছিন্ন', notConnected: 'সংযুক্ত নয়!',
@@ -576,8 +603,9 @@
       personaLabels: { pro: 'পক্ষে', neutral: 'নিরপেক্ষ', con: 'বিপক্ষে' },
       character: 'চরিত্র:',
       charMaskDude: 'মাস্ক ডিউড', charNinjaFrog: 'নিনজা ফ্রগ', charPinkMan: 'পিংক ম্যান', charVirtualGuy: 'ভার্চুয়াল গাই',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'ঐকমত্য খোঁজা',
+      showSummary: 'সঞ্চালকের সারসংক্ষেপ',
+      consensusReached: 'ঐকমত্যে পৌঁছানো হয়েছে — উভয় পক্ষ সাধারণ ভিত্তি খুঁজে পেয়েছে।',
     },
     // === Middle Eastern Languages ===
     ar: {
@@ -595,8 +623,9 @@
       personaLabels: { pro: 'مؤيد', neutral: 'محايد', con: 'معارض' },
       character: 'الشخصية:',
       charMaskDude: 'رجل القناع', charNinjaFrog: 'ضفدع النينجا', charPinkMan: 'الرجل الوردي', charVirtualGuy: 'الرجل الافتراضي',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'البحث عن توافق',
+      showSummary: 'ملخص المشرف',
+      consensusReached: 'تم التوصل إلى توافق — وجد كلا الطرفين أرضية مشتركة.',
     },
     he: {
       checking: 'בודק...', connected: 'מחובר', disconnected: 'מנותק', notConnected: 'לא מחובר!',
@@ -613,8 +642,9 @@
       personaLabels: { pro: 'בעד', neutral: 'ניטרלי', con: 'נגד' },
       character: 'דמות:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'חיפוש הסכמה',
+      showSummary: 'סיכום המנחה',
+      consensusReached: 'הושגה הסכמה — שני הצדדים מצאו בסיס משותף.',
     },
     fa: {
       checking: 'در حال بررسی...', connected: 'متصل', disconnected: 'قطع شده', notConnected: 'متصل نیست!',
@@ -631,8 +661,9 @@
       personaLabels: { pro: 'موافق', neutral: 'بی‌طرف', con: 'مخالف' },
       character: 'شخصیت:',
       charMaskDude: 'مرد نقابدار', charNinjaFrog: 'قورباغه نینجا', charPinkMan: 'مرد صورتی', charVirtualGuy: 'مرد مجازی',
-      seekConsensus: 'Seek Consensus',
-      consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      seekConsensus: 'جستجوی توافق',
+      showSummary: 'خلاصه مجری',
+      consensusReached: 'توافق حاصل شد — هر دو طرف زمینه مشترکی پیدا کردند.',
     },
   };
 
@@ -681,6 +712,8 @@
   const nameBInput = document.getElementById('nameB');
   /** @type {HTMLInputElement} */
   const seekConsensusCheck = document.getElementById('seekConsensus');
+  /** @type {HTMLInputElement} */
+  const showSummaryCheck = document.getElementById('showSummary');
   /** @type {HTMLButtonElement} */
   const startBtn = document.getElementById('startBtn');
   /** @type {HTMLButtonElement} */
@@ -1106,6 +1139,8 @@
     modelBSelect.disabled = status === 'running';
     if (charASelect) charASelect.disabled = status === 'running';
     if (charBSelect) charBSelect.disabled = status === 'running';
+    seekConsensusCheck.disabled = status === 'running';
+    showSummaryCheck.disabled = status === 'running';
 
     if (status === 'paused') {
       pauseBtn.textContent = '▶ ' + t('resume');
@@ -1133,6 +1168,7 @@
         modelB: modelBSelect.value,
         topic: topicInput.value,
         seekConsensus: seekConsensusCheck.checked ? 'true' : 'false',
+        showSummary: showSummaryCheck.checked ? 'true' : 'false',
       },
     });
   }
@@ -1150,6 +1186,7 @@
     if (s.modelB) modelBSelect.value = s.modelB;
     if (s.topic) topicInput.value = s.topic;
     if (s.seekConsensus) seekConsensusCheck.checked = s.seekConsensus === 'true';
+    if (s.showSummary !== undefined) showSummaryCheck.checked = s.showSummary !== 'false';
   }
 
   // ===== Event Handlers =====
@@ -1214,6 +1251,7 @@
       nameA: nameA,
       nameB: nameB,
       seekConsensus: seekConsensusCheck.checked,
+      showSummary: showSummaryCheck.checked,
     });
   });
 

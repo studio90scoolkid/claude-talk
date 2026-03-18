@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.4.1] - 2026-03-18
+
+### Added
+- Moderator Summary toggle — option to enable/disable end-of-debate summary (enabled by default)
+- Summary now uses top-tier models (Claude Opus / Gemini 2.5 Pro)
+- Full i18n for seekConsensus, showSummary, and consensusReached across all 32 languages
+
+### Changed
+- Checkboxes disabled during active debate to prevent confusion
+- Compact checkbox styling for tighter layout
+
 ## [0.4.0] - 2026-03-18
 
 ### Added

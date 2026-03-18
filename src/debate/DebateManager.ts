@@ -29,6 +29,7 @@ export class DebateManager extends EventEmitter {
   private _modelB: ModelAlias = 'sonnet';
   private _providerA: Provider = 'claude';
   private _providerB: Provider = 'claude';
+  private _showSummary = true;
 
   // Persistent agents — maintain their own CLI sessions
   private agentA: AIAgent | null = null;
@@ -49,6 +50,7 @@ export class DebateManager extends EventEmitter {
     seekConsensus = false,
     providerA: Provider = 'claude',
     providerB: Provider = 'claude',
+    showSummary = true,
   ): Promise<void> {
     // Stop any existing debate
     if (this.state.status === 'running' || this.state.status === 'paused') {
@@ -68,6 +70,7 @@ export class DebateManager extends EventEmitter {
     this._nameA = nameA || 'Agent A';
     this._nameB = nameB || 'Agent B';
     this._seekConsensus = seekConsensus;
+    this._showSummary = showSummary;
     this._modelA = modelA;
     this._modelB = modelB;
     this._providerA = providerA;
@@ -122,7 +125,7 @@ export class DebateManager extends EventEmitter {
     this.agentA = null;
     this.agentB = null;
     this.emitStateChange();
-    if (hadMessages) {
+    if (hadMessages && this._showSummary) {
       this.generateSummary();
     }
   }
@@ -187,7 +190,7 @@ export class DebateManager extends EventEmitter {
         this.state.status = 'stopped';
         this.emit('consensus');
         this.emitStateChange();
-        this.generateSummary();
+        if (this._showSummary) { this.generateSummary(); }
         return;
       }
 
@@ -251,8 +254,8 @@ ${transcript}
     const cliPath = useGemini ? findGeminiPath() : findClaudePath();
     const env = useGemini ? { ...process.env, PATH: `${process.env.PATH}:/usr/local/bin:/opt/homebrew/bin` } : makeCleanEnv();
     const args = useGemini
-      ? ['-p', prompt, '--output-format', 'json', '-m', 'gemini-2.5-flash']
-      : ['-p', prompt, '--output-format', 'json', '--model', 'haiku'];
+      ? ['-p', prompt, '--output-format', 'json', '-m', 'gemini-2.5-pro']
+      : ['-p', prompt, '--output-format', 'json', '--model', 'opus'];
 
     const proc = spawn(cliPath, args, {
       stdio: ['ignore', 'pipe', 'pipe'],
