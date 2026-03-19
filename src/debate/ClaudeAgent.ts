@@ -207,6 +207,7 @@ Absolute rules:
 - You MUST directly engage with your opponent's specific claims before presenting your own points.
 - You MUST respond in the SAME LANGUAGE as the debate topic. Detect the language of "${topic}" and use that language for your entire response.
 - Keep your response to 3-5 sentences. Follow the response structure given in each turn prompt.
+- Tone: Sound intelligent but approachable. Write like a sharp commentator on a podcast, not a professor writing a paper. Avoid academic jargon, stiff phrasing, or words that feel unnatural in spoken conversation.
 - NEVER use markdown formatting. No **, no *, no #, no -, no \`, no >. Absolutely zero markup characters. Plain text only. This is non-negotiable.${consensusRule}`;
   }
 
