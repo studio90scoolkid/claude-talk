@@ -85,6 +85,11 @@ export function getWebviewContent(
   <div class="setup-panel">
     <div class="topic-row">
       <input type="text" id="topicInput" class="topic-input" data-i18n-placeholder="topicPlaceholder">
+      <div class="control-buttons">
+        <button id="startBtn" class="ctrl-btn ctrl-play" data-i18n-title="startBattle">▶</button>
+        <button id="pauseBtn" class="ctrl-btn ctrl-pause" disabled data-i18n-title="pause">⏸</button>
+        <button id="stopBtn" class="ctrl-btn ctrl-stop" disabled data-i18n-title="stop">⏹</button>
+      </div>
     </div>
     <div class="persona-row">
       <div class="agent-config">
@@ -167,9 +172,6 @@ export function getWebviewContent(
         </div>
       </div>
       <div class="btn-group">
-        <button id="startBtn" class="rpg-btn primary" data-i18n="startBattle"></button>
-        <button id="pauseBtn" class="rpg-btn warning" disabled data-i18n="pause"></button>
-        <button id="stopBtn" class="rpg-btn danger" disabled data-i18n="stop"></button>
         <label class="consensus-label">
           <input type="checkbox" id="seekConsensus">
           <span data-i18n="seekConsensus"></span>

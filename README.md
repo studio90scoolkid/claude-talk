@@ -25,7 +25,7 @@
 
 **Claude Talk** pits two AI agents against each other to debate any topic you choose. Supports both **Claude** and **Google Gemini** — mix and match providers per agent. Each agent takes a stance (Pro, Neutral, or Con) and argues its position in real-time.
 
-> Pick a topic. Choose your fighters. Hit START. Grab some popcorn.
+> Pick a topic. Choose your fighters. Hit ▶. Grab some popcorn.
 
 ### Why use Claude Talk?
 
@@ -54,7 +54,7 @@ Two AI agents debating from different perspectives can do more than entertain:
 | **Persistent Sessions** | Each agent maintains its own CLI session with full context retention |
 | **30+ Languages** | Full UI localization — Korean, Japanese, Chinese, Spanish, French, and more |
 | **Auto-save Settings** | Your last configuration is restored automatically |
-| **Debate Controls** | Pause, resume, or stop debates at any time |
+| **Debate Controls** | Compact player-style controls (▶ ⏸ ⏹) — pause, resume, or stop debates with a visible end-of-debate banner |
 
 ---
 
@@ -64,7 +64,7 @@ Two AI agents debating from different perspectives can do more than entertain:
 2. *(Optional)* Install [Gemini CLI](https://github.com/google-gemini/gemini-cli) (`npm install -g @google/gemini-cli`) and authenticate (`gemini`)
 3. Install this extension from the VS Code Marketplace
 4. Open Command Palette → **Claude Talk: Start**
-5. Enter a topic, pick characters & stances, and hit **START**
+5. Enter a topic, pick characters & stances, and hit **▶**
 
 ---
 

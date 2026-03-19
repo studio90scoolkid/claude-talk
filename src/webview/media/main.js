@@ -24,17 +24,17 @@
       modelOpus: 'Opus (Powerful)',
       modelGeminiFlash: 'Gemini 2.5 Flash',
       modelGeminiPro: 'Gemini 2.5 Pro',
-      startBattle: 'START BATTLE',
-      pause: 'PAUSE',
-      resume: 'RESUME',
-      stop: 'STOP',
+      startBattle: 'Start Battle',
+      pause: 'Pause',
+      resume: 'Resume',
+      stop: 'Stop',
       ready: 'READY',
       battle: 'BATTLE!',
       paused: 'PAUSED',
       stopped: 'STOPPED',
       messages: 'MESSAGES: 0',
       welcomeTitle: '⚔ CLAUDE TALK ⚔',
-      welcomeDesc: 'Enter a topic and press START BATTLE to begin an all-out debate between two AI agents!',
+      welcomeDesc: 'Enter a topic and press ▶ to begin an all-out debate between two AI agents!',
       welcomeHint: 'Powered by Claude CLI',
       personaLabels: { pro: 'FOR', neutral: 'NEUTRAL', con: 'AGAINST' },
       character: 'CHARACTER:',
@@ -42,6 +42,7 @@
       seekConsensus: 'Seek Consensus',
       showSummary: 'Moderator Summary',
       consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
+      debateStopped: 'DEBATE ENDED — The debate has been stopped.',
       consensusGaugeLabel: 'CONSENSUS',
       moderatorSummary: 'MODERATOR SUMMARY',
       summaryLoading: 'The moderator is preparing a summary...',
@@ -73,7 +74,7 @@
       stopped: '중지됨',
       messages: '메시지: 0',
       welcomeTitle: '⚔ AI 토론 아레나 ⚔',
-      welcomeDesc: '토론 주제를 입력하고 토론 시작을 눌러 두 AI 에이전트의 끝장 토론을 시작하세요!',
+      welcomeDesc: '토론 주제를 입력하고 ▶ 버튼을 눌러 두 AI 에이전트의 끝장 토론을 시작하세요!',
       welcomeHint: 'Powered by Claude CLI',
       personaLabels: { pro: '찬성', neutral: '중립', con: '반대' },
       character: '캐릭터:',
@@ -81,6 +82,7 @@
       seekConsensus: '합의점 찾기',
       showSummary: '토론 정리',
       consensusReached: '합의 도달 — 양측이 공통점을 찾았습니다.',
+      debateStopped: '토론 종료 — 토론이 중단되었습니다.',
       consensusGaugeLabel: '합의도',
       moderatorSummary: '사회자 정리',
       summaryLoading: '사회자가 토론을 정리하고 있습니다...',
@@ -117,6 +119,7 @@
       seekConsensus: '合意を目指す',
       showSummary: '司会者まとめ',
       consensusReached: '合意に達しました — 両者が共通点を見つけました。',
+      debateStopped: '討論終了 — 討論が中断されました。',
       consensusGaugeLabel: '合意度',
     },
     zh: {
@@ -151,6 +154,7 @@
       seekConsensus: '寻求共识',
       showSummary: '主持人总结',
       consensusReached: '达成共识 — 双方找到了共同点。',
+      debateStopped: '辩论结束 — 辩论已被中止。',
       consensusGaugeLabel: '共识度',
     },
     // === European Languages ===
@@ -160,7 +164,7 @@
       persona: 'PERSONA:', model: 'MODELL:',
       pro: 'Dafür (PRO)', neutral: 'Neutral', con: 'Dagegen (CON)',
       modelHaiku: 'Haiku (Schnell)', modelSonnet: 'Sonnet (Ausgewogen)', modelOpus: 'Opus (Leistungsstark)',
-      startBattle: 'DEBATTE STARTEN', pause: 'PAUSE', resume: 'FORTSETZEN', stop: 'STOPP',
+      startBattle: 'Debatte starten', pause: 'Pause', resume: 'Fortsetzen', stop: 'Stopp',
       ready: 'BEREIT', battle: 'DEBATTE!', paused: 'PAUSIERT', stopped: 'GESTOPPT',
       messages: 'NACHRICHTEN: 0',
       welcomeTitle: '⚔ KI DEBATT-ARENA ⚔',
@@ -172,6 +176,7 @@
       seekConsensus: 'Konsens suchen',
       showSummary: 'Moderator-Zusammenfassung',
       consensusReached: 'KONSENS ERREICHT — Beide Seiten haben Gemeinsamkeiten gefunden.',
+      debateStopped: 'DEBATTE BEENDET — Die Debatte wurde abgebrochen.',
       consensusGaugeLabel: 'KONSENS',
     },
     fr: {
@@ -180,7 +185,7 @@
       persona: 'PERSONA :', model: 'MODÈLE :',
       pro: 'Pour (PRO)', neutral: 'Neutre', con: 'Contre (CON)',
       modelHaiku: 'Haiku (Rapide)', modelSonnet: 'Sonnet (Équilibré)', modelOpus: 'Opus (Puissant)',
-      startBattle: 'LANCER LE DÉBAT', pause: 'PAUSE', resume: 'REPRENDRE', stop: 'ARRÊT',
+      startBattle: 'Lancer le débat', pause: 'Pause', resume: 'Reprendre', stop: 'Arrêt',
       ready: 'PRÊT', battle: 'DÉBAT !', paused: 'EN PAUSE', stopped: 'ARRÊTÉ',
       messages: 'MESSAGES : 0',
       welcomeTitle: '⚔ ARÈNE DE DÉBAT IA ⚔',
@@ -192,6 +197,7 @@
       seekConsensus: 'Chercher un consensus',
       showSummary: 'Résumé du modérateur',
       consensusReached: 'CONSENSUS ATTEINT — Les deux agents ont trouvé un terrain d\'entente.',
+      debateStopped: 'DÉBAT TERMINÉ — Le débat a été arrêté.',
       consensusGaugeLabel: 'CONSENSUS',
     },
     es: {
@@ -200,7 +206,7 @@
       persona: 'PERSONA:', model: 'MODELO:',
       pro: 'A favor (PRO)', neutral: 'Neutral', con: 'En contra (CON)',
       modelHaiku: 'Haiku (Rápido)', modelSonnet: 'Sonnet (Equilibrado)', modelOpus: 'Opus (Potente)',
-      startBattle: 'INICIAR DEBATE', pause: 'PAUSA', resume: 'REANUDAR', stop: 'DETENER',
+      startBattle: 'Iniciar debate', pause: 'Pausa', resume: 'Reanudar', stop: 'Detener',
       ready: 'LISTO', battle: '¡DEBATE!', paused: 'EN PAUSA', stopped: 'DETENIDO',
       messages: 'MENSAJES: 0',
       welcomeTitle: '⚔ ARENA DE DEBATE IA ⚔',
@@ -212,6 +218,7 @@
       seekConsensus: 'Buscar consenso',
       showSummary: 'Resumen del moderador',
       consensusReached: 'CONSENSO ALCANZADO — Ambos agentes han encontrado puntos en común.',
+      debateStopped: 'DEBATE FINALIZADO — El debate ha sido detenido.',
       consensusGaugeLabel: 'CONSENSO',
     },
     pt: {
@@ -220,7 +227,7 @@
       persona: 'PERSONA:', model: 'MODELO:',
       pro: 'A favor (PRO)', neutral: 'Neutro', con: 'Contra (CON)',
       modelHaiku: 'Haiku (Rápido)', modelSonnet: 'Sonnet (Equilibrado)', modelOpus: 'Opus (Poderoso)',
-      startBattle: 'INICIAR DEBATE', pause: 'PAUSAR', resume: 'RETOMAR', stop: 'PARAR',
+      startBattle: 'Iniciar debate', pause: 'Pausar', resume: 'Retomar', stop: 'Parar',
       ready: 'PRONTO', battle: 'DEBATE!', paused: 'PAUSADO', stopped: 'PARADO',
       messages: 'MENSAGENS: 0',
       welcomeTitle: '⚔ ARENA DE DEBATE IA ⚔',
@@ -232,6 +239,7 @@
       seekConsensus: 'Buscar consenso',
       showSummary: 'Resumo do moderador',
       consensusReached: 'CONSENSO ALCANÇADO — Ambos os agentes encontraram pontos em comum.',
+      debateStopped: 'DEBATE ENCERRADO — O debate foi interrompido.',
       consensusGaugeLabel: 'CONSENSO',
     },
     it: {
@@ -240,7 +248,7 @@
       persona: 'PERSONA:', model: 'MODELLO:',
       pro: 'A favore (PRO)', neutral: 'Neutrale', con: 'Contro (CON)',
       modelHaiku: 'Haiku (Veloce)', modelSonnet: 'Sonnet (Bilanciato)', modelOpus: 'Opus (Potente)',
-      startBattle: 'INIZIA DIBATTITO', pause: 'PAUSA', resume: 'RIPRENDI', stop: 'FERMA',
+      startBattle: 'Inizia dibattito', pause: 'Pausa', resume: 'Riprendi', stop: 'Ferma',
       ready: 'PRONTO', battle: 'DIBATTITO!', paused: 'IN PAUSA', stopped: 'FERMATO',
       messages: 'MESSAGGI: 0',
       welcomeTitle: '⚔ ARENA DI DIBATTITO IA ⚔',
@@ -252,6 +260,7 @@
       seekConsensus: 'Cercare consenso',
       showSummary: 'Riepilogo del moderatore',
       consensusReached: 'CONSENSO RAGGIUNTO — Entrambi gli agenti hanno trovato un terreno comune.',
+      debateStopped: 'DIBATTITO TERMINATO — Il dibattito è stato interrotto.',
       consensusGaugeLabel: 'CONSENSO',
     },
     nl: {
@@ -260,7 +269,7 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Voor (PRO)', neutral: 'Neutraal', con: 'Tegen (CON)',
       modelHaiku: 'Haiku (Snel)', modelSonnet: 'Sonnet (Gebalanceerd)', modelOpus: 'Opus (Krachtig)',
-      startBattle: 'START DEBAT', pause: 'PAUZE', resume: 'HERVATTEN', stop: 'STOP',
+      startBattle: 'Start debat', pause: 'Pauze', resume: 'Hervatten', stop: 'Stop',
       ready: 'GEREED', battle: 'DEBAT!', paused: 'GEPAUZEERD', stopped: 'GESTOPT',
       messages: 'BERICHTEN: 0',
       welcomeTitle: '⚔ AI DEBAT ARENA ⚔',
@@ -272,6 +281,7 @@
       seekConsensus: 'Consensus zoeken',
       showSummary: 'Samenvatting moderator',
       consensusReached: 'CONSENSUS BEREIKT — Beide agenten hebben een gemeenschappelijke basis gevonden.',
+      debateStopped: 'DEBAT BEËINDIGD — Het debat is gestopt.',
       consensusGaugeLabel: 'CONSENSUS',
     },
     pl: {
@@ -280,7 +290,7 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Za (PRO)', neutral: 'Neutralny', con: 'Przeciw (CON)',
       modelHaiku: 'Haiku (Szybki)', modelSonnet: 'Sonnet (Zrównoważony)', modelOpus: 'Opus (Potężny)',
-      startBattle: 'ROZPOCZNIJ DEBATĘ', pause: 'PAUZA', resume: 'WZNÓW', stop: 'ZATRZYMAJ',
+      startBattle: 'Rozpocznij debatę', pause: 'Pauza', resume: 'Wznów', stop: 'Zatrzymaj',
       ready: 'GOTOWY', battle: 'DEBATA!', paused: 'WSTRZYMANO', stopped: 'ZATRZYMANO',
       messages: 'WIADOMOŚCI: 0',
       welcomeTitle: '⚔ ARENA DEBAT AI ⚔',
@@ -292,6 +302,7 @@
       seekConsensus: 'Szukaj konsensusu',
       showSummary: 'Podsumowanie moderatora',
       consensusReached: 'KONSENSUS OSIĄGNIĘTY — Obie strony znalazły wspólny grunt.',
+      debateStopped: 'DEBATA ZAKOŃCZONA — Debata została zatrzymana.',
       consensusGaugeLabel: 'KONSENSUS',
     },
     ru: {
@@ -300,7 +311,7 @@
       persona: 'ПЕРСОНА:', model: 'МОДЕЛЬ:',
       pro: 'За (PRO)', neutral: 'Нейтрально', con: 'Против (CON)',
       modelHaiku: 'Haiku (Быстрый)', modelSonnet: 'Sonnet (Сбалансир.)', modelOpus: 'Opus (Мощный)',
-      startBattle: 'НАЧАТЬ ДЕБАТЫ', pause: 'ПАУЗА', resume: 'ПРОДОЛЖИТЬ', stop: 'СТОП',
+      startBattle: 'Начать дебаты', pause: 'Пауза', resume: 'Продолжить', stop: 'Стоп',
       ready: 'ГОТОВО', battle: 'ДЕБАТЫ!', paused: 'ПАУЗА', stopped: 'ОСТАНОВЛЕНО',
       messages: 'СООБЩЕНИЯ: 0',
       welcomeTitle: '⚔ АРЕНА ДЕБАТОВ ИИ ⚔',
@@ -312,6 +323,7 @@
       seekConsensus: 'Искать консенсус',
       showSummary: 'Итоги модератора',
       consensusReached: 'КОНСЕНСУС ДОСТИГНУТ — Обе стороны нашли общую позицию.',
+      debateStopped: 'ДЕБАТЫ ЗАВЕРШЕНЫ — Дебаты были остановлены.',
       consensusGaugeLabel: 'КОНСЕНСУС',
     },
     uk: {
@@ -320,7 +332,7 @@
       persona: 'ПЕРСОНА:', model: 'МОДЕЛЬ:',
       pro: 'За (PRO)', neutral: 'Нейтрально', con: 'Проти (CON)',
       modelHaiku: 'Haiku (Швидкий)', modelSonnet: 'Sonnet (Збалансов.)', modelOpus: 'Opus (Потужний)',
-      startBattle: 'ПОЧАТИ ДЕБАТИ', pause: 'ПАУЗА', resume: 'ПРОДОВЖИТИ', stop: 'СТОП',
+      startBattle: 'Почати дебати', pause: 'Пауза', resume: 'Продовжити', stop: 'Стоп',
       ready: 'ГОТОВО', battle: 'ДЕБАТИ!', paused: 'ПАУЗА', stopped: 'ЗУПИНЕНО',
       messages: 'ПОВІДОМЛЕННЯ: 0',
       welcomeTitle: '⚔ АРЕНА ДЕБАТІВ ШІ ⚔',
@@ -332,6 +344,7 @@
       seekConsensus: 'Шукати консенсус',
       showSummary: 'Підсумки модератора',
       consensusReached: 'КОНСЕНСУС ДОСЯГНУТО — Обидві сторони знайшли спільну позицію.',
+      debateStopped: 'ДЕБАТИ ЗАВЕРШЕНО — Дебати були зупинені.',
       consensusGaugeLabel: 'КОНСЕНСУС',
     },
     cs: {
@@ -340,7 +353,7 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Pro (PRO)', neutral: 'Neutrální', con: 'Proti (CON)',
       modelHaiku: 'Haiku (Rychlý)', modelSonnet: 'Sonnet (Vyvážený)', modelOpus: 'Opus (Výkonný)',
-      startBattle: 'ZAČÍT DEBATU', pause: 'PAUZA', resume: 'POKRAČOVAT', stop: 'ZASTAVIT',
+      startBattle: 'Začít debatu', pause: 'Pauza', resume: 'Pokračovat', stop: 'Zastavit',
       ready: 'PŘIPRAVEN', battle: 'DEBATA!', paused: 'POZASTAVENO', stopped: 'ZASTAVENO',
       messages: 'ZPRÁVY: 0',
       welcomeTitle: '⚔ AI DEBATNÍ ARÉNA ⚔',
@@ -352,6 +365,7 @@
       seekConsensus: 'Hledat konsensus',
       showSummary: 'Shrnutí moderátora',
       consensusReached: 'KONSENSUS DOSAŽEN — Obě strany našly společnou řeč.',
+      debateStopped: 'DEBATA UKONČENA — Debata byla zastavena.',
       consensusGaugeLabel: 'KONSENSUS',
     },
     sv: {
@@ -360,7 +374,7 @@
       persona: 'PERSONA:', model: 'MODELL:',
       pro: 'För (PRO)', neutral: 'Neutral', con: 'Emot (CON)',
       modelHaiku: 'Haiku (Snabb)', modelSonnet: 'Sonnet (Balanserad)', modelOpus: 'Opus (Kraftfull)',
-      startBattle: 'STARTA DEBATT', pause: 'PAUS', resume: 'ÅTERUPPTA', stop: 'STOPP',
+      startBattle: 'Starta debatt', pause: 'Paus', resume: 'Återuppta', stop: 'Stopp',
       ready: 'REDO', battle: 'DEBATT!', paused: 'PAUSAD', stopped: 'STOPPAD',
       messages: 'MEDDELANDEN: 0',
       welcomeTitle: '⚔ AI DEBATTARENA ⚔',
@@ -372,6 +386,7 @@
       seekConsensus: 'Sök konsensus',
       showSummary: 'Moderatorsammanfattning',
       consensusReached: 'KONSENSUS UPPNÅDD — Båda sidor har hittat gemensam mark.',
+      debateStopped: 'DEBATT AVSLUTAD — Debatten har stoppats.',
       consensusGaugeLabel: 'KONSENSUS',
     },
     da: {
@@ -380,7 +395,7 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'For (PRO)', neutral: 'Neutral', con: 'Imod (CON)',
       modelHaiku: 'Haiku (Hurtig)', modelSonnet: 'Sonnet (Balanceret)', modelOpus: 'Opus (Kraftig)',
-      startBattle: 'START DEBAT', pause: 'PAUSE', resume: 'GENOPTAG', stop: 'STOP',
+      startBattle: 'Start debat', pause: 'Pause', resume: 'Genoptag', stop: 'Stop',
       ready: 'KLAR', battle: 'DEBAT!', paused: 'PAUSET', stopped: 'STOPPET',
       messages: 'BESKEDER: 0',
       welcomeTitle: '⚔ AI DEBATARENA ⚔',
@@ -392,6 +407,7 @@
       seekConsensus: 'Søg konsensus',
       showSummary: 'Moderatoropsummering',
       consensusReached: 'KONSENSUS OPNÅET — Begge sider har fundet fælles grund.',
+      debateStopped: 'DEBAT AFSLUTTET — Debatten er blevet stoppet.',
       consensusGaugeLabel: 'KONSENSUS',
     },
     fi: {
@@ -400,7 +416,7 @@
       persona: 'PERSONA:', model: 'MALLI:',
       pro: 'Puolesta (PRO)', neutral: 'Neutraali', con: 'Vastaan (CON)',
       modelHaiku: 'Haiku (Nopea)', modelSonnet: 'Sonnet (Tasapainoinen)', modelOpus: 'Opus (Tehokas)',
-      startBattle: 'ALOITA VÄITTELY', pause: 'TAUKO', resume: 'JATKA', stop: 'LOPETA',
+      startBattle: 'Aloita väittely', pause: 'Tauko', resume: 'Jatka', stop: 'Lopeta',
       ready: 'VALMIS', battle: 'VÄITTELY!', paused: 'TAUOLLA', stopped: 'LOPETETTU',
       messages: 'VIESTIT: 0',
       welcomeTitle: '⚔ AI VÄITTELYAREENA ⚔',
@@ -412,6 +428,7 @@
       seekConsensus: 'Etsi yhteisymmärrystä',
       showSummary: 'Moderaattorin yhteenveto',
       consensusReached: 'YHTEISYMMÄRRYS SAAVUTETTU — Molemmat osapuolet löysivät yhteisen pohjan.',
+      debateStopped: 'VÄITTELY PÄÄTTYNYT — Väittely on keskeytetty.',
       consensusGaugeLabel: 'KONSENSUS',
     },
     nb: {
@@ -420,7 +437,7 @@
       persona: 'PERSONA:', model: 'MODELL:',
       pro: 'For (PRO)', neutral: 'Nøytral', con: 'Mot (CON)',
       modelHaiku: 'Haiku (Rask)', modelSonnet: 'Sonnet (Balansert)', modelOpus: 'Opus (Kraftig)',
-      startBattle: 'START DEBATT', pause: 'PAUSE', resume: 'FORTSETT', stop: 'STOPP',
+      startBattle: 'Start debatt', pause: 'Pause', resume: 'Fortsett', stop: 'Stopp',
       ready: 'KLAR', battle: 'DEBATT!', paused: 'PAUSET', stopped: 'STOPPET',
       messages: 'MELDINGER: 0',
       welcomeTitle: '⚔ AI DEBATTARENA ⚔',
@@ -432,6 +449,7 @@
       seekConsensus: 'Søk konsensus',
       showSummary: 'Moderatoroppsummering',
       consensusReached: 'KONSENSUS OPPNÅDD — Begge sider har funnet felles grunn.',
+      debateStopped: 'DEBATT AVSLUTTET — Debatten har blitt stoppet.',
       consensusGaugeLabel: 'KONSENSUS',
     },
     tr: {
@@ -440,7 +458,7 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Lehte (PRO)', neutral: 'Tarafsız', con: 'Aleyhte (CON)',
       modelHaiku: 'Haiku (Hızlı)', modelSonnet: 'Sonnet (Dengeli)', modelOpus: 'Opus (Güçlü)',
-      startBattle: 'TARTIŞMA BAŞLAT', pause: 'DURAKLAT', resume: 'DEVAM ET', stop: 'DURDUR',
+      startBattle: 'Tartışma başlat', pause: 'Duraklat', resume: 'Devam et', stop: 'Durdur',
       ready: 'HAZIR', battle: 'TARTIŞMA!', paused: 'DURAKLATILDI', stopped: 'DURDURULDU',
       messages: 'MESAJLAR: 0',
       welcomeTitle: '⚔ AI TARTIŞMA ARENASI ⚔',
@@ -452,6 +470,7 @@
       seekConsensus: 'Uzlaşı ara',
       showSummary: 'Moderatör özeti',
       consensusReached: 'UZLAŞI SAĞLANDI — Her iki taraf da ortak bir zemin buldu.',
+      debateStopped: 'TARTIŞMA SONA ERDİ — Tartışma durduruldu.',
       consensusGaugeLabel: 'UZLAŞI',
     },
     el: {
@@ -460,7 +479,7 @@
       persona: 'PERSONA:', model: 'ΜΟΝΤΕΛΟ:',
       pro: 'Υπέρ (PRO)', neutral: 'Ουδέτερο', con: 'Κατά (CON)',
       modelHaiku: 'Haiku (Γρήγορο)', modelSonnet: 'Sonnet (Ισορροπημένο)', modelOpus: 'Opus (Ισχυρό)',
-      startBattle: 'ΕΝΑΡΞΗ ΣΥΖΗΤΗΣΗΣ', pause: 'ΠΑΥΣΗ', resume: 'ΣΥΝΕΧΕΙΑ', stop: 'ΔΙΑΚΟΠΗ',
+      startBattle: 'Έναρξη συζήτησης', pause: 'Παύση', resume: 'Συνέχεια', stop: 'Διακοπή',
       ready: 'ΕΤΟΙΜΟ', battle: 'ΣΥΖΗΤΗΣΗ!', paused: 'ΣΕ ΠΑΥΣΗ', stopped: 'ΔΙΑΚΟΠΗ',
       messages: 'ΜΗΝΥΜΑΤΑ: 0',
       welcomeTitle: '⚔ AI ARENA ΣΥΖΗΤΗΣΗΣ ⚔',
@@ -472,6 +491,7 @@
       seekConsensus: 'Αναζήτηση συναίνεσης',
       showSummary: 'Σύνοψη συντονιστή',
       consensusReached: 'ΣΥΝΑΙΝΕΣΗ ΕΠΙΤΕΥΧΘΗΚΕ — Και οι δύο πλευρές βρήκαν κοινό έδαφος.',
+      debateStopped: 'ΣΥΖΗΤΗΣΗ ΤΕΡΜΑΤΙΣΤΗΚΕ — Η συζήτηση διακόπηκε.',
       consensusGaugeLabel: 'ΣΥΝΑΙΝΕΣΗ',
     },
     hu: {
@@ -480,7 +500,7 @@
       persona: 'PERSONA:', model: 'MODELL:',
       pro: 'Mellette (PRO)', neutral: 'Semleges', con: 'Ellene (CON)',
       modelHaiku: 'Haiku (Gyors)', modelSonnet: 'Sonnet (Kiegyensúlyozott)', modelOpus: 'Opus (Erős)',
-      startBattle: 'VITA INDÍTÁSA', pause: 'SZÜNET', resume: 'FOLYTATÁS', stop: 'LEÁLLÍTÁS',
+      startBattle: 'Vita indítása', pause: 'Szünet', resume: 'Folytatás', stop: 'Leállítás',
       ready: 'KÉSZ', battle: 'VITA!', paused: 'SZÜNETEL', stopped: 'LEÁLLÍTVA',
       messages: 'ÜZENETEK: 0',
       welcomeTitle: '⚔ AI VITAARÉNA ⚔',
@@ -492,6 +512,7 @@
       seekConsensus: 'Konszenzust keresni',
       showSummary: 'Moderátor összefoglalója',
       consensusReached: 'KONSZENZUS ELÉRVE — Mindkét fél közös alapot talált.',
+      debateStopped: 'VITA BEFEJEZVE — A vita leállításra került.',
       consensusGaugeLabel: 'KONSZENZUS',
     },
     ro: {
@@ -500,7 +521,7 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Pentru (PRO)', neutral: 'Neutru', con: 'Contra (CON)',
       modelHaiku: 'Haiku (Rapid)', modelSonnet: 'Sonnet (Echilibrat)', modelOpus: 'Opus (Puternic)',
-      startBattle: 'ÎNCEPE DEZBATEREA', pause: 'PAUZĂ', resume: 'REIA', stop: 'OPREȘTE',
+      startBattle: 'Începe dezbaterea', pause: 'Pauză', resume: 'Reia', stop: 'Oprește',
       ready: 'PREGĂTIT', battle: 'DEZBATERE!', paused: 'ÎN PAUZĂ', stopped: 'OPRIT',
       messages: 'MESAJE: 0',
       welcomeTitle: '⚔ ARENA DE DEZBATERI IA ⚔',
@@ -512,6 +533,7 @@
       seekConsensus: 'Căutare consens',
       showSummary: 'Rezumatul moderatorului',
       consensusReached: 'CONSENS ATINS — Ambele părți au găsit un teren comun.',
+      debateStopped: 'DEZBATERE ÎNCHEIATĂ — Dezbaterea a fost oprită.',
       consensusGaugeLabel: 'CONSENS',
     },
     // === Additional Asian Languages ===
@@ -533,6 +555,7 @@
       seekConsensus: 'หาฉันทามติ',
       showSummary: 'สรุปจากผู้ดำเนินรายการ',
       consensusReached: 'บรรลุฉันทามติ — ทั้งสองฝ่ายพบจุดร่วม',
+      debateStopped: 'จบการอภิปราย — การอภิปรายถูกหยุด',
       consensusGaugeLabel: 'ฉันทามติ',
     },
     vi: {
@@ -541,7 +564,7 @@
       persona: 'VAI TRÒ:', model: 'MÔ HÌNH:',
       pro: 'Ủng hộ (PRO)', neutral: 'Trung lập', con: 'Phản đối (CON)',
       modelHaiku: 'Haiku (Nhanh)', modelSonnet: 'Sonnet (Cân bằng)', modelOpus: 'Opus (Mạnh mẽ)',
-      startBattle: 'BẮT ĐẦU TRANH LUẬN', pause: 'TẠM DỪNG', resume: 'TIẾP TỤC', stop: 'DỪNG',
+      startBattle: 'Bắt đầu tranh luận', pause: 'Tạm dừng', resume: 'Tiếp tục', stop: 'Dừng',
       ready: 'SẴN SÀNG', battle: 'TRANH LUẬN!', paused: 'TẠM DỪNG', stopped: 'ĐÃ DỪNG',
       messages: 'TIN NHẮN: 0',
       welcomeTitle: '⚔ ĐẤU TRƯỜNG TRANH LUẬN AI ⚔',
@@ -553,6 +576,7 @@
       seekConsensus: 'Tìm đồng thuận',
       showSummary: 'Tóm tắt của người điều hành',
       consensusReached: 'ĐẠT ĐỒNG THUẬN — Cả hai bên đã tìm được tiếng nói chung.',
+      debateStopped: 'TRANH LUẬN KẾT THÚC — Cuộc tranh luận đã bị dừng.',
       consensusGaugeLabel: 'ĐỒNG THUẬN',
     },
     id: {
@@ -561,7 +585,7 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Setuju (PRO)', neutral: 'Netral', con: 'Menolak (CON)',
       modelHaiku: 'Haiku (Cepat)', modelSonnet: 'Sonnet (Seimbang)', modelOpus: 'Opus (Kuat)',
-      startBattle: 'MULAI DEBAT', pause: 'JEDA', resume: 'LANJUTKAN', stop: 'BERHENTI',
+      startBattle: 'Mulai debat', pause: 'Jeda', resume: 'Lanjutkan', stop: 'Berhenti',
       ready: 'SIAP', battle: 'DEBAT!', paused: 'DIJEDA', stopped: 'DIHENTIKAN',
       messages: 'PESAN: 0',
       welcomeTitle: '⚔ ARENA DEBAT AI ⚔',
@@ -573,6 +597,7 @@
       seekConsensus: 'Cari konsensus',
       showSummary: 'Ringkasan moderator',
       consensusReached: 'KONSENSUS TERCAPAI — Kedua agen menemukan titik temu.',
+      debateStopped: 'DEBAT SELESAI — Debat telah dihentikan.',
       consensusGaugeLabel: 'KONSENSUS',
     },
     ms: {
@@ -581,7 +606,7 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Setuju (PRO)', neutral: 'Neutral', con: 'Menentang (CON)',
       modelHaiku: 'Haiku (Pantas)', modelSonnet: 'Sonnet (Seimbang)', modelOpus: 'Opus (Berkuasa)',
-      startBattle: 'MULA PERBAHASAN', pause: 'JEDA', resume: 'SAMBUNG', stop: 'HENTI',
+      startBattle: 'Mula perbahasan', pause: 'Jeda', resume: 'Sambung', stop: 'Henti',
       ready: 'SEDIA', battle: 'PERBAHASAN!', paused: 'DIJEDA', stopped: 'DIHENTIKAN',
       messages: 'MESEJ: 0',
       welcomeTitle: '⚔ ARENA PERBAHASAN AI ⚔',
@@ -593,6 +618,7 @@
       seekConsensus: 'Cari konsensus',
       showSummary: 'Rumusan moderator',
       consensusReached: 'KONSENSUS DICAPAI — Kedua-dua pihak menemui titik persamaan.',
+      debateStopped: 'PERBAHASAN TAMAT — Perbahasan telah dihentikan.',
       consensusGaugeLabel: 'KONSENSUS',
     },
     hi: {
@@ -613,6 +639,7 @@
       seekConsensus: 'सहमति खोजें',
       showSummary: 'संचालक सारांश',
       consensusReached: 'सहमति प्राप्त — दोनों पक्षों ने समान आधार पाया।',
+      debateStopped: 'बहस समाप्त — बहस रोक दी गई।',
       consensusGaugeLabel: 'सहमति',
     },
     bn: {
@@ -633,6 +660,7 @@
       seekConsensus: 'ঐকমত্য খোঁজা',
       showSummary: 'সঞ্চালকের সারসংক্ষেপ',
       consensusReached: 'ঐকমত্যে পৌঁছানো হয়েছে — উভয় পক্ষ সাধারণ ভিত্তি খুঁজে পেয়েছে।',
+      debateStopped: 'বিতর্ক শেষ — বিতর্ক বন্ধ করা হয়েছে।',
       consensusGaugeLabel: 'ঐকমত্য',
     },
     // === Middle Eastern Languages ===
@@ -654,6 +682,7 @@
       seekConsensus: 'البحث عن توافق',
       showSummary: 'ملخص المشرف',
       consensusReached: 'تم التوصل إلى توافق — وجد كلا الطرفين أرضية مشتركة.',
+      debateStopped: 'انتهى النقاش — تم إيقاف النقاش.',
       consensusGaugeLabel: 'توافق',
     },
     he: {
@@ -674,6 +703,7 @@
       seekConsensus: 'חיפוש הסכמה',
       showSummary: 'סיכום המנחה',
       consensusReached: 'הושגה הסכמה — שני הצדדים מצאו בסיס משותף.',
+      debateStopped: 'הדיון הסתיים — הדיון הופסק.',
       consensusGaugeLabel: 'הסכמה',
     },
     fa: {
@@ -694,6 +724,7 @@
       seekConsensus: 'جستجوی توافق',
       showSummary: 'خلاصه مجری',
       consensusReached: 'توافق حاصل شد — هر دو طرف زمینه مشترکی پیدا کردند.',
+      debateStopped: 'بحث پایان یافت — بحث متوقف شد.',
       consensusGaugeLabel: 'توافق',
     },
   };
@@ -714,6 +745,10 @@
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
       if (key) /** @type {HTMLInputElement} */ (el).placeholder = t(key);
+    });
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const key = el.getAttribute('data-i18n-title');
+      if (key) el.title = t(key);
     });
   }
 
@@ -1134,6 +1169,15 @@
       connInfo.textContent = '';
     }
 
+    // Show stopped banner in chat
+    if (status === 'stopped') {
+      const stoppedDiv = document.createElement('div');
+      stoppedDiv.className = 'chat-message stopped-banner';
+      stoppedDiv.innerHTML = `<div class="stopped-text">${t('debateStopped')}</div>`;
+      chatArea.appendChild(stoppedDiv);
+      chatArea.scrollTop = chatArea.scrollHeight;
+    }
+
     // Hide consensus gauge when idle
     if (status === 'idle' && consensusGaugeEl) {
       consensusGaugeEl.style.display = 'none';
@@ -1157,11 +1201,15 @@
     showSummaryCheck.disabled = status === 'running';
 
     if (status === 'paused') {
-      pauseBtn.textContent = '▶ ' + t('resume');
-      pauseBtn.className = 'rpg-btn info';
+      pauseBtn.textContent = '▶';
+      pauseBtn.title = t('resume');
+      pauseBtn.setAttribute('data-i18n-title', 'resume');
+      pauseBtn.className = 'ctrl-btn ctrl-pause ctrl-resume';
     } else {
-      pauseBtn.textContent = '⏸ ' + t('pause');
-      pauseBtn.className = 'rpg-btn warning';
+      pauseBtn.textContent = '⏸';
+      pauseBtn.title = t('pause');
+      pauseBtn.setAttribute('data-i18n-title', 'pause');
+      pauseBtn.className = 'ctrl-btn ctrl-pause';
     }
   }
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.5.1] - 2026-03-19
+
+### Changed
+- Control buttons (start/pause/stop) replaced with compact player-style icons (▶ ⏸ ⏹) placed next to the topic input
+- Button tooltip text unified to title case across all 27 languages with i18n support (`data-i18n-title`)
+- Welcome description updated to reference ▶ icon instead of button text
+
+### Added
+- "Debate Ended" banner in chat area when debate is stopped — red-themed, matching consensus banner style, with i18n for all 27 languages
+- Minimum width constraint on setup panel and agent config containers to prevent layout collapse on narrow windows
+
+### Fixed
+- Checkbox options no longer wrap to the next line when window is narrowed (`flex-wrap: nowrap`, `flex-shrink: 0`)
+
 ## [0.5.0] - 2026-03-19
 
 ### Added
