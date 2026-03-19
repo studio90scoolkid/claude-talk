@@ -4,7 +4,8 @@ import * as vscode from 'vscode';
 import { AIAgent, Persona, ClaudeModelAlias, AuthStatus, DebateMessage, TokenUsage, PERSONA_PROMPTS, PERSONA_LABELS } from './types';
 
 const TIMEOUT_MS = 60_000;
-const MAX_OPPONENT_MSG_LENGTH = 600;
+const MAX_OPPONENT_MSG_LENGTH = 1000;
+const MAX_SUMMARY_PER_SIDE = 3;
 
 let outputChannel: vscode.OutputChannel | undefined;
 
@@ -203,8 +204,9 @@ Absolute rules:
 - If you sense you are drifting off-topic, immediately return to the core issues of "${topic}".
 - Each turn, present new arguments, cases, or evidence not used before.
 - Repeating the same argument in different words is forbidden.
+- You MUST directly engage with your opponent's specific claims before presenting your own points.
 - You MUST respond in the SAME LANGUAGE as the debate topic. Detect the language of "${topic}" and use that language for your entire response.
-- Keep your response to 3-5 sentences.
+- Keep your response to 3-5 sentences. Follow the response structure given in each turn prompt.
 - NEVER use markdown formatting. No **, no *, no #, no -, no \`, no >. Absolutely zero markup characters. Plain text only. This is non-negotiable.${consensusRule}`;
   }
 
@@ -212,6 +214,27 @@ Absolute rules:
   private buildFirstTurnPrompt(topic: string): string {
     return `Make your first statement on the debate topic "${topic}".
 Present your core stance and strongest evidence.`;
+  }
+
+  /** Build a compact summary of arguments so far from both sides */
+  private buildDebateProgress(history: DebateMessage[]): string {
+    if (history.length <= 1) { return ''; }
+
+    const myMsgs = history.filter(m => m.agent === (this.persona === 'pro' || this.persona === 'neutral' ? 'A' : 'B'));
+    const opMsgs = history.filter(m => m.agent !== (this.persona === 'pro' || this.persona === 'neutral' ? 'A' : 'B'));
+
+    const summarize = (msgs: DebateMessage[], limit: number) =>
+      msgs.slice(-limit).map((m, i) => `  ${i + 1}. ${m.content.slice(0, 100)}`).join('\n');
+
+    const parts: string[] = ['[Debate progress]'];
+    if (myMsgs.length > 0) {
+      parts.push(`Your previous points:\n${summarize(myMsgs, MAX_SUMMARY_PER_SIDE)}`);
+    }
+    if (opMsgs.length > 0) {
+      parts.push(`${this.opponentName}'s previous points:\n${summarize(opMsgs, MAX_SUMMARY_PER_SIDE)}`);
+    }
+    parts.push('Do NOT repeat any of the above points. You must advance the debate with new substance.');
+    return parts.join('\n');
   }
 
   /** Subsequent turns: respond to opponent's latest message with turn-aware strategy */
@@ -222,10 +245,17 @@ Present your core stance and strongest evidence.`;
       : lastMsg.content;
 
     const strategyHint = this.getStrategyHint();
+    const debateProgress = this.buildDebateProgress(history);
 
-    const actionLine = this.seekConsensus
-      ? `Respond to the above statement honestly. Acknowledge what is valid, challenge what you disagree with.`
-      : `Counter the above statement.`;
+    const responseFormat = this.seekConsensus
+      ? `Response structure:
+1. Directly address the strongest specific claim your opponent just made (1 sentence).
+2. Present your new argument or evidence on an aspect not yet discussed (2-3 sentences).
+3. Identify one point of agreement or remaining tension to explore next (1 sentence).`
+      : `Response structure:
+1. Directly rebut the strongest specific claim your opponent just made (1 sentence).
+2. Present ONE new argument with concrete evidence, data, or example (2-3 sentences).
+3. Pose a pointed question or challenge that forces your opponent to defend a weak spot (1 sentence).`;
 
     // Topic anchor gets stronger as turns progress
     let topicReminder = '';
@@ -233,9 +263,11 @@ Present your core stance and strongest evidence.`;
       topicReminder = `\n\n[Topic check] The debate topic is "${topic}". Only discuss content directly related to this topic.`;
     }
 
-    return `[${this.opponentName}'s statement]: ${opponentText}
+    return `${debateProgress}
 
-${actionLine}
+[${this.opponentName}'s latest statement]: ${opponentText}
+
+${responseFormat}
 Strategy: ${strategyHint}${topicReminder}`;
   }
 

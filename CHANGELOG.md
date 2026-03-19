@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.2] - 2026-03-19
+
+### Changed
+- Structured debate flow — each turn now requires agents to directly rebut opponent's claim, present new evidence, and pose a challenge
+- Debate progress tracking — follow-up prompts include a summary of recent arguments from both sides to prevent repetition
+- Opponent message cap raised from 600 to 1000 characters for better context retention
+- System prompt now enforces "engage with opponent's specific claims first" rule
+
 ## [0.5.1] - 2026-03-19
 
 ### Changed
