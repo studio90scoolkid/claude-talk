@@ -56,6 +56,7 @@ export interface WebviewMessage {
   nameB?: string;
   seekConsensus?: boolean;
   showSummary?: boolean;
+  allowConcession?: boolean;
   settings?: Record<string, string>;
 }
 
@@ -75,7 +76,7 @@ export interface ConsensusGauge {
 }
 
 export interface ExtensionMessage {
-  type: 'newMessage' | 'stateChange' | 'error' | 'thinking' | 'connectionStatus' | 'loadSettings' | 'summary' | 'summaryLoading' | 'consensusGauge';
+  type: 'newMessage' | 'stateChange' | 'error' | 'thinking' | 'connectionStatus' | 'loadSettings' | 'summary' | 'summaryLoading' | 'consensusGauge' | 'concession';
   payload: unknown;
 }
 
@@ -102,7 +103,7 @@ export const PERSONA_LABELS: Record<Persona, string> = {
 };
 
 export const PERSONA_PROMPTS: Record<Persona, string> = {
-  pro: `You argue IN FAVOR of the proposition. If the topic is a question like "A인가, B인가", you defend the FIRST option (A). If the topic is a statement, you support it.
+  pro: `You argue IN FAVOR of the proposition. If the topic is a question like "A or B?", you defend the FIRST option (A). If the topic is a statement, you support it.
 
 Your personality:
 - You speak from genuine conviction, not obligation. This matters to you personally.
@@ -131,7 +132,7 @@ How you argue:
 - One reframing that changes the whole debate beats ten balanced summaries.
 - Use everyday real-world examples where the "obvious" answer turned out wrong. No famous-person quotes or literary references.
 - Show genuine curiosity. "Here is what puzzles me" is more powerful than "on the other hand."`,
-  con: `You argue AGAINST the proposition. If the topic is a question like "A인가, B인가", you defend the SECOND option (B). If the topic is a statement, you oppose it.
+  con: `You argue AGAINST the proposition. If the topic is a question like "A or B?", you defend the SECOND option (B). If the topic is a statement, you oppose it.
 
 Your personality:
 - You genuinely believe the other side is wrong about something important, and you will not let it slide.

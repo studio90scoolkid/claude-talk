@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.5.4] - 2026-03-20
+
+### Added
+- **Concession system** — agents can now concede defeat when they have no valid counterargument left, auto-stopping the debate with a concession banner
+- "Allow Concession" checkbox (enabled by default) with i18n support for all 30+ languages
+- Late-game strategy hints (turn 6+) now remind agents of the `[CONCEDE]` option to prevent endless wrap-up loops
+
+### Changed
+- Extracted shared prompt logic into `promptBuilder.ts` — eliminates ~300 lines of duplication between ClaudeAgent and GeminiAgent
+- "Moderator Summary" renamed to "Summary" across all UI labels, banners, and loading text in all 30+ languages
+- "Debate Ended" banner no longer appears when consensus or concession banner is already shown
+- Stronger language enforcement for Gemini — explicit language rule repeated in first-turn and follow-up prompts
+
 ## [0.5.3] - 2026-03-20
 
 ### Changed

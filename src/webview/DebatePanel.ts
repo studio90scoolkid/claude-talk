@@ -76,6 +76,12 @@ export class DebatePanel {
       }
     });
 
+    this.debateManager.on('concession', (data: { conceder: string; winner: string }) => {
+      if (!this.disposed) {
+        this.panel.webview.postMessage({ type: 'concession', payload: data });
+      }
+    });
+
     this.debateManager.on('consensusGauge', (gauge: { scoreA: number; scoreB: number; average: number }) => {
       if (!this.disposed) {
         this.panel.webview.postMessage({ type: 'consensusGauge', payload: gauge });
@@ -192,6 +198,7 @@ export class DebatePanel {
             (message.providerA as Provider) || 'claude',
             (message.providerB as Provider) || 'claude',
             message.showSummary !== false,
+            message.allowConcession !== false,
           );
         }
         break;

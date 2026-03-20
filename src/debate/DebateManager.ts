@@ -30,6 +30,7 @@ export class DebateManager extends EventEmitter {
   private _providerA: Provider = 'claude';
   private _providerB: Provider = 'claude';
   private _showSummary = true;
+  private _allowConcession = true;
   private _summaryProc: ChildProcess | null = null;
 
   // Consensus gauge tracking (0-100 per agent)
@@ -58,6 +59,7 @@ export class DebateManager extends EventEmitter {
     providerA: Provider = 'claude',
     providerB: Provider = 'claude',
     showSummary = true,
+    allowConcession = true,
   ): Promise<void> {
     // Stop any existing debate
     if (this.state.status === 'running' || this.state.status === 'paused') {
@@ -84,14 +86,15 @@ export class DebateManager extends EventEmitter {
     this._hasScoreA = false;
     this._hasScoreB = false;
     this._showSummary = showSummary;
+    this._allowConcession = allowConcession;
     this._modelA = modelA;
     this._modelB = modelB;
     this._providerA = providerA;
     this._providerB = providerB;
 
     // Create persistent agents with their own sessions
-    this.agentA = this.createAgent(providerA, this._nameA, personaA, modelA, this._nameB, seekConsensus);
-    this.agentB = this.createAgent(providerB, this._nameB, personaB, modelB, this._nameA, seekConsensus);
+    this.agentA = this.createAgent(providerA, this._nameA, personaA, modelA, this._nameB, seekConsensus, allowConcession);
+    this.agentB = this.createAgent(providerB, this._nameB, personaB, modelB, this._nameA, seekConsensus, allowConcession);
 
     this.abortController = new AbortController();
     const myLoopId = ++this.loopId;
@@ -169,7 +172,7 @@ export class DebateManager extends EventEmitter {
           const msg = err instanceof Error ? err.message : String(err);
           if (msg === 'Aborted' || id !== this.loopId) { return; }
           if (attempt === MAX_RETRIES) {
-            this.emit('error', `${currentAgent.name} 응답 실패: ${msg}`);
+            this.emit('error', `${currentAgent.name} failed to respond: ${msg}`);
             this.state.status = 'paused';
             this.emitStateChange();
             return;
@@ -220,6 +223,12 @@ export class DebateManager extends EventEmitter {
         message.content = message.content.replace(/\s*\[CONSENSUS_REACHED\]\s*/g, '').trim();
       }
 
+      // Detect concession marker
+      const hasConcession = this._allowConcession && response.text.includes('[CONCEDE]');
+      if (hasConcession) {
+        message.content = message.content.replace(/\s*\[CONCEDE\]\s*/g, '').trim();
+      }
+
       this.state.messages.push(message);
       if (this.state.messages.length > MAX_MESSAGES) {
         this.state.messages = this.state.messages.slice(-MAX_MESSAGES);
@@ -230,6 +239,17 @@ export class DebateManager extends EventEmitter {
       if (this._seekConsensus && hasConsensus && this._consensusScoreA >= 70 && this._consensusScoreB >= 70) {
         this.state.status = 'stopped';
         this.emit('consensus');
+        this.emitStateChange();
+        if (this._showSummary) { this.generateSummary(); }
+        return;
+      }
+
+      // Auto-stop when an agent concedes defeat
+      if (hasConcession) {
+        this.state.status = 'stopped';
+        const conceder = isA ? this._nameA : this._nameB;
+        const winner = isA ? this._nameB : this._nameA;
+        this.emit('concession', { conceder, winner });
         this.emitStateChange();
         if (this._showSummary) { this.generateSummary(); }
         return;
@@ -248,11 +268,12 @@ export class DebateManager extends EventEmitter {
     model: ModelAlias,
     opponentName: string,
     seekConsensus: boolean,
+    allowConcession: boolean,
   ): AIAgent {
     if (provider === 'gemini') {
-      return new GeminiAgent(name, persona, model as any, opponentName, seekConsensus);
+      return new GeminiAgent(name, persona, model as any, opponentName, seekConsensus, allowConcession);
     }
-    return new ClaudeAgent(name, persona, model as any, opponentName, seekConsensus);
+    return new ClaudeAgent(name, persona, model as any, opponentName, seekConsensus, allowConcession);
   }
 
   private emitStateChange(): void {

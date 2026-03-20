@@ -40,12 +40,14 @@
       character: 'CHARACTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Seek Consensus',
-      showSummary: 'Moderator Summary',
+      showSummary: 'Show Summary',
+      allowConcession: 'Allow Concession',
       consensusReached: 'CONSENSUS REACHED — Both agents have found common ground.',
       debateStopped: 'DEBATE ENDED — The debate has been stopped.',
+      concessionMessage: 'CONCESSION — {conceder} has conceded defeat to {winner}.',
       consensusGaugeLabel: 'CONSENSUS',
-      moderatorSummary: 'MODERATOR SUMMARY',
-      summaryLoading: 'The moderator is preparing a summary...',
+      moderatorSummary: 'SUMMARY',
+      summaryLoading: 'Preparing a summary...',
     },
     ko: {
       checking: '확인 중...',
@@ -80,12 +82,14 @@
       character: '캐릭터:',
       charMaskDude: '마스크 듀드', charNinjaFrog: '닌자 프로그', charPinkMan: '핑크맨', charVirtualGuy: '버추얼 가이',
       seekConsensus: '합의점 찾기',
-      showSummary: '토론 정리',
+      showSummary: '토론 요약',
+      allowConcession: '패배 인정 허용',
       consensusReached: '합의 도달 — 양측이 공통점을 찾았습니다.',
       debateStopped: '토론 종료 — 토론이 중단되었습니다.',
+      concessionMessage: '패배 인정 — {conceder}이(가) {winner}에게 패배를 인정했습니다.',
       consensusGaugeLabel: '합의도',
-      moderatorSummary: '사회자 정리',
-      summaryLoading: '사회자가 토론을 정리하고 있습니다...',
+      moderatorSummary: '토론 요약',
+      summaryLoading: '토론을 요약하고 있습니다...',
     },
     ja: {
       checking: '確認中...',
@@ -117,9 +121,11 @@
       character: 'キャラ:',
       charMaskDude: 'マスクデュード', charNinjaFrog: 'ニンジャフロッグ', charPinkMan: 'ピンクマン', charVirtualGuy: 'バーチャルガイ',
       seekConsensus: '合意を目指す',
-      showSummary: '司会者まとめ',
+      showSummary: 'まとめを表示',
+      allowConcession: '敗北を認める',
       consensusReached: '合意に達しました — 両者が共通点を見つけました。',
       debateStopped: '討論終了 — 討論が中断されました。',
+      concessionMessage: '敗北宣言 — {conceder}が{winner}に敗北を認めました。',
       consensusGaugeLabel: '合意度',
     },
     zh: {
@@ -152,9 +158,11 @@
       character: '角色:',
       charMaskDude: '面具侠', charNinjaFrog: '忍者蛙', charPinkMan: '粉红人', charVirtualGuy: '虚拟侠',
       seekConsensus: '寻求共识',
-      showSummary: '主持人总结',
+      showSummary: '显示总结',
+      allowConcession: '允许认输',
       consensusReached: '达成共识 — 双方找到了共同点。',
       debateStopped: '辩论结束 — 辩论已被中止。',
+      concessionMessage: '认输 — {conceder}向{winner}认输了。',
       consensusGaugeLabel: '共识度',
     },
     // === European Languages ===
@@ -174,7 +182,7 @@
       character: 'CHARAKTER:',
       charMaskDude: 'Maskentyp', charNinjaFrog: 'Ninja-Frosch', charPinkMan: 'Pinkmann', charVirtualGuy: 'Virtueller Typ',
       seekConsensus: 'Konsens suchen',
-      showSummary: 'Moderator-Zusammenfassung',
+      showSummary: 'Zusammenfassung',
       consensusReached: 'KONSENS ERREICHT — Beide Seiten haben Gemeinsamkeiten gefunden.',
       debateStopped: 'DEBATTE BEENDET — Die Debatte wurde abgebrochen.',
       consensusGaugeLabel: 'KONSENS',
@@ -195,7 +203,7 @@
       character: 'PERSONNAGE :',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Chercher un consensus',
-      showSummary: 'Résumé du modérateur',
+      showSummary: 'Résumé',
       consensusReached: 'CONSENSUS ATTEINT — Les deux agents ont trouvé un terrain d\'entente.',
       debateStopped: 'DÉBAT TERMINÉ — Le débat a été arrêté.',
       consensusGaugeLabel: 'CONSENSUS',
@@ -216,7 +224,7 @@
       character: 'PERSONAJE:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Buscar consenso',
-      showSummary: 'Resumen del moderador',
+      showSummary: 'Resumen',
       consensusReached: 'CONSENSO ALCANZADO — Ambos agentes han encontrado puntos en común.',
       debateStopped: 'DEBATE FINALIZADO — El debate ha sido detenido.',
       consensusGaugeLabel: 'CONSENSO',
@@ -237,7 +245,7 @@
       character: 'PERSONAGEM:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Buscar consenso',
-      showSummary: 'Resumo do moderador',
+      showSummary: 'Resumo',
       consensusReached: 'CONSENSO ALCANÇADO — Ambos os agentes encontraram pontos em comum.',
       debateStopped: 'DEBATE ENCERRADO — O debate foi interrompido.',
       consensusGaugeLabel: 'CONSENSO',
@@ -258,7 +266,7 @@
       character: 'PERSONAGGIO:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Cercare consenso',
-      showSummary: 'Riepilogo del moderatore',
+      showSummary: 'Riepilogo',
       consensusReached: 'CONSENSO RAGGIUNTO — Entrambi gli agenti hanno trovato un terreno comune.',
       debateStopped: 'DIBATTITO TERMINATO — Il dibattito è stato interrotto.',
       consensusGaugeLabel: 'CONSENSO',
@@ -279,7 +287,7 @@
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Consensus zoeken',
-      showSummary: 'Samenvatting moderator',
+      showSummary: 'Samenvatting',
       consensusReached: 'CONSENSUS BEREIKT — Beide agenten hebben een gemeenschappelijke basis gevonden.',
       debateStopped: 'DEBAT BEËINDIGD — Het debat is gestopt.',
       consensusGaugeLabel: 'CONSENSUS',
@@ -300,7 +308,7 @@
       character: 'POSTAĆ:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Szukaj konsensusu',
-      showSummary: 'Podsumowanie moderatora',
+      showSummary: 'Podsumowanie',
       consensusReached: 'KONSENSUS OSIĄGNIĘTY — Obie strony znalazły wspólny grunt.',
       debateStopped: 'DEBATA ZAKOŃCZONA — Debata została zatrzymana.',
       consensusGaugeLabel: 'KONSENSUS',
@@ -321,7 +329,7 @@
       character: 'ПЕРСОНАЖ:',
       charMaskDude: 'Маск Дюд', charNinjaFrog: 'Ниндзя Фрог', charPinkMan: 'Пинк Мэн', charVirtualGuy: 'Виртуал Гай',
       seekConsensus: 'Искать консенсус',
-      showSummary: 'Итоги модератора',
+      showSummary: 'Итоги',
       consensusReached: 'КОНСЕНСУС ДОСТИГНУТ — Обе стороны нашли общую позицию.',
       debateStopped: 'ДЕБАТЫ ЗАВЕРШЕНЫ — Дебаты были остановлены.',
       consensusGaugeLabel: 'КОНСЕНСУС',
@@ -342,7 +350,7 @@
       character: 'ПЕРСОНАЖ:',
       charMaskDude: 'Маск Дюд', charNinjaFrog: 'Ниндзя Фрог', charPinkMan: 'Пинк Мэн', charVirtualGuy: 'Виртуал Гай',
       seekConsensus: 'Шукати консенсус',
-      showSummary: 'Підсумки модератора',
+      showSummary: 'Підсумки',
       consensusReached: 'КОНСЕНСУС ДОСЯГНУТО — Обидві сторони знайшли спільну позицію.',
       debateStopped: 'ДЕБАТИ ЗАВЕРШЕНО — Дебати були зупинені.',
       consensusGaugeLabel: 'КОНСЕНСУС',
@@ -363,7 +371,7 @@
       character: 'POSTAVA:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Hledat konsensus',
-      showSummary: 'Shrnutí moderátora',
+      showSummary: 'Shrnutí',
       consensusReached: 'KONSENSUS DOSAŽEN — Obě strany našly společnou řeč.',
       debateStopped: 'DEBATA UKONČENA — Debata byla zastavena.',
       consensusGaugeLabel: 'KONSENSUS',
@@ -384,7 +392,7 @@
       character: 'KARAKTÄR:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Sök konsensus',
-      showSummary: 'Moderatorsammanfattning',
+      showSummary: 'Sammanfattning',
       consensusReached: 'KONSENSUS UPPNÅDD — Båda sidor har hittat gemensam mark.',
       debateStopped: 'DEBATT AVSLUTAD — Debatten har stoppats.',
       consensusGaugeLabel: 'KONSENSUS',
@@ -405,7 +413,7 @@
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Søg konsensus',
-      showSummary: 'Moderatoropsummering',
+      showSummary: 'Opsummering',
       consensusReached: 'KONSENSUS OPNÅET — Begge sider har fundet fælles grund.',
       debateStopped: 'DEBAT AFSLUTTET — Debatten er blevet stoppet.',
       consensusGaugeLabel: 'KONSENSUS',
@@ -426,7 +434,7 @@
       character: 'HAHMO:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Etsi yhteisymmärrystä',
-      showSummary: 'Moderaattorin yhteenveto',
+      showSummary: 'Yhteenveto',
       consensusReached: 'YHTEISYMMÄRRYS SAAVUTETTU — Molemmat osapuolet löysivät yhteisen pohjan.',
       debateStopped: 'VÄITTELY PÄÄTTYNYT — Väittely on keskeytetty.',
       consensusGaugeLabel: 'KONSENSUS',
@@ -447,7 +455,7 @@
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Søk konsensus',
-      showSummary: 'Moderatoroppsummering',
+      showSummary: 'Oppsummering',
       consensusReached: 'KONSENSUS OPPNÅDD — Begge sider har funnet felles grunn.',
       debateStopped: 'DEBATT AVSLUTTET — Debatten har blitt stoppet.',
       consensusGaugeLabel: 'KONSENSUS',
@@ -468,7 +476,7 @@
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Uzlaşı ara',
-      showSummary: 'Moderatör özeti',
+      showSummary: 'Özet',
       consensusReached: 'UZLAŞI SAĞLANDI — Her iki taraf da ortak bir zemin buldu.',
       debateStopped: 'TARTIŞMA SONA ERDİ — Tartışma durduruldu.',
       consensusGaugeLabel: 'UZLAŞI',
@@ -489,7 +497,7 @@
       character: 'ΧΑΡΑΚΤΗΡΑΣ:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Αναζήτηση συναίνεσης',
-      showSummary: 'Σύνοψη συντονιστή',
+      showSummary: 'Σύνοψη',
       consensusReached: 'ΣΥΝΑΙΝΕΣΗ ΕΠΙΤΕΥΧΘΗΚΕ — Και οι δύο πλευρές βρήκαν κοινό έδαφος.',
       debateStopped: 'ΣΥΖΗΤΗΣΗ ΤΕΡΜΑΤΙΣΤΗΚΕ — Η συζήτηση διακόπηκε.',
       consensusGaugeLabel: 'ΣΥΝΑΙΝΕΣΗ',
@@ -510,7 +518,7 @@
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Konszenzust keresni',
-      showSummary: 'Moderátor összefoglalója',
+      showSummary: 'Összefoglaló',
       consensusReached: 'KONSZENZUS ELÉRVE — Mindkét fél közös alapot talált.',
       debateStopped: 'VITA BEFEJEZVE — A vita leállításra került.',
       consensusGaugeLabel: 'KONSZENZUS',
@@ -531,7 +539,7 @@
       character: 'PERSONAJE:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Căutare consens',
-      showSummary: 'Rezumatul moderatorului',
+      showSummary: 'Rezumat',
       consensusReached: 'CONSENS ATINS — Ambele părți au găsit un teren comun.',
       debateStopped: 'DEZBATERE ÎNCHEIATĂ — Dezbaterea a fost oprită.',
       consensusGaugeLabel: 'CONSENS',
@@ -553,7 +561,7 @@
       character: 'ตัวละคร:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'หาฉันทามติ',
-      showSummary: 'สรุปจากผู้ดำเนินรายการ',
+      showSummary: 'สรุป',
       consensusReached: 'บรรลุฉันทามติ — ทั้งสองฝ่ายพบจุดร่วม',
       debateStopped: 'จบการอภิปราย — การอภิปรายถูกหยุด',
       consensusGaugeLabel: 'ฉันทามติ',
@@ -574,7 +582,7 @@
       character: 'NHÂN VẬT:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Tìm đồng thuận',
-      showSummary: 'Tóm tắt của người điều hành',
+      showSummary: 'Tóm tắt',
       consensusReached: 'ĐẠT ĐỒNG THUẬN — Cả hai bên đã tìm được tiếng nói chung.',
       debateStopped: 'TRANH LUẬN KẾT THÚC — Cuộc tranh luận đã bị dừng.',
       consensusGaugeLabel: 'ĐỒNG THUẬN',
@@ -595,7 +603,7 @@
       character: 'KARAKTER:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Cari konsensus',
-      showSummary: 'Ringkasan moderator',
+      showSummary: 'Ringkasan',
       consensusReached: 'KONSENSUS TERCAPAI — Kedua agen menemukan titik temu.',
       debateStopped: 'DEBAT SELESAI — Debat telah dihentikan.',
       consensusGaugeLabel: 'KONSENSUS',
@@ -616,7 +624,7 @@
       character: 'WATAK:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'Cari konsensus',
-      showSummary: 'Rumusan moderator',
+      showSummary: 'Rumusan',
       consensusReached: 'KONSENSUS DICAPAI — Kedua-dua pihak menemui titik persamaan.',
       debateStopped: 'PERBAHASAN TAMAT — Perbahasan telah dihentikan.',
       consensusGaugeLabel: 'KONSENSUS',
@@ -637,7 +645,7 @@
       character: 'चरित्र:',
       charMaskDude: 'मास्क ड्यूड', charNinjaFrog: 'निंजा फ्रॉग', charPinkMan: 'पिंक मैन', charVirtualGuy: 'वर्चुअल गाय',
       seekConsensus: 'सहमति खोजें',
-      showSummary: 'संचालक सारांश',
+      showSummary: 'सारांश',
       consensusReached: 'सहमति प्राप्त — दोनों पक्षों ने समान आधार पाया।',
       debateStopped: 'बहस समाप्त — बहस रोक दी गई।',
       consensusGaugeLabel: 'सहमति',
@@ -658,7 +666,7 @@
       character: 'চরিত্র:',
       charMaskDude: 'মাস্ক ডিউড', charNinjaFrog: 'নিনজা ফ্রগ', charPinkMan: 'পিংক ম্যান', charVirtualGuy: 'ভার্চুয়াল গাই',
       seekConsensus: 'ঐকমত্য খোঁজা',
-      showSummary: 'সঞ্চালকের সারসংক্ষেপ',
+      showSummary: 'সারসংক্ষেপ',
       consensusReached: 'ঐকমত্যে পৌঁছানো হয়েছে — উভয় পক্ষ সাধারণ ভিত্তি খুঁজে পেয়েছে।',
       debateStopped: 'বিতর্ক শেষ — বিতর্ক বন্ধ করা হয়েছে।',
       consensusGaugeLabel: 'ঐকমত্য',
@@ -680,7 +688,7 @@
       character: 'الشخصية:',
       charMaskDude: 'رجل القناع', charNinjaFrog: 'ضفدع النينجا', charPinkMan: 'الرجل الوردي', charVirtualGuy: 'الرجل الافتراضي',
       seekConsensus: 'البحث عن توافق',
-      showSummary: 'ملخص المشرف',
+      showSummary: 'ملخص',
       consensusReached: 'تم التوصل إلى توافق — وجد كلا الطرفين أرضية مشتركة.',
       debateStopped: 'انتهى النقاش — تم إيقاف النقاش.',
       consensusGaugeLabel: 'توافق',
@@ -701,7 +709,7 @@
       character: 'דמות:',
       charMaskDude: 'Mask Dude', charNinjaFrog: 'Ninja Frog', charPinkMan: 'Pink Man', charVirtualGuy: 'Virtual Guy',
       seekConsensus: 'חיפוש הסכמה',
-      showSummary: 'סיכום המנחה',
+      showSummary: 'סיכום',
       consensusReached: 'הושגה הסכמה — שני הצדדים מצאו בסיס משותף.',
       debateStopped: 'הדיון הסתיים — הדיון הופסק.',
       consensusGaugeLabel: 'הסכמה',
@@ -722,7 +730,7 @@
       character: 'شخصیت:',
       charMaskDude: 'مرد نقابدار', charNinjaFrog: 'قورباغه نینجا', charPinkMan: 'مرد صورتی', charVirtualGuy: 'مرد مجازی',
       seekConsensus: 'جستجوی توافق',
-      showSummary: 'خلاصه مجری',
+      showSummary: 'خلاصه',
       consensusReached: 'توافق حاصل شد — هر دو طرف زمینه مشترکی پیدا کردند.',
       debateStopped: 'بحث پایان یافت — بحث متوقف شد.',
       consensusGaugeLabel: 'توافق',
@@ -780,6 +788,8 @@
   const seekConsensusCheck = document.getElementById('seekConsensus');
   /** @type {HTMLInputElement} */
   const showSummaryCheck = document.getElementById('showSummary');
+  /** @type {HTMLInputElement} */
+  const allowConcessionCheck = document.getElementById('allowConcession');
   /** @type {HTMLButtonElement} */
   const startBtn = document.getElementById('startBtn');
   /** @type {HTMLButtonElement} */
@@ -1183,13 +1193,17 @@
       connInfo.textContent = '';
     }
 
-    // Show stopped banner in chat
+    // Show stopped banner in chat (skip if consensus or concession banner already shown)
     if (status === 'stopped') {
-      const stoppedDiv = document.createElement('div');
-      stoppedDiv.className = 'chat-message stopped-banner';
-      stoppedDiv.innerHTML = `<div class="stopped-text">${t('debateStopped')}</div>`;
-      chatArea.appendChild(stoppedDiv);
-      chatArea.scrollTop = chatArea.scrollHeight;
+      const lastBanner = chatArea.querySelector('.chat-message:last-child');
+      const hasFinalBanner = lastBanner && lastBanner.classList.contains('consensus-banner');
+      if (!hasFinalBanner) {
+        const stoppedDiv = document.createElement('div');
+        stoppedDiv.className = 'chat-message stopped-banner';
+        stoppedDiv.innerHTML = `<div class="stopped-text">${t('debateStopped')}</div>`;
+        chatArea.appendChild(stoppedDiv);
+        chatArea.scrollTop = chatArea.scrollHeight;
+      }
     }
 
     // Hide consensus gauge when idle
@@ -1214,6 +1228,7 @@
     if (charBSelect) charBSelect.disabled = status === 'running';
     seekConsensusCheck.disabled = status === 'running';
     showSummaryCheck.disabled = status === 'running';
+    allowConcessionCheck.disabled = status === 'running';
 
     if (status === 'paused') {
       pauseBtn.textContent = '▶';
@@ -1246,6 +1261,7 @@
         topic: topicInput.value,
         seekConsensus: seekConsensusCheck.checked ? 'true' : 'false',
         showSummary: showSummaryCheck.checked ? 'true' : 'false',
+        allowConcession: allowConcessionCheck.checked ? 'true' : 'false',
       },
     });
   }
@@ -1264,6 +1280,7 @@
     if (s.topic) topicInput.value = s.topic;
     if (s.seekConsensus) seekConsensusCheck.checked = s.seekConsensus === 'true';
     if (s.showSummary !== undefined) showSummaryCheck.checked = s.showSummary !== 'false';
+    if (s.allowConcession !== undefined) allowConcessionCheck.checked = s.allowConcession !== 'false';
   }
 
   // ===== Event Handlers =====
@@ -1336,6 +1353,7 @@
       nameB: nameB,
       seekConsensus: seekConsensusCheck.checked,
       showSummary: showSummaryCheck.checked,
+      allowConcession: allowConcessionCheck.checked,
     });
   });
 
@@ -1506,6 +1524,16 @@
           consensusGaugeValue.textContent = '100%';
           consensusGaugeFill.style.background = 'var(--accent-green)';
         }
+        break;
+      }
+      case 'concession': {
+        const { conceder, winner } = message.payload;
+        const concessionDiv = document.createElement('div');
+        concessionDiv.className = 'chat-message consensus-banner';
+        const concessionText = t('concessionMessage').replace('{conceder}', conceder).replace('{winner}', winner);
+        concessionDiv.innerHTML = `<div class="consensus-text">${concessionText}</div>`;
+        chatArea.appendChild(concessionDiv);
+        chatArea.scrollTop = chatArea.scrollHeight;
         break;
       }
       case 'summaryLoading': {
