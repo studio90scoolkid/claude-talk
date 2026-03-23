@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.6.4] - 2026-03-23
+
+### Fixed
+- **CLI binary discovery on other machines** — `~/.local/bin/` added to search paths (where `claude install` places the binary), plus `npm prefix -g` fallback for non-standard npm setups
+- **Gemini auth check too strict** — `oauth_creds.json` is now checked directly regardless of `settings.json` authType field, fixing false "not authenticated" on some Gemini CLI versions
+- **Cross-platform support** — Windows-compatible binary paths (`.cmd`), `where` instead of `which`, `os.homedir()` instead of `process.env.HOME`, and platform-aware PATH separators
+
+### Changed
+- Claude auth check now verifies CLI is callable (`--version`) before running `auth status`, with better text-based fallback parsing for non-JSON output
+- Improved debug logging for auth checks in Output panel (`AI Debate` channel)
+
 ## [0.6.3] - 2026-03-22
 
 ### Added

@@ -1,10 +1,12 @@
 import { spawn, execSync } from 'child_process';
 import { randomUUID } from 'crypto';
+import * as os from 'os';
 import * as vscode from 'vscode';
 import { AIAgent, Persona, ClaudeModelAlias, AuthStatus, DebateMessage, DebateMode, TokenUsage } from './types';
 import { PromptConfig, buildSystemPrompt, buildFirstTurnPrompt, buildFollowUpPrompt } from './promptBuilder';
 
 const TIMEOUT_MS = 60_000;
+const IS_WINDOWS = process.platform === 'win32';
 
 let outputChannel: vscode.OutputChannel | undefined;
 
@@ -21,7 +23,13 @@ export function makeCleanEnv(): NodeJS.ProcessEnv {
   const env = { ...process.env };
   delete env.CLAUDECODE;
   delete env.CLAUDE_CODE_SESSION_ID;
-  env.PATH = `${env.PATH}:/usr/local/bin:/opt/homebrew/bin`;
+  if (IS_WINDOWS) {
+    const npmGlobal = `${process.env.APPDATA}\\npm`;
+    env.PATH = `${env.PATH};${npmGlobal}`;
+  } else {
+    const homeDir = os.homedir();
+    env.PATH = `${env.PATH}:/usr/local/bin:/opt/homebrew/bin:${homeDir}/.local/bin`;
+  }
   env.NONINTERACTIVE = '1';
   // Disable all non-essential telemetry, error reporting, and feedback surveys
   // See: https://code.claude.com/docs/en/data-usage
@@ -32,26 +40,56 @@ export function makeCleanEnv(): NodeJS.ProcessEnv {
 export function findClaudePath(): string {
   if (resolvedClaudePath) { return resolvedClaudePath; }
 
-  const candidates = [
-    '/usr/local/bin/claude',
-    '/opt/homebrew/bin/claude',
-    `${process.env.HOME}/.nvm/versions/node/*/bin/claude`,
-    `${process.env.HOME}/.npm-global/bin/claude`,
-  ];
+  const homeDir = os.homedir();
+  const candidates = IS_WINDOWS
+    ? [
+        `${process.env.APPDATA}\\npm\\claude.cmd`,
+        `${homeDir}\\.npm-global\\claude.cmd`,
+        `${process.env.LOCALAPPDATA}\\npm\\claude.cmd`,
+      ]
+    : [
+        `${homeDir}/.local/bin/claude`,
+        '/usr/local/bin/claude',
+        '/opt/homebrew/bin/claude',
+        `${homeDir}/.nvm/versions/node/*/bin/claude`,
+        `${homeDir}/.npm-global/bin/claude`,
+      ];
 
   try {
-    const result = execSync('which claude', {
+    const whichCmd = IS_WINDOWS ? 'where claude' : 'which claude';
+    const result = execSync(whichCmd, {
       encoding: 'utf8',
       timeout: 5000,
       env: makeCleanEnv(),
-    }).trim();
+    }).trim().split(/\r?\n/)[0]; // 'where' on Windows may return multiple lines
     if (result) {
       resolvedClaudePath = result;
       getLog().appendLine(`[ClaudeAgent] Found claude at: ${result}`);
       return result;
     }
   } catch {
-    // which failed, try candidates
+    // which/where failed, try candidates
+  }
+
+  // Try npm global prefix — VS Code extensions may not inherit shell PATH
+  try {
+    const npmPrefix = execSync('npm prefix -g', {
+      encoding: 'utf8',
+      timeout: 5000,
+      env: makeCleanEnv(),
+    }).trim();
+    if (npmPrefix) {
+      const binName = IS_WINDOWS ? 'claude.cmd' : 'claude';
+      const npmBin = require('path').join(npmPrefix, IS_WINDOWS ? '' : 'bin', binName);
+      const fs = require('fs');
+      if (fs.existsSync(npmBin)) {
+        resolvedClaudePath = npmBin;
+        getLog().appendLine(`[ClaudeAgent] Found claude via npm prefix at: ${npmBin}`);
+        return npmBin;
+      }
+    }
+  } catch {
+    // npm prefix failed
   }
 
   const fs = require('fs');
@@ -79,8 +117,44 @@ export function findClaudePath(): string {
   }
 
   getLog().appendLine('[ClaudeAgent] WARNING: Could not resolve claude path, using bare "claude"');
-  resolvedClaudePath = 'claude';
-  return 'claude';
+  resolvedClaudePath = IS_WINDOWS ? 'claude.cmd' : 'claude';
+  return resolvedClaudePath;
+}
+
+/** Run a CLI command and capture output */
+function runCliCommand(
+  binPath: string,
+  args: string[],
+  timeoutMs: number,
+): Promise<{ code: number | null; stdout: string; stderr: string }> {
+  return new Promise((resolve) => {
+    const env = makeCleanEnv();
+    const proc = spawn(binPath, args, {
+      stdio: ['ignore', 'pipe', 'pipe'],
+      env,
+    });
+
+    let stdout = '';
+    let stderr = '';
+
+    proc.stdout.on('data', (data: Buffer) => { stdout += data.toString(); });
+    proc.stderr.on('data', (data: Buffer) => { stderr += data.toString(); });
+
+    const timer = setTimeout(() => {
+      try { proc.kill('SIGTERM'); } catch { /* */ }
+      resolve({ code: null, stdout, stderr: stderr || 'timed out' });
+    }, timeoutMs);
+
+    proc.on('close', (code) => {
+      clearTimeout(timer);
+      resolve({ code, stdout, stderr });
+    });
+
+    proc.on('error', (err) => {
+      clearTimeout(timer);
+      resolve({ code: null, stdout: '', stderr: err.message });
+    });
+  });
 }
 
 /** Check Claude CLI installation and auth status */
@@ -93,62 +167,62 @@ export async function checkClaudeAuth(): Promise<AuthStatus> {
     return { loggedIn: false, error: 'Claude CLI not found. Install: npm install -g @anthropic-ai/claude-code' };
   }
 
-  return new Promise((resolve) => {
-    const env = makeCleanEnv();
-    const proc = spawn(claudePath, ['auth', 'status'], {
-      stdio: ['ignore', 'pipe', 'pipe'],
-      env,
-    });
+  // Step 1: Verify CLI is actually callable
+  const versionResult = await runCliCommand(claudePath, ['--version'], 10_000);
+  log.appendLine(`[Auth] --version exit=${versionResult.code}, out=${versionResult.stdout.slice(0, 100)}`);
 
-    let stdout = '';
-    let stderr = '';
+  if (versionResult.code !== 0 && !versionResult.stdout.trim()) {
+    if (versionResult.stderr.includes('ENOENT')) {
+      return { loggedIn: false, error: `Claude CLI not found at "${claudePath}". Install: npm install -g @anthropic-ai/claude-code` };
+    }
+    return { loggedIn: false, error: `Claude CLI error: ${versionResult.stderr.slice(0, 100)}` };
+  }
 
-    proc.stdout.on('data', (data: Buffer) => { stdout += data.toString(); });
-    proc.stderr.on('data', (data: Buffer) => { stderr += data.toString(); });
+  // Step 2: Try "auth status" for detailed info
+  const authResult = await runCliCommand(claudePath, ['auth', 'status'], 15_000);
+  log.appendLine(`[Auth] auth status exit=${authResult.code}, stdout=${authResult.stdout.slice(0, 300)}`);
+  if (authResult.stderr) { log.appendLine(`[Auth] auth status stderr: ${authResult.stderr.slice(0, 300)}`); }
 
-    const timeout = setTimeout(() => {
-      try { proc.kill('SIGTERM'); } catch { /* */ }
-      resolve({ loggedIn: false, error: 'Auth check timed out' });
-    }, 15_000);
+  const combined = authResult.stdout + '\n' + authResult.stderr;
 
-    proc.on('close', (code) => {
-      clearTimeout(timeout);
-      log.appendLine(`[Auth] exit code=${code}, stdout=${stdout.slice(0, 300)}`);
-      if (stderr) { log.appendLine(`[Auth] stderr: ${stderr.slice(0, 300)}`); }
+  // Try JSON parse first
+  try {
+    const parsed = JSON.parse(authResult.stdout);
+    if (parsed.loggedIn !== undefined) {
+      return {
+        loggedIn: !!parsed.loggedIn,
+        authMethod: parsed.authMethod,
+        email: parsed.email,
+        orgName: parsed.orgName,
+        subscriptionType: parsed.subscriptionType,
+      };
+    }
+  } catch { /* not JSON */ }
 
-      try {
-        const parsed = JSON.parse(stdout);
-        resolve({
-          loggedIn: !!parsed.loggedIn,
-          authMethod: parsed.authMethod,
-          email: parsed.email,
-          orgName: parsed.orgName,
-          subscriptionType: parsed.subscriptionType,
-        });
-      } catch {
-        // Non-JSON output - likely not logged in or old CLI version
-        if (stdout.includes('not logged in') || code !== 0) {
-          resolve({ loggedIn: false, error: 'Not logged in. Run "claude auth login" in terminal.' });
-        } else {
-          resolve({ loggedIn: false, error: `Unexpected auth response: ${stdout.slice(0, 100)}` });
-        }
-      }
-    });
+  // Try text detection
+  const lower = combined.toLowerCase();
+  if (lower.includes('not logged in') || lower.includes('not authenticated')) {
+    return { loggedIn: false, error: 'Not logged in. Run "claude login" in terminal.' };
+  }
+  if (lower.includes('logged in') || lower.includes('authenticated')) {
+    log.appendLine('[Auth] Detected logged-in from text output');
+    return { loggedIn: true };
+  }
 
-    proc.on('error', (err) => {
-      clearTimeout(timeout);
-      log.appendLine(`[Auth] Process error: ${err.message}`);
-      if (err.message.includes('ENOENT')) {
-        resolve({ loggedIn: false, error: `Claude CLI not found at "${claudePath}". Install: npm install -g @anthropic-ai/claude-code` });
-      } else {
-        resolve({ loggedIn: false, error: err.message });
-      }
-    });
-  });
+  // "auth status" returned exit 0 — assume logged in
+  if (authResult.code === 0 && authResult.stdout.trim()) {
+    log.appendLine(`[Auth] auth status exit 0, assuming logged in: ${authResult.stdout.slice(0, 200)}`);
+    return { loggedIn: true };
+  }
+
+  // auth status returned unexpected result
+  log.appendLine(`[Auth] auth status inconclusive: code=${authResult.code}, stdout=${authResult.stdout.slice(0, 200)}`);
+  return { loggedIn: false, error: 'Could not determine auth status. Run "claude login" in terminal.' };
 }
 
 export class ClaudeAgent implements AIAgent {
   private sessionId: string;
+  private sessionCreated = false;
   private turnCount = 0;
   private _topic = '';
 
@@ -173,12 +247,12 @@ export class ClaudeAgent implements AIAgent {
     // Derive turnCount from history length so retries don't double-increment
     this.turnCount = Math.floor(history.length / 2) + 1;
     this._topic = topic;
-    const isFirstTurn = history.length === 0;
+    const isNewSession = !this.sessionCreated;
     const config = this.promptConfig;
-    const prompt = isFirstTurn
+    const prompt = history.length === 0
       ? buildFirstTurnPrompt(config, topic)
       : buildFollowUpPrompt(config, topic, history);
-    return this.callClaude(prompt, signal, isFirstTurn);
+    return this.callClaude(prompt, signal, isNewSession);
   }
 
   private get promptConfig(): PromptConfig {
@@ -196,7 +270,7 @@ export class ClaudeAgent implements AIAgent {
   private callClaude(
     prompt: string,
     signal?: AbortSignal,
-    isFirstTurn = false,
+    isNewSession = false,
   ): Promise<{ text: string; usage?: TokenUsage }> {
     return new Promise((resolve, reject) => {
       if (signal?.aborted) {
@@ -212,7 +286,7 @@ export class ClaudeAgent implements AIAgent {
       if (this.mode === 'code') {
         args.push('--allowedTools', 'Read,Grep,Glob');
       }
-      if (isFirstTurn) {
+      if (isNewSession) {
         // Create a new session with system prompt
         args.push('--session-id', this.sessionId);
         args.push('--system-prompt', buildSystemPrompt(this.promptConfig, this._topic));
@@ -283,6 +357,7 @@ export class ClaudeAgent implements AIAgent {
           const result = parsed.result || parsed.content || stdout;
           const text = typeof result === 'string' ? result.trim() : JSON.stringify(result);
           log.appendLine(`[${this.name}] Response (${text.length} chars): ${text.slice(0, 100)}...`);
+          this.sessionCreated = true;
 
           // Extract token usage if available
           let usage: TokenUsage | undefined;
@@ -299,6 +374,7 @@ export class ClaudeAgent implements AIAgent {
           const text = stdout.trim();
           if (text) {
             log.appendLine(`[${this.name}] Non-JSON response (${text.length} chars)`);
+            this.sessionCreated = true;
             safeResolve({ text });
           } else {
             log.appendLine(`[${this.name}] Empty response!`);

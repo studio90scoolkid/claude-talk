@@ -1,9 +1,11 @@
 import { spawn, execSync } from 'child_process';
+import * as os from 'os';
 import * as vscode from 'vscode';
 import { AIAgent, Persona, GeminiModelAlias, DebateMessage, DebateMode, TokenUsage } from './types';
 import { PromptConfig, buildSystemPrompt, buildFirstTurnPrompt, buildFollowUpPrompt } from './promptBuilder';
 
 const TIMEOUT_MS = 60_000;
+const IS_WINDOWS = process.platform === 'win32';
 
 let outputChannel: vscode.OutputChannel | undefined;
 
@@ -18,7 +20,13 @@ let resolvedGeminiPath: string | null = null;
 
 function makeCleanEnv(): NodeJS.ProcessEnv {
   const env = { ...process.env };
-  env.PATH = `${env.PATH}:/usr/local/bin:/opt/homebrew/bin`;
+  if (IS_WINDOWS) {
+    const npmGlobal = `${process.env.APPDATA}\\npm`;
+    env.PATH = `${env.PATH};${npmGlobal}`;
+  } else {
+    const homeDir = os.homedir();
+    env.PATH = `${env.PATH}:/usr/local/bin:/opt/homebrew/bin:${homeDir}/.local/bin`;
+  }
   // Disable telemetry and prompt logging
   // See: https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/telemetry.md
   env.GEMINI_TELEMETRY_ENABLED = 'false';
@@ -29,26 +37,56 @@ function makeCleanEnv(): NodeJS.ProcessEnv {
 export function findGeminiPath(): string {
   if (resolvedGeminiPath) { return resolvedGeminiPath; }
 
-  const candidates = [
-    '/usr/local/bin/gemini',
-    '/opt/homebrew/bin/gemini',
-    `${process.env.HOME}/.nvm/versions/node/*/bin/gemini`,
-    `${process.env.HOME}/.npm-global/bin/gemini`,
-  ];
+  const homeDir = os.homedir();
+  const candidates = IS_WINDOWS
+    ? [
+        `${process.env.APPDATA}\\npm\\gemini.cmd`,
+        `${homeDir}\\.npm-global\\gemini.cmd`,
+        `${process.env.LOCALAPPDATA}\\npm\\gemini.cmd`,
+      ]
+    : [
+        `${homeDir}/.local/bin/gemini`,
+        '/usr/local/bin/gemini',
+        '/opt/homebrew/bin/gemini',
+        `${homeDir}/.nvm/versions/node/*/bin/gemini`,
+        `${homeDir}/.npm-global/bin/gemini`,
+      ];
 
   try {
-    const result = execSync('which gemini', {
+    const whichCmd = IS_WINDOWS ? 'where gemini' : 'which gemini';
+    const result = execSync(whichCmd, {
       encoding: 'utf8',
       timeout: 5000,
       env: makeCleanEnv(),
-    }).trim();
+    }).trim().split(/\r?\n/)[0]; // 'where' on Windows may return multiple lines
     if (result) {
       resolvedGeminiPath = result;
       getLog().appendLine(`[GeminiAgent] Found gemini at: ${result}`);
       return result;
     }
   } catch {
-    // which failed, try candidates
+    // which/where failed, try candidates
+  }
+
+  // Try npm global prefix — VS Code extensions may not inherit shell PATH
+  try {
+    const npmPrefix = execSync('npm prefix -g', {
+      encoding: 'utf8',
+      timeout: 5000,
+      env: makeCleanEnv(),
+    }).trim();
+    if (npmPrefix) {
+      const binName = IS_WINDOWS ? 'gemini.cmd' : 'gemini';
+      const npmBin = require('path').join(npmPrefix, IS_WINDOWS ? '' : 'bin', binName);
+      const fs = require('fs');
+      if (fs.existsSync(npmBin)) {
+        resolvedGeminiPath = npmBin;
+        getLog().appendLine(`[GeminiAgent] Found gemini via npm prefix at: ${npmBin}`);
+        return npmBin;
+      }
+    }
+  } catch {
+    // npm prefix failed
   }
 
   const fs = require('fs');
@@ -76,8 +114,8 @@ export function findGeminiPath(): string {
   }
 
   getLog().appendLine('[GeminiAgent] WARNING: Could not resolve gemini path, using bare "gemini"');
-  resolvedGeminiPath = 'gemini';
-  return 'gemini';
+  resolvedGeminiPath = IS_WINDOWS ? 'gemini.cmd' : 'gemini';
+  return resolvedGeminiPath;
 }
 
 /** Decode email from JWT id_token (no verification, just payload extraction) */
@@ -120,8 +158,9 @@ export async function checkGeminiAuth(): Promise<{ loggedIn: boolean; installed?
   // Step 2: Check auth by reading config file + env vars (no token cost)
   const fs = require('fs');
   const path = require('path');
-  const homeDir = process.env.HOME || '';
-  const settingsPath = path.join(homeDir, '.gemini', 'settings.json');
+  const homeDir = os.homedir();
+  const geminiDir = path.join(homeDir, '.gemini');
+  const settingsPath = path.join(geminiDir, 'settings.json');
 
   // Check env vars first
   if (process.env.GEMINI_API_KEY || process.env.GOOGLE_GENAI_USE_VERTEXAI || process.env.GOOGLE_GENAI_USE_GCA) {
@@ -137,39 +176,39 @@ export async function checkGeminiAuth(): Promise<{ loggedIn: boolean; installed?
       authType = settings?.security?.auth?.selectedType
         || settings?.authType
         || settings?.apiKey;
+      log.appendLine(`[GeminiAuth] settings.json authType: ${authType ?? '(not found)'}`);
+    } else {
+      log.appendLine(`[GeminiAuth] settings.json not found at: ${settingsPath}`);
     }
   } catch (e: unknown) {
     log.appendLine(`[GeminiAuth] Failed to read settings.json: ${e}`);
   }
 
-  if (!authType) {
-    log.appendLine('[GeminiAuth] No auth config found');
-    return { loggedIn: false, installed: true, error: 'Gemini not authenticated. Run: gemini' };
+  // Always check oauth_creds.json — some CLI versions complete auth
+  // without writing authType to settings.json
+  const credsPath = path.join(geminiDir, 'oauth_creds.json');
+  try {
+    if (fs.existsSync(credsPath)) {
+      const creds = JSON.parse(fs.readFileSync(credsPath, 'utf8'));
+      const email = creds.id_token ? extractEmailFromIdToken(creds.id_token) : undefined;
+      if (creds.refresh_token) {
+        log.appendLine('[GeminiAuth] OAuth credentials valid (refresh_token present)');
+        return { loggedIn: true, installed: true, email };
+      }
+      // No refresh_token — check if access_token is still valid
+      if (creds.access_token && creds.expiry_date && creds.expiry_date > Date.now()) {
+        log.appendLine('[GeminiAuth] OAuth access_token still valid');
+        return { loggedIn: true, installed: true, email };
+      }
+      log.appendLine('[GeminiAuth] OAuth credentials expired');
+      return { loggedIn: false, installed: true, error: 'Gemini auth expired. Run: gemini' };
+    }
+  } catch (e: unknown) {
+    log.appendLine(`[GeminiAuth] Failed to read oauth_creds.json: ${e}`);
   }
 
-  // For OAuth auth, verify credentials file exists with a valid refresh_token
-  if (String(authType).includes('oauth')) {
-    const credsPath = path.join(homeDir, '.gemini', 'oauth_creds.json');
-    try {
-      if (fs.existsSync(credsPath)) {
-        const creds = JSON.parse(fs.readFileSync(credsPath, 'utf8'));
-        const email = creds.id_token ? extractEmailFromIdToken(creds.id_token) : undefined;
-        if (creds.refresh_token) {
-          log.appendLine('[GeminiAuth] OAuth credentials valid (refresh_token present)');
-          return { loggedIn: true, installed: true, email };
-        }
-        // No refresh_token — check if access_token is still valid
-        if (creds.access_token && creds.expiry_date && creds.expiry_date > Date.now()) {
-          log.appendLine('[GeminiAuth] OAuth access_token still valid');
-          return { loggedIn: true, installed: true, email };
-        }
-        log.appendLine('[GeminiAuth] OAuth credentials expired');
-        return { loggedIn: false, installed: true, error: 'Gemini auth expired. Run: gemini' };
-      }
-    } catch (e: unknown) {
-      log.appendLine(`[GeminiAuth] Failed to read oauth_creds.json: ${e}`);
-    }
-    log.appendLine('[GeminiAuth] OAuth configured but no credentials file');
+  if (!authType) {
+    log.appendLine('[GeminiAuth] No auth config found');
     return { loggedIn: false, installed: true, error: 'Gemini not authenticated. Run: gemini' };
   }
 
