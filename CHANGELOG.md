@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.7.2] - 2026-03-27
+
+### Changed
+- Summary generation now uses the best model for each provider (Codex: gpt-5.4 instead of gpt-5.4-mini)
+
 ## [0.7.1] - 2026-03-27
 
 ### Changed

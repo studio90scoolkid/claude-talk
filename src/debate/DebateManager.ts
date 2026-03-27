@@ -356,7 +356,7 @@ ${transcript}
       // Both agents use Codex
       cliPath = findCodexPath();
       env = { ...process.env, PATH: `${process.env.PATH}:/usr/local/bin:/opt/homebrew/bin` };
-      args = ['exec', prompt, '-m', 'gpt-5.4-mini', '--json', '--full-auto'];
+      args = ['exec', prompt, '-m', 'gpt-5.4', '--json', '--full-auto'];
     }
 
     const proc = spawn(cliPath, args, {
