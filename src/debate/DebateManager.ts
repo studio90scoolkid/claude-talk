@@ -2,6 +2,7 @@ import { EventEmitter } from 'events';
 import { ChildProcess, spawn } from 'child_process';
 import { ClaudeAgent, findClaudePath, makeCleanEnv } from './ClaudeAgent';
 import { GeminiAgent, findGeminiPath } from './GeminiAgent';
+import { CodexAgent, findCodexPath } from './CodexAgent';
 import { AIAgent, DebateMessage, DebateMode, DebateState, ModelAlias, Persona, Provider, TokenUsage } from './types';
 
 const MAX_MESSAGES = 200;
@@ -287,6 +288,9 @@ export class DebateManager extends EventEmitter {
     if (provider === 'gemini') {
       return new GeminiAgent(name, persona, model as any, opponentName, seekConsensus, allowConcession, mode, cwd);
     }
+    if (provider === 'codex') {
+      return new CodexAgent(name, persona, model as any, opponentName, seekConsensus, allowConcession, mode, cwd);
+    }
     return new ClaudeAgent(name, persona, model as any, opponentName, seekConsensus, allowConcession, mode, cwd);
   }
 
@@ -334,13 +338,26 @@ ${transcript}
 
     this.emit('summaryLoading');
 
-    // Use Claude for summary by default; fall back to Gemini if both agents use Gemini
-    const useGemini = this._providerA === 'gemini' && this._providerB === 'gemini';
-    const cliPath = useGemini ? findGeminiPath() : findClaudePath();
-    const env = useGemini ? { ...process.env, PATH: `${process.env.PATH}:/usr/local/bin:/opt/homebrew/bin` } : makeCleanEnv();
-    const args = useGemini
-      ? ['-p', prompt, '--output-format', 'json', '-m', 'gemini-2.5-pro']
-      : ['-p', prompt, '--output-format', 'json', '--model', 'opus'];
+    // Use Claude for summary by default; fall back to Gemini/Codex if neither agent uses Claude
+    const hasClaudeProvider = this._providerA === 'claude' || this._providerB === 'claude';
+    const hasGeminiProvider = this._providerA === 'gemini' || this._providerB === 'gemini';
+    let cliPath: string;
+    let env: NodeJS.ProcessEnv;
+    let args: string[];
+    if (hasClaudeProvider || (!hasGeminiProvider && this._providerA !== 'codex')) {
+      cliPath = findClaudePath();
+      env = makeCleanEnv();
+      args = ['-p', prompt, '--output-format', 'json', '--model', 'opus'];
+    } else if (hasGeminiProvider) {
+      cliPath = findGeminiPath();
+      env = { ...process.env, PATH: `${process.env.PATH}:/usr/local/bin:/opt/homebrew/bin` };
+      args = ['-p', prompt, '--output-format', 'json', '-m', 'gemini-3-pro'];
+    } else {
+      // Both agents use Codex
+      cliPath = findCodexPath();
+      env = { ...process.env, PATH: `${process.env.PATH}:/usr/local/bin:/opt/homebrew/bin` };
+      args = ['exec', prompt, '-m', 'gpt-5.4-mini', '--json', '--full-auto'];
+    }
 
     const proc = spawn(cliPath, args, {
       stdio: ['ignore', 'pipe', 'pipe'],

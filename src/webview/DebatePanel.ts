@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { DebateManager } from '../debate/DebateManager';
 import { checkClaudeAuth } from '../debate/ClaudeAgent';
 import { checkGeminiAuth } from '../debate/GeminiAgent';
+import { checkCodexAuth } from '../debate/CodexAgent';
 import { DebateMessage, DebateMode, ModelAlias, Persona, Provider, WebviewMessage } from '../debate/types';
 import { getWebviewContent } from './getWebviewContent';
 
@@ -179,27 +180,42 @@ export class DebatePanel {
       if (this.disposed) { return; }
       this.panel.webview.postMessage({
         type: 'connectionStatus',
-        payload: { status: 'providerReady', provider: 'gemini', available: auth.loggedIn, installed: !!auth.installed, email: auth.email, error: auth.error },
+        payload: { status: 'providerReady', provider: 'gemini', available: auth.loggedIn, installed: !!auth.installed, email: auth.email, tier: auth.tier, error: auth.error },
       });
       return auth;
     });
 
-    const [claudeAuth, geminiAuth] = await Promise.all([claudePromise, geminiPromise]);
-    if (this.disposed || !claudeAuth || !geminiAuth) { return; }
+    const codexPromise = checkCodexAuth().then((auth) => {
+      if (this.disposed) { return; }
+      this.panel.webview.postMessage({
+        type: 'connectionStatus',
+        payload: { status: 'providerReady', provider: 'codex', available: auth.loggedIn, installed: !!auth.installed, tier: auth.tier, error: auth.error },
+      });
+      return auth;
+    });
+
+    const [claudeAuth, geminiAuth, codexAuth] = await Promise.all([claudePromise, geminiPromise, codexPromise]);
+    if (this.disposed || !claudeAuth || !geminiAuth || !codexAuth) { return; }
 
     // Send final combined status for overall UI update
     this.panel.webview.postMessage({
       type: 'connectionStatus',
       payload: {
-        status: (claudeAuth.loggedIn || geminiAuth.loggedIn) ? 'connected' : 'disconnected',
+        status: (claudeAuth.loggedIn || geminiAuth.loggedIn || codexAuth.loggedIn) ? 'connected' : 'disconnected',
         claudeAvailable: claudeAuth.loggedIn,
         claudeEmail: claudeAuth.email,
         claudeSubscription: claudeAuth.subscriptionType,
+        claudeTier: claudeAuth.subscriptionType || 'unknown',
         claudeError: claudeAuth.error,
         geminiAvailable: geminiAuth.loggedIn,
         geminiInstalled: !!geminiAuth.installed,
         geminiEmail: geminiAuth.email,
+        geminiTier: geminiAuth.tier || 'unknown',
         geminiError: geminiAuth.error,
+        codexAvailable: codexAuth.loggedIn,
+        codexInstalled: !!codexAuth.installed,
+        codexTier: codexAuth.tier || 'unknown',
+        codexError: codexAuth.error,
       },
     });
   }

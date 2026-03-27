@@ -38,11 +38,13 @@ export interface DebateState {
   personaB: Persona;
 }
 
-export type Provider = 'claude' | 'gemini';
+export type Provider = 'claude' | 'gemini' | 'codex';
 
 export type ClaudeModelAlias = 'haiku' | 'sonnet' | 'opus';
-export type GeminiModelAlias = 'gemini-2.5-flash' | 'gemini-2.5-pro';
-export type ModelAlias = ClaudeModelAlias | GeminiModelAlias;
+export type GeminiModelAlias = 'gemini-2.5-flash' | 'gemini-2.5-pro' | 'gemini-3-flash' | 'gemini-3-pro';
+export type CodexModelAlias = 'gpt-5.4' | 'gpt-5.4-mini' | 'o4-mini' | 'o3-mini';
+export type ModelAlias = ClaudeModelAlias | GeminiModelAlias | CodexModelAlias;
+
 
 export interface WebviewMessage {
   type: 'startDebate' | 'stopDebate' | 'pauseDebate' | 'resumeDebate' | 'checkConnection' | 'saveSettings' | 'requestState';
@@ -89,13 +91,23 @@ export const CLAUDE_MODEL_LABELS: Record<ClaudeModelAlias, string> = {
 };
 
 export const GEMINI_MODEL_LABELS: Record<GeminiModelAlias, string> = {
+  'gemini-3-flash': 'Gemini 3 Flash',
+  'gemini-3-pro': 'Gemini 3 Pro',
   'gemini-2.5-flash': 'Gemini 2.5 Flash',
   'gemini-2.5-pro': 'Gemini 2.5 Pro',
+};
+
+export const CODEX_MODEL_LABELS: Record<CodexModelAlias, string> = {
+  'gpt-5.4': 'GPT-5.4',
+  'gpt-5.4-mini': 'GPT-5.4 Mini',
+  'o4-mini': 'o4-mini (Reasoning)',
+  'o3-mini': 'o3-mini (Reasoning)',
 };
 
 export const MODEL_LABELS: Record<ModelAlias, string> = {
   ...CLAUDE_MODEL_LABELS,
   ...GEMINI_MODEL_LABELS,
+  ...CODEX_MODEL_LABELS,
 };
 
 export const PERSONA_LABELS: Record<Persona, string> = {

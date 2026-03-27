@@ -27,7 +27,7 @@
 
 ## What is this?
 
-**Claude Talk** pits two AI agents against each other to debate any topic you choose. Supports both **Claude** and **Google Gemini** — mix and match providers per agent. Each agent takes a stance (Pro, Neutral, or Con) and argues its position in real-time.
+**Claude Talk** pits two AI agents against each other to debate any topic you choose. Supports **Claude**, **Google Gemini**, and **OpenAI Codex** — mix and match providers per agent. Each agent takes a stance (Pro, Neutral, or Con) and argues its position in real-time.
 
 > Pick a topic. Choose your fighters. Hit ▶. Grab some popcorn.
 
@@ -49,13 +49,13 @@ Two AI agents debating from different perspectives can do more than entertain:
 | Feature | Description |
 |---------|-------------|
 | **Code Mode** | Toggle codebase-aware debates — agents explore your workspace with file-reading tools and argue with real code evidence |
-| **Multi-Provider Support** | Use **Claude** and **Google Gemini** — mix providers per agent (e.g., Claude vs Gemini) |
+| **Multi-Provider Support** | Use **Claude**, **Google Gemini**, and **OpenAI Codex** — mix providers per agent (e.g., Claude vs Gemini vs Codex) |
 | **Real-time AI Debate** | Two AI agents argue back and forth automatically |
 | **Seek Consensus Mode** | Agents naturally find common ground with a real-time consensus gauge in the status bar |
 | **Allow Concession** | Agents can concede defeat when they run out of counterarguments — auto-stops the debate with a concession banner |
 | **Debate Summary** | Optional AI-generated debate summary at the end (toggleable, uses top-tier models) |
 | **3 Stance Modes** | Set each agent as **Pro**, **Neutral**, or **Con** |
-| **Model Selection** | Claude: **Haiku / Sonnet / Opus** — Gemini: **2.5 Flash / 2.5 Pro** |
+| **Model Selection** | Claude: **Haiku / Sonnet / Opus** — Gemini: **3 Flash / 3 Pro / 2.5 Flash / 2.5 Pro** — Codex: **GPT-5.4 / GPT-5.4 Mini / o4-mini / o3-mini** |
 | **Per-Provider Status** | Separate connection indicators for each provider with 3-state display (connected / not authenticated / not installed) |
 | **Custom Agent Names** | Name your debaters anything you want |
 | **Persistent Sessions** | Each agent maintains its own CLI session with full context retention |
@@ -70,20 +70,22 @@ Two AI agents debating from different perspectives can do more than entertain:
 
 1. Install [Claude CLI](https://docs.anthropic.com/en/docs/claude-cli) and authenticate (`claude login`)
 2. *(Optional)* Install [Gemini CLI](https://github.com/google-gemini/gemini-cli) (`npm install -g @google/gemini-cli`) and authenticate (`gemini`)
-3. Install this extension from the VS Code Marketplace
-4. Open Command Palette → **Claude Talk: Start**
-5. Enter a topic, pick characters & stances, and hit **▶**
+3. *(Optional)* Install [Codex CLI](https://github.com/openai/codex) (`npm install -g @openai/codex`) and authenticate (`codex auth`)
+4. Install this extension from the VS Code Marketplace
+5. Open Command Palette → **Claude Talk: Start**
+6. Enter a topic, pick characters & stances, and hit **▶**
 
 ---
 
 ## How It Works
 
 ```
-┌─────────────┐     debate topic      ┌─────────────┐
-│   Agent A    │ ◄──────────────────► │   Agent B    │
-│ Claude/Gemini│   turn-by-turn       │ Claude/Gemini│
-│  Pro/Con     │   via CLI sessions   │  Pro/Con     │
-└─────────────┘                       └─────────────┘
+┌───────────────┐   debate topic    ┌───────────────┐
+│    Agent A     │ ◄──────────────► │    Agent B     │
+│ Claude/Gemini/ │  turn-by-turn    │ Claude/Gemini/ │
+│     Codex      │  via CLI sessions│     Codex      │
+│   Pro/Con      │                  │   Pro/Con      │
+└───────────────┘                   └───────────────┘
 ```
 
 Each agent maintains its own **persistent CLI session** throughout the debate. This means:

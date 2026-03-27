@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.7.0] - 2026-03-27
+
+### Added
+- **OpenAI Codex provider** — third AI provider with GPT-5.4, GPT-5.4 Mini, o4-mini, and o3-mini model support; mix and match Claude, Gemini, and Codex per agent
+- **Gemini 3 models** — Gemini 3 Flash and Gemini 3 Pro added to model selection (default changed to Gemini 3 Flash)
+- **Provider tier display** — connection status bar now shows account tier (free/paid) for each provider
+
+### Changed
+- Summary generation now intelligently selects the CLI based on which providers are in use, with Codex fallback support
+
 ## [0.6.6] - 2026-03-26
 
 ### Fixed

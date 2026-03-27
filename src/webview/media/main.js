@@ -22,8 +22,15 @@
       modelHaiku: 'Haiku (Fast)',
       modelSonnet: 'Sonnet (Balanced)',
       modelOpus: 'Opus (Powerful)',
+      modelGemini3Flash: 'Gemini 3 Flash',
+      modelGemini3Pro: 'Gemini 3 Pro',
       modelGeminiFlash: 'Gemini 2.5 Flash',
       modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexGpt54: 'GPT-5.4',
+      modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelCodexO4Mini: 'o4-mini (Reasoning)',
+      modelCodexO3Mini: 'o3-mini (Reasoning)',
+      modelRequiresPlan: 'Requires {0} plan',
       startBattle: 'Start Battle',
       pause: 'Pause',
       resume: 'Resume',
@@ -69,8 +76,15 @@
       modelHaiku: 'Haiku (빠름)',
       modelSonnet: 'Sonnet (균형)',
       modelOpus: 'Opus (강력)',
+      modelGemini3Flash: 'Gemini 3 Flash',
+      modelGemini3Pro: 'Gemini 3 Pro',
       modelGeminiFlash: 'Gemini 2.5 Flash',
       modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexGpt54: 'GPT-5.4',
+      modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelCodexO4Mini: 'o4-mini (추론)',
+      modelCodexO3Mini: 'o3-mini (추론)',
+      modelRequiresPlan: '{0} 플랜 필요',
       startBattle: '토론 시작',
       pause: '일시정지',
       resume: '재개',
@@ -115,6 +129,15 @@
       modelHaiku: 'Haiku (高速)',
       modelSonnet: 'Sonnet (バランス)',
       modelOpus: 'Opus (高性能)',
+      modelGemini3Flash: 'Gemini 3 Flash',
+      modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash',
+      modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexGpt54: 'GPT-5.4',
+      modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelCodexO4Mini: 'o4-mini (推論)',
+      modelCodexO3Mini: 'o3-mini (推論)',
+      modelRequiresPlan: '{0}プラン必要',
       startBattle: 'バトル開始',
       pause: '一時停止',
       resume: '再開',
@@ -157,6 +180,15 @@
       modelHaiku: 'Haiku (快速)',
       modelSonnet: 'Sonnet (均衡)',
       modelOpus: 'Opus (强大)',
+      modelGemini3Flash: 'Gemini 3 Flash',
+      modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash',
+      modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexGpt54: 'GPT-5.4',
+      modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelCodexO4Mini: 'o4-mini (推理)',
+      modelCodexO3Mini: 'o3-mini (推理)',
+      modelRequiresPlan: '需要{0}计划',
       startBattle: '开始辩论',
       pause: '暂停',
       resume: '继续',
@@ -189,6 +221,10 @@
       persona: 'PERSONA:', model: 'MODELL:',
       pro: 'Dafür (PRO)', neutral: 'Neutral', con: 'Dagegen (CON)',
       modelHaiku: 'Haiku (Schnell)', modelSonnet: 'Sonnet (Ausgewogen)', modelOpus: 'Opus (Leistungsstark)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Reasoning)', modelCodexO3Mini: 'o3-mini (Reasoning)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Erfordert {0}-Plan',
       startBattle: 'Debatte starten', pause: 'Pause', resume: 'Fortsetzen', stop: 'Stopp',
       ready: 'BEREIT', battle: 'DEBATTE!', paused: 'PAUSIERT', stopped: 'GESTOPPT',
       messages: 'NACHRICHTEN: 0',
@@ -210,6 +246,10 @@
       persona: 'PERSONA :', model: 'MODÈLE :',
       pro: 'Pour (PRO)', neutral: 'Neutre', con: 'Contre (CON)',
       modelHaiku: 'Haiku (Rapide)', modelSonnet: 'Sonnet (Équilibré)', modelOpus: 'Opus (Puissant)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Raisonnement)', modelCodexO3Mini: 'o3-mini (Raisonnement)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Nécessite le plan {0}',
       startBattle: 'Lancer le débat', pause: 'Pause', resume: 'Reprendre', stop: 'Arrêt',
       ready: 'PRÊT', battle: 'DÉBAT !', paused: 'EN PAUSE', stopped: 'ARRÊTÉ',
       messages: 'MESSAGES : 0',
@@ -231,6 +271,10 @@
       persona: 'PERSONA:', model: 'MODELO:',
       pro: 'A favor (PRO)', neutral: 'Neutral', con: 'En contra (CON)',
       modelHaiku: 'Haiku (Rápido)', modelSonnet: 'Sonnet (Equilibrado)', modelOpus: 'Opus (Potente)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Razonamiento)', modelCodexO3Mini: 'o3-mini (Razonamiento)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Requiere plan {0}',
       startBattle: 'Iniciar debate', pause: 'Pausa', resume: 'Reanudar', stop: 'Detener',
       ready: 'LISTO', battle: '¡DEBATE!', paused: 'EN PAUSA', stopped: 'DETENIDO',
       messages: 'MENSAJES: 0',
@@ -252,6 +296,10 @@
       persona: 'PERSONA:', model: 'MODELO:',
       pro: 'A favor (PRO)', neutral: 'Neutro', con: 'Contra (CON)',
       modelHaiku: 'Haiku (Rápido)', modelSonnet: 'Sonnet (Equilibrado)', modelOpus: 'Opus (Poderoso)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Raciocínio)', modelCodexO3Mini: 'o3-mini (Raciocínio)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Requer plano {0}',
       startBattle: 'Iniciar debate', pause: 'Pausar', resume: 'Retomar', stop: 'Parar',
       ready: 'PRONTO', battle: 'DEBATE!', paused: 'PAUSADO', stopped: 'PARADO',
       messages: 'MENSAGENS: 0',
@@ -273,6 +321,10 @@
       persona: 'PERSONA:', model: 'MODELLO:',
       pro: 'A favore (PRO)', neutral: 'Neutrale', con: 'Contro (CON)',
       modelHaiku: 'Haiku (Veloce)', modelSonnet: 'Sonnet (Bilanciato)', modelOpus: 'Opus (Potente)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Ragionamento)', modelCodexO3Mini: 'o3-mini (Ragionamento)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Richiede piano {0}',
       startBattle: 'Inizia dibattito', pause: 'Pausa', resume: 'Riprendi', stop: 'Ferma',
       ready: 'PRONTO', battle: 'DIBATTITO!', paused: 'IN PAUSA', stopped: 'FERMATO',
       messages: 'MESSAGGI: 0',
@@ -294,6 +346,10 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Voor (PRO)', neutral: 'Neutraal', con: 'Tegen (CON)',
       modelHaiku: 'Haiku (Snel)', modelSonnet: 'Sonnet (Gebalanceerd)', modelOpus: 'Opus (Krachtig)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Redenering)', modelCodexO3Mini: 'o3-mini (Redenering)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Vereist {0}-plan',
       startBattle: 'Start debat', pause: 'Pauze', resume: 'Hervatten', stop: 'Stop',
       ready: 'GEREED', battle: 'DEBAT!', paused: 'GEPAUZEERD', stopped: 'GESTOPT',
       messages: 'BERICHTEN: 0',
@@ -315,6 +371,10 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Za (PRO)', neutral: 'Neutralny', con: 'Przeciw (CON)',
       modelHaiku: 'Haiku (Szybki)', modelSonnet: 'Sonnet (Zrównoważony)', modelOpus: 'Opus (Potężny)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Rozumowanie)', modelCodexO3Mini: 'o3-mini (Rozumowanie)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Wymaga planu {0}',
       startBattle: 'Rozpocznij debatę', pause: 'Pauza', resume: 'Wznów', stop: 'Zatrzymaj',
       ready: 'GOTOWY', battle: 'DEBATA!', paused: 'WSTRZYMANO', stopped: 'ZATRZYMANO',
       messages: 'WIADOMOŚCI: 0',
@@ -336,6 +396,10 @@
       persona: 'ПЕРСОНА:', model: 'МОДЕЛЬ:',
       pro: 'За (PRO)', neutral: 'Нейтрально', con: 'Против (CON)',
       modelHaiku: 'Haiku (Быстрый)', modelSonnet: 'Sonnet (Сбалансир.)', modelOpus: 'Opus (Мощный)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Рассужд.)', modelCodexO3Mini: 'o3-mini (Рассужд.)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Требуется план {0}',
       startBattle: 'Начать дебаты', pause: 'Пауза', resume: 'Продолжить', stop: 'Стоп',
       ready: 'ГОТОВО', battle: 'ДЕБАТЫ!', paused: 'ПАУЗА', stopped: 'ОСТАНОВЛЕНО',
       messages: 'СООБЩЕНИЯ: 0',
@@ -357,6 +421,10 @@
       persona: 'ПЕРСОНА:', model: 'МОДЕЛЬ:',
       pro: 'За (PRO)', neutral: 'Нейтрально', con: 'Проти (CON)',
       modelHaiku: 'Haiku (Швидкий)', modelSonnet: 'Sonnet (Збалансов.)', modelOpus: 'Opus (Потужний)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Міркування)', modelCodexO3Mini: 'o3-mini (Міркування)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Потрібен план {0}',
       startBattle: 'Почати дебати', pause: 'Пауза', resume: 'Продовжити', stop: 'Стоп',
       ready: 'ГОТОВО', battle: 'ДЕБАТИ!', paused: 'ПАУЗА', stopped: 'ЗУПИНЕНО',
       messages: 'ПОВІДОМЛЕННЯ: 0',
@@ -378,6 +446,10 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Pro (PRO)', neutral: 'Neutrální', con: 'Proti (CON)',
       modelHaiku: 'Haiku (Rychlý)', modelSonnet: 'Sonnet (Vyvážený)', modelOpus: 'Opus (Výkonný)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Uvažování)', modelCodexO3Mini: 'o3-mini (Uvažování)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Vyžaduje plán {0}',
       startBattle: 'Začít debatu', pause: 'Pauza', resume: 'Pokračovat', stop: 'Zastavit',
       ready: 'PŘIPRAVEN', battle: 'DEBATA!', paused: 'POZASTAVENO', stopped: 'ZASTAVENO',
       messages: 'ZPRÁVY: 0',
@@ -399,6 +471,10 @@
       persona: 'PERSONA:', model: 'MODELL:',
       pro: 'För (PRO)', neutral: 'Neutral', con: 'Emot (CON)',
       modelHaiku: 'Haiku (Snabb)', modelSonnet: 'Sonnet (Balanserad)', modelOpus: 'Opus (Kraftfull)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Resonemang)', modelCodexO3Mini: 'o3-mini (Resonemang)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Kräver {0}-plan',
       startBattle: 'Starta debatt', pause: 'Paus', resume: 'Återuppta', stop: 'Stopp',
       ready: 'REDO', battle: 'DEBATT!', paused: 'PAUSAD', stopped: 'STOPPAD',
       messages: 'MEDDELANDEN: 0',
@@ -420,6 +496,10 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'For (PRO)', neutral: 'Neutral', con: 'Imod (CON)',
       modelHaiku: 'Haiku (Hurtig)', modelSonnet: 'Sonnet (Balanceret)', modelOpus: 'Opus (Kraftig)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Ræsonnement)', modelCodexO3Mini: 'o3-mini (Ræsonnement)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Kræver {0}-plan',
       startBattle: 'Start debat', pause: 'Pause', resume: 'Genoptag', stop: 'Stop',
       ready: 'KLAR', battle: 'DEBAT!', paused: 'PAUSET', stopped: 'STOPPET',
       messages: 'BESKEDER: 0',
@@ -441,6 +521,10 @@
       persona: 'PERSONA:', model: 'MALLI:',
       pro: 'Puolesta (PRO)', neutral: 'Neutraali', con: 'Vastaan (CON)',
       modelHaiku: 'Haiku (Nopea)', modelSonnet: 'Sonnet (Tasapainoinen)', modelOpus: 'Opus (Tehokas)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Päättely)', modelCodexO3Mini: 'o3-mini (Päättely)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Vaatii {0}-suunnitelman',
       startBattle: 'Aloita väittely', pause: 'Tauko', resume: 'Jatka', stop: 'Lopeta',
       ready: 'VALMIS', battle: 'VÄITTELY!', paused: 'TAUOLLA', stopped: 'LOPETETTU',
       messages: 'VIESTIT: 0',
@@ -462,6 +546,10 @@
       persona: 'PERSONA:', model: 'MODELL:',
       pro: 'For (PRO)', neutral: 'Nøytral', con: 'Mot (CON)',
       modelHaiku: 'Haiku (Rask)', modelSonnet: 'Sonnet (Balansert)', modelOpus: 'Opus (Kraftig)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Resonnement)', modelCodexO3Mini: 'o3-mini (Resonnement)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Krever {0}-plan',
       startBattle: 'Start debatt', pause: 'Pause', resume: 'Fortsett', stop: 'Stopp',
       ready: 'KLAR', battle: 'DEBATT!', paused: 'PAUSET', stopped: 'STOPPET',
       messages: 'MELDINGER: 0',
@@ -483,6 +571,10 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Lehte (PRO)', neutral: 'Tarafsız', con: 'Aleyhte (CON)',
       modelHaiku: 'Haiku (Hızlı)', modelSonnet: 'Sonnet (Dengeli)', modelOpus: 'Opus (Güçlü)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Akıl Yürütme)', modelCodexO3Mini: 'o3-mini (Akıl Yürütme)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: '{0} planı gerektirir',
       startBattle: 'Tartışma başlat', pause: 'Duraklat', resume: 'Devam et', stop: 'Durdur',
       ready: 'HAZIR', battle: 'TARTIŞMA!', paused: 'DURAKLATILDI', stopped: 'DURDURULDU',
       messages: 'MESAJLAR: 0',
@@ -504,6 +596,10 @@
       persona: 'PERSONA:', model: 'ΜΟΝΤΕΛΟ:',
       pro: 'Υπέρ (PRO)', neutral: 'Ουδέτερο', con: 'Κατά (CON)',
       modelHaiku: 'Haiku (Γρήγορο)', modelSonnet: 'Sonnet (Ισορροπημένο)', modelOpus: 'Opus (Ισχυρό)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Συλλογισμός)', modelCodexO3Mini: 'o3-mini (Συλλογισμός)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Απαιτεί πλάνο {0}',
       startBattle: 'Έναρξη συζήτησης', pause: 'Παύση', resume: 'Συνέχεια', stop: 'Διακοπή',
       ready: 'ΕΤΟΙΜΟ', battle: 'ΣΥΖΗΤΗΣΗ!', paused: 'ΣΕ ΠΑΥΣΗ', stopped: 'ΔΙΑΚΟΠΗ',
       messages: 'ΜΗΝΥΜΑΤΑ: 0',
@@ -525,6 +621,10 @@
       persona: 'PERSONA:', model: 'MODELL:',
       pro: 'Mellette (PRO)', neutral: 'Semleges', con: 'Ellene (CON)',
       modelHaiku: 'Haiku (Gyors)', modelSonnet: 'Sonnet (Kiegyensúlyozott)', modelOpus: 'Opus (Erős)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Következtetés)', modelCodexO3Mini: 'o3-mini (Következtetés)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: '{0} csomag szükséges',
       startBattle: 'Vita indítása', pause: 'Szünet', resume: 'Folytatás', stop: 'Leállítás',
       ready: 'KÉSZ', battle: 'VITA!', paused: 'SZÜNETEL', stopped: 'LEÁLLÍTVA',
       messages: 'ÜZENETEK: 0',
@@ -546,6 +646,10 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Pentru (PRO)', neutral: 'Neutru', con: 'Contra (CON)',
       modelHaiku: 'Haiku (Rapid)', modelSonnet: 'Sonnet (Echilibrat)', modelOpus: 'Opus (Puternic)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Raționament)', modelCodexO3Mini: 'o3-mini (Raționament)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Necesită planul {0}',
       startBattle: 'Începe dezbaterea', pause: 'Pauză', resume: 'Reia', stop: 'Oprește',
       ready: 'PREGĂTIT', battle: 'DEZBATERE!', paused: 'ÎN PAUZĂ', stopped: 'OPRIT',
       messages: 'MESAJE: 0',
@@ -568,6 +672,10 @@
       persona: 'บทบาท:', model: 'โมเดล:',
       pro: 'เห็นด้วย (PRO)', neutral: 'เป็นกลาง', con: 'ไม่เห็นด้วย (CON)',
       modelHaiku: 'Haiku (เร็ว)', modelSonnet: 'Sonnet (สมดุล)', modelOpus: 'Opus (ทรงพลัง)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (การใช้เหตุผล)', modelCodexO3Mini: 'o3-mini (การใช้เหตุผล)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'ต้องใช้แผน {0}',
       startBattle: 'เริ่มอภิปราย', pause: 'หยุดชั่วคราว', resume: 'ดำเนินต่อ', stop: 'หยุด',
       ready: 'พร้อม', battle: 'กำลังอภิปราย!', paused: 'หยุดชั่วคราว', stopped: 'หยุดแล้ว',
       messages: 'ข้อความ: 0',
@@ -589,6 +697,10 @@
       persona: 'VAI TRÒ:', model: 'MÔ HÌNH:',
       pro: 'Ủng hộ (PRO)', neutral: 'Trung lập', con: 'Phản đối (CON)',
       modelHaiku: 'Haiku (Nhanh)', modelSonnet: 'Sonnet (Cân bằng)', modelOpus: 'Opus (Mạnh mẽ)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Suy luận)', modelCodexO3Mini: 'o3-mini (Suy luận)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Yêu cầu gói {0}',
       startBattle: 'Bắt đầu tranh luận', pause: 'Tạm dừng', resume: 'Tiếp tục', stop: 'Dừng',
       ready: 'SẴN SÀNG', battle: 'TRANH LUẬN!', paused: 'TẠM DỪNG', stopped: 'ĐÃ DỪNG',
       messages: 'TIN NHẮN: 0',
@@ -610,6 +722,10 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Setuju (PRO)', neutral: 'Netral', con: 'Menolak (CON)',
       modelHaiku: 'Haiku (Cepat)', modelSonnet: 'Sonnet (Seimbang)', modelOpus: 'Opus (Kuat)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Penalaran)', modelCodexO3Mini: 'o3-mini (Penalaran)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Memerlukan paket {0}',
       startBattle: 'Mulai debat', pause: 'Jeda', resume: 'Lanjutkan', stop: 'Berhenti',
       ready: 'SIAP', battle: 'DEBAT!', paused: 'DIJEDA', stopped: 'DIHENTIKAN',
       messages: 'PESAN: 0',
@@ -631,6 +747,10 @@
       persona: 'PERSONA:', model: 'MODEL:',
       pro: 'Setuju (PRO)', neutral: 'Neutral', con: 'Menentang (CON)',
       modelHaiku: 'Haiku (Pantas)', modelSonnet: 'Sonnet (Seimbang)', modelOpus: 'Opus (Berkuasa)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (Penaakulan)', modelCodexO3Mini: 'o3-mini (Penaakulan)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'Memerlukan pelan {0}',
       startBattle: 'Mula perbahasan', pause: 'Jeda', resume: 'Sambung', stop: 'Henti',
       ready: 'SEDIA', battle: 'PERBAHASAN!', paused: 'DIJEDA', stopped: 'DIHENTIKAN',
       messages: 'MESEJ: 0',
@@ -652,6 +772,10 @@
       persona: 'भूमिका:', model: 'मॉडल:',
       pro: 'पक्ष में (PRO)', neutral: 'तटस्थ', con: 'विपक्ष में (CON)',
       modelHaiku: 'Haiku (तेज़)', modelSonnet: 'Sonnet (संतुलित)', modelOpus: 'Opus (शक्तिशाली)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (तर्क)', modelCodexO3Mini: 'o3-mini (तर्क)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: '{0} प्लान आवश्यक',
       startBattle: 'बहस शुरू करें', pause: 'रोकें', resume: 'जारी रखें', stop: 'बंद करें',
       ready: 'तैयार', battle: 'बहस जारी!', paused: 'रुका हुआ', stopped: 'बंद',
       messages: 'संदेश: 0',
@@ -673,6 +797,10 @@
       persona: 'ভূমিকা:', model: 'মডেল:',
       pro: 'পক্ষে (PRO)', neutral: 'নিরপেক্ষ', con: 'বিপক্ষে (CON)',
       modelHaiku: 'Haiku (দ্রুত)', modelSonnet: 'Sonnet (সুষম)', modelOpus: 'Opus (শক্তিশালী)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (যুক্তি)', modelCodexO3Mini: 'o3-mini (যুক্তি)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: '{0} প্ল্যান প্রয়োজন',
       startBattle: 'বিতর্ক শুরু', pause: 'বিরতি', resume: 'চালিয়ে যান', stop: 'থামান',
       ready: 'প্রস্তুত', battle: 'বিতর্ক চলছে!', paused: 'বিরতিতে', stopped: 'থেমে গেছে',
       messages: 'বার্তা: 0',
@@ -695,6 +823,10 @@
       persona: 'الشخصية:', model: 'النموذج:',
       pro: 'مؤيد (PRO)', neutral: 'محايد', con: 'معارض (CON)',
       modelHaiku: 'Haiku (سريع)', modelSonnet: 'Sonnet (متوازن)', modelOpus: 'Opus (قوي)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (استدلال)', modelCodexO3Mini: 'o3-mini (استدلال)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'يتطلب خطة {0}',
       startBattle: 'بدء النقاش', pause: 'إيقاف مؤقت', resume: 'استئناف', stop: 'إيقاف',
       ready: 'جاهز', battle: 'نقاش!', paused: 'متوقف مؤقتاً', stopped: 'متوقف',
       messages: 'الرسائل: 0',
@@ -716,6 +848,10 @@
       persona: 'פרסונה:', model: 'מודל:',
       pro: 'בעד (PRO)', neutral: 'ניטרלי', con: 'נגד (CON)',
       modelHaiku: 'Haiku (מהיר)', modelSonnet: 'Sonnet (מאוזן)', modelOpus: 'Opus (חזק)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (היסק)', modelCodexO3Mini: 'o3-mini (היסק)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'דורש תוכנית {0}',
       startBattle: 'התחל דיון', pause: 'השהה', resume: 'המשך', stop: 'עצור',
       ready: 'מוכן', battle: 'דיון!', paused: 'מושהה', stopped: 'נעצר',
       messages: 'הודעות: 0',
@@ -737,6 +873,10 @@
       persona: 'شخصیت:', model: 'مدل:',
       pro: 'موافق (PRO)', neutral: 'بی‌طرف', con: 'مخالف (CON)',
       modelHaiku: 'Haiku (سریع)', modelSonnet: 'Sonnet (متعادل)', modelOpus: 'Opus (قدرتمند)',
+      modelGemini3Flash: 'Gemini 3 Flash', modelGemini3Pro: 'Gemini 3 Pro',
+      modelGeminiFlash: 'Gemini 2.5 Flash', modelGeminiPro: 'Gemini 2.5 Pro',
+      modelCodexO4Mini: 'o4-mini (استدلال)', modelCodexO3Mini: 'o3-mini (استدلال)', modelCodexGpt54: 'GPT-5.4', modelCodexGpt54Mini: 'GPT-5.4 Mini',
+      modelRequiresPlan: 'نیاز به طرح {0} دارد',
       startBattle: 'شروع بحث', pause: 'مکث', resume: 'ادامه', stop: 'توقف',
       ready: 'آماده', battle: 'بحث!', paused: 'در مکث', stopped: 'متوقف',
       messages: 'پیام‌ها: 0',
@@ -836,6 +976,12 @@
   const connLabelGemini = document.getElementById('connLabelGemini');
   /** @type {HTMLElement} */
   const connAccountGemini = document.getElementById('connAccountGemini');
+  /** @type {HTMLElement} */
+  const connDotCodex = document.getElementById('connDotCodex');
+  /** @type {HTMLElement} */
+  const connLabelCodex = document.getElementById('connLabelCodex');
+  /** @type {HTMLElement} */
+  const connAccountCodex = document.getElementById('connAccountCodex');
   /** @type {HTMLButtonElement} */
   const connRefresh = document.getElementById('connRefresh');
   /** @type {HTMLElement} */
@@ -849,10 +995,11 @@
   const consensusGaugeValue = document.getElementById('consensusGaugeValue');
 
   let isConnected = false;
-  let claudeCheckDone = false;  // per-provider auth check status
-  let geminiCheckDone = false;
-  let claudeAvailable = false;
-  let geminiAvailable = false;
+  const providerState = {
+    claude: { checkDone: false, available: false, tier: 'unknown' },
+    gemini: { checkDone: false, available: false, tier: 'unknown' },
+    codex: { checkDone: false, available: false, tier: 'unknown' },
+  };
   let currentStatus = 'idle';
 
   // ===== Helpers =====
@@ -919,13 +1066,9 @@
         }
         case 'error': {
           const div = document.createElement('div');
-          div.className = 'chat-message agent-a';
-          div.style.alignSelf = 'center';
-          div.style.maxWidth = '100%';
+          div.className = 'chat-message error-message';
           const bubble = document.createElement('div');
-          bubble.className = 'speech-bubble';
-          bubble.style.background = '#4a1a1a';
-          bubble.style.outlineColor = '#ef5350';
+          bubble.className = 'speech-bubble error-bubble';
           const content = document.createElement('div');
           content.className = 'bubble-content';
           content.style.color = '#ef5350';
@@ -957,76 +1100,135 @@
   }
 
   // ===== Provider-dependent Model Lists =====
-  const CLAUDE_MODELS = [
-    { value: 'haiku', i18n: 'modelHaiku' },
-    { value: 'sonnet', i18n: 'modelSonnet' },
-    { value: 'opus', i18n: 'modelOpus' },
-  ];
-  const GEMINI_MODELS = [
-    { value: 'gemini-2.5-flash', i18n: 'modelGeminiFlash' },
-    { value: 'gemini-2.5-pro', i18n: 'modelGeminiPro' },
-  ];
+  const PROVIDER_MODELS = {
+    claude: [
+      { value: 'haiku', i18n: 'modelHaiku', tiers: ['free', 'pro', 'max', 'team', 'enterprise'] },
+      { value: 'sonnet', i18n: 'modelSonnet', tiers: ['pro', 'max', 'team', 'enterprise'] },
+      { value: 'opus', i18n: 'modelOpus', tiers: ['pro', 'max', 'team', 'enterprise'] },
+    ],
+    gemini: [
+      { value: 'gemini-3-flash', i18n: 'modelGemini3Flash', tiers: ['free', 'paid'] },
+      { value: 'gemini-3-pro', i18n: 'modelGemini3Pro', tiers: ['paid'] },
+      { value: 'gemini-2.5-flash', i18n: 'modelGeminiFlash', tiers: ['free', 'paid'] },
+      { value: 'gemini-2.5-pro', i18n: 'modelGeminiPro', tiers: ['paid'] },
+    ],
+    codex: [
+      { value: 'gpt-5.4', i18n: 'modelCodexGpt54', tiers: ['plus', 'pro'] },
+      { value: 'gpt-5.4-mini', i18n: 'modelCodexGpt54Mini', tiers: ['free', 'plus', 'pro'] },
+      { value: 'o4-mini', i18n: 'modelCodexO4Mini', tiers: ['plus', 'pro'] },
+      { value: 'o3-mini', i18n: 'modelCodexO3Mini', tiers: ['plus', 'pro'] },
+    ],
+  };
+
+  /** Get minimum required tier label for display */
+  function getMinTierLabel(tiers, provider) {
+    if (provider === 'claude') {
+      if (tiers.includes('free')) return null;
+      if (tiers.includes('pro')) return 'Pro';
+      if (tiers.includes('max')) return 'Max';
+      return 'Enterprise';
+    }
+    if (provider === 'gemini') {
+      if (tiers.includes('free')) return null;
+      return 'Paid';
+    }
+    if (provider === 'codex') {
+      if (tiers.includes('free')) return null;
+      if (tiers.includes('plus')) return 'Plus';
+      if (tiers.includes('pro')) return 'Pro';
+      return 'Pro';
+    }
+    return null;
+  }
 
   function updateModelOptions(providerSelect, modelSelect) {
     const provider = providerSelect.value;
-    const models = provider === 'gemini' ? GEMINI_MODELS : CLAUDE_MODELS;
+    const models = PROVIDER_MODELS[provider] || PROVIDER_MODELS.claude;
+    const tier = (providerState[provider] || {}).tier || 'unknown';
     const prevValue = modelSelect.value;
     modelSelect.innerHTML = '';
+    let firstEnabled = -1;
     models.forEach((m, i) => {
       const opt = document.createElement('option');
       opt.value = m.value;
-      opt.textContent = t(m.i18n);
-      if (i === (models.length > 2 ? 1 : 0)) opt.selected = true; // default: sonnet / flash
+      // Check if current tier has access to this model
+      const hasAccess = tier === 'unknown' || m.tiers.includes(tier);
+      opt.disabled = !hasAccess;
+      if (hasAccess) {
+        opt.textContent = t(m.i18n);
+        if (firstEnabled < 0) firstEnabled = i;
+      } else {
+        const minTier = getMinTierLabel(m.tiers, provider);
+        opt.textContent = t(m.i18n) + (minTier ? ' \uD83D\uDD12 ' + t('modelRequiresPlan').replace('{0}', minTier) : '');
+      }
       modelSelect.appendChild(opt);
     });
-    // Restore previous value if still valid
-    const validValues = models.map(m => m.value);
+    // Restore previous value if still valid and enabled
+    const validValues = models.filter(m => tier === 'unknown' || m.tiers.includes(tier)).map(m => m.value);
     if (validValues.includes(prevValue)) {
       modelSelect.value = prevValue;
+    } else if (firstEnabled >= 0) {
+      modelSelect.value = models[firstEnabled].value;
     }
   }
 
   providerASelect.addEventListener('change', () => { updateModelOptions(providerASelect, modelASelect); updateStartBtnState(); });
   providerBSelect.addEventListener('change', () => { updateModelOptions(providerBSelect, modelBSelect); updateStartBtnState(); });
+  modelASelect.addEventListener('change', updateStartBtnState);
+  modelBSelect.addEventListener('change', updateStartBtnState);
 
-  /** Update the two provider connection indicators */
+  const PROVIDER_NAMES = ['claude', 'gemini', 'codex'];
+  const providerDOM = {
+    claude: { dot: connDotClaude, label: connLabelClaude, account: connAccountClaude },
+    gemini: { dot: connDotGemini, label: connLabelGemini, account: connAccountGemini },
+    codex: { dot: connDotCodex, label: connLabelCodex, account: connAccountCodex },
+  };
+
   function setProviderStatus(provider, status) {
-    const dot = provider === 'claude' ? connDotClaude : connDotGemini;
-    const label = provider === 'claude' ? connLabelClaude : connLabelGemini;
-    dot.className = 'conn-dot ' + status;
-    label.className = 'conn-label ' + status;
+    const els = providerDOM[provider];
+    if (els.dot) els.dot.className = 'conn-dot ' + status;
+    if (els.label) els.label.className = 'conn-label ' + status;
   }
 
-  function setAccountInfo(el, text) {
-    el.textContent = text;
+  function setAccountInfo(provider, text) {
+    const els = providerDOM[provider];
+    els.account.textContent = text;
+    els.label.title = text || '';
   }
 
-  /** Check if the start button should be enabled based on selected providers' auth status */
+  function resetAllProviders(status) {
+    PROVIDER_NAMES.forEach(p => {
+      providerState[p].checkDone = status === 'done';
+      if (status !== 'done') providerState[p].available = false;
+      setProviderStatus(p, status === 'done' ? 'disconnected' : 'checking');
+      setAccountInfo(p, '');
+    });
+  }
+
   function updateStartBtnState() {
     if (currentStatus === 'running') {
       startBtn.disabled = true;
       return;
     }
-    const needClaude = providerASelect.value === 'claude' || providerBSelect.value === 'claude';
-    const needGemini = providerASelect.value === 'gemini' || providerBSelect.value === 'gemini';
-    const blocked = (needClaude && !claudeCheckDone) || (needGemini && !geminiCheckDone);
+    const needed = new Set([providerASelect.value, providerBSelect.value]);
+    const selOptA = modelASelect.options[modelASelect.selectedIndex];
+    const selOptB = modelBSelect.options[modelBSelect.selectedIndex];
+    const modelLocked = (selOptA && selOptA.disabled) || (selOptB && selOptB.disabled);
+    const blocked = [...needed].some(p => !providerState[p]?.checkDone) || modelLocked;
     startBtn.disabled = blocked;
   }
 
-  /** Disable provider options that are not available */
   function updateProviderOptions() {
     [providerASelect, providerBSelect].forEach(sel => {
       for (const opt of sel.options) {
-        if (opt.value === 'claude') opt.disabled = !claudeAvailable;
-        if (opt.value === 'gemini') opt.disabled = !geminiAvailable;
+        if (opt.value in providerState) opt.disabled = !providerState[opt.value].available;
       }
-      // If current selection is unavailable, switch to the other
-      if (sel.value === 'claude' && !claudeAvailable && geminiAvailable) {
-        sel.value = 'gemini';
-        updateModelOptions(sel, sel === providerASelect ? modelASelect : modelBSelect);
-      } else if (sel.value === 'gemini' && !geminiAvailable && claudeAvailable) {
-        sel.value = 'claude';
-        updateModelOptions(sel, sel === providerASelect ? modelASelect : modelBSelect);
+      if (!providerState[sel.value]?.available) {
+        const fallback = PROVIDER_NAMES.find(p => providerState[p].available);
+        if (fallback) {
+          sel.value = fallback;
+          updateModelOptions(sel, sel === providerASelect ? modelASelect : modelBSelect);
+        }
       }
     });
   }
@@ -1345,36 +1547,41 @@
     }
 
     startBtn.disabled = status === 'running';
-    if (status !== 'running') { updateStartBtnState(); }
-    pauseBtn.disabled = status !== 'running' && status !== 'paused';
+    if (status !== 'running' && status !== 'paused') { updateStartBtnState(); }
+    pauseBtn.disabled = status !== 'running';
     stopBtn.disabled = status === 'idle' || status === 'stopped';
-    nameAInput.disabled = status === 'running';
-    nameBInput.disabled = status === 'running';
-    topicInput.disabled = status === 'running';
-    personaASelect.disabled = status === 'running';
-    personaBSelect.disabled = status === 'running';
-    providerASelect.disabled = status === 'running';
-    providerBSelect.disabled = status === 'running';
-    modelASelect.disabled = status === 'running';
-    modelBSelect.disabled = status === 'running';
-    if (charASelect) charASelect.disabled = status === 'running';
-    if (charBSelect) charBSelect.disabled = status === 'running';
-    modeBtn.disabled = status === 'running';
-    seekConsensusCheck.disabled = status === 'running';
-    showSummaryCheck.disabled = status === 'running';
-    allowConcessionCheck.disabled = status === 'running';
+    const inputsLocked = status === 'running' || status === 'paused';
+    nameAInput.disabled = inputsLocked;
+    nameBInput.disabled = inputsLocked;
+    topicInput.disabled = inputsLocked;
+    personaASelect.disabled = inputsLocked;
+    personaBSelect.disabled = inputsLocked;
+    providerASelect.disabled = inputsLocked;
+    providerBSelect.disabled = inputsLocked;
+    modelASelect.disabled = inputsLocked;
+    modelBSelect.disabled = inputsLocked;
+    if (charASelect) charASelect.disabled = inputsLocked;
+    if (charBSelect) charBSelect.disabled = inputsLocked;
+    modeBtn.disabled = inputsLocked;
+    seekConsensusCheck.disabled = inputsLocked;
+    showSummaryCheck.disabled = inputsLocked;
+    allowConcessionCheck.disabled = inputsLocked;
 
     if (status === 'paused') {
-      pauseBtn.textContent = '▶';
-      pauseBtn.title = t('resume');
-      pauseBtn.setAttribute('data-i18n-title', 'resume');
-      pauseBtn.className = 'ctrl-btn ctrl-pause ctrl-resume';
-    } else {
-      pauseBtn.textContent = '⏸';
-      pauseBtn.title = t('pause');
-      pauseBtn.setAttribute('data-i18n-title', 'pause');
-      pauseBtn.className = 'ctrl-btn ctrl-pause';
+      startBtn.disabled = false;
+      startBtn.textContent = '▶';
+      startBtn.title = t('resume');
+      startBtn.className = 'ctrl-btn ctrl-play ctrl-resume';
+    } else if (status !== 'running') {
+      startBtn.textContent = '▶';
+      startBtn.title = t('startBattle');
+      startBtn.className = 'ctrl-btn ctrl-play';
     }
+
+    pauseBtn.textContent = '⏸';
+    pauseBtn.title = t('pause');
+    pauseBtn.setAttribute('data-i18n-title', 'pause');
+    pauseBtn.className = 'ctrl-btn ctrl-pause';
   }
 
   // ===== Settings Persistence =====
@@ -1447,6 +1654,10 @@
 
   // ===== Event Handlers =====
   startBtn.addEventListener('click', () => {
+    if (currentStatus === 'paused') {
+      vscode.postMessage({ type: 'resumeDebate' });
+      return;
+    }
     if (!isConnected) {
       connInfo.textContent = t('notConnected');
       return;
@@ -1454,21 +1665,12 @@
     // Validate selected providers are available
     const selA = providerASelect.value;
     const selB = providerBSelect.value;
-    if (selA === 'claude' && !claudeAvailable) {
-      connInfo.textContent = 'Claude CLI ' + t('disconnected');
-      return;
-    }
-    if (selA === 'gemini' && !geminiAvailable) {
-      connInfo.textContent = 'Gemini CLI ' + t('disconnected');
-      return;
-    }
-    if (selB === 'claude' && !claudeAvailable) {
-      connInfo.textContent = 'Claude CLI ' + t('disconnected');
-      return;
-    }
-    if (selB === 'gemini' && !geminiAvailable) {
-      connInfo.textContent = 'Gemini CLI ' + t('disconnected');
-      return;
+    const nameMap = { claude: 'Claude CLI', gemini: 'Gemini CLI', codex: 'Codex CLI' };
+    for (const sel of [selA, selB]) {
+      if (!providerState[sel]?.available) {
+        connInfo.textContent = nameMap[sel] + ' ' + t('disconnected');
+        return;
+      }
     }
 
     const topic = topicInput.value.trim();
@@ -1523,21 +1725,14 @@
   });
 
   connRefresh.addEventListener('click', () => {
-    claudeCheckDone = false;
-    geminiCheckDone = false;
-    updateStartBtnState();
-    setProviderStatus('claude', 'checking');
-    setProviderStatus('gemini', 'checking');
+    resetAllProviders('checking');
     connInfo.textContent = '';
+    updateStartBtnState();
     vscode.postMessage({ type: 'checkConnection' });
   });
 
   pauseBtn.addEventListener('click', () => {
-    if (currentStatus === 'paused') {
-      vscode.postMessage({ type: 'resumeDebate' });
-    } else {
-      vscode.postMessage({ type: 'pauseDebate' });
-    }
+    vscode.postMessage({ type: 'pauseDebate' });
   });
 
   stopBtn.addEventListener('click', () => {
@@ -1591,82 +1786,71 @@
       case 'connectionStatus': {
         const conn = msg.payload;
         if (conn.status === 'checking') {
-          claudeCheckDone = false;
-          geminiCheckDone = false;
-          setProviderStatus('claude', 'checking');
-          setProviderStatus('gemini', 'checking');
-          setAccountInfo(connAccountClaude, '');
-          setAccountInfo(connAccountGemini, '');
+          resetAllProviders('checking');
           isConnected = false;
           connInfo.textContent = '';
           updateStartBtnState();
         } else if (conn.status === 'providerReady') {
-          // Individual provider check completed — unlock start button as soon as selected providers are ready
-          if (conn.provider === 'claude') {
-            claudeCheckDone = true;
-            claudeAvailable = !!conn.available;
-            setProviderStatus('claude', claudeAvailable ? 'connected' : 'disconnected');
-            if (claudeAvailable) {
-              const parts = [];
-              if (conn.email) parts.push(conn.email);
-              if (conn.subscription) parts.push(conn.subscription.toUpperCase());
-              setAccountInfo(connAccountClaude, parts.length ? parts.join(' · ') : '');
-            } else {
-              setAccountInfo(connAccountClaude, '');
-              if (conn.error) connInfo.textContent = conn.error;
-            }
-          } else if (conn.provider === 'gemini') {
-            geminiCheckDone = true;
-            geminiAvailable = !!conn.available;
-            const geminiStatus = geminiAvailable ? 'connected' : (conn.installed ? 'warning' : 'disconnected');
-            setProviderStatus('gemini', geminiStatus);
-            setAccountInfo(connAccountGemini, geminiAvailable && conn.email ? conn.email : '');
-            if (!geminiAvailable && conn.error) {
+          const p = conn.provider;
+          const ps = providerState[p];
+          ps.checkDone = true;
+          ps.available = !!conn.available;
+          if (conn.subscription) ps.tier = conn.subscription.toLowerCase();
+          else if (conn.tier) ps.tier = conn.tier;
+          const status = ps.available ? 'connected' : (conn.installed === false ? 'disconnected' : (conn.installed ? 'warning' : 'disconnected'));
+          setProviderStatus(p, status);
+          if (ps.available) {
+            const parts = [];
+            if (conn.email) parts.push(conn.email);
+            if (conn.subscription) parts.push(conn.subscription.toUpperCase());
+            setAccountInfo(p, parts.length ? parts.join(' · ') : '');
+          } else {
+            setAccountInfo(p, '');
+            if (conn.error) {
               const prev = connInfo.textContent;
               connInfo.textContent = prev ? prev + ' | ' + conn.error : conn.error;
             }
           }
-          isConnected = claudeAvailable || geminiAvailable;
+          updateModelOptions(providerASelect, modelASelect);
+          updateModelOptions(providerBSelect, modelBSelect);
+          isConnected = PROVIDER_NAMES.some(k => providerState[k].available);
           updateStartBtnState();
         } else if (conn.status === 'connected') {
-          // Final combined status — update everything to final state
-          claudeCheckDone = true;
-          geminiCheckDone = true;
-          claudeAvailable = !!conn.claudeAvailable;
-          geminiAvailable = !!conn.geminiAvailable;
-          isConnected = claudeAvailable || geminiAvailable;
-          setProviderStatus('claude', claudeAvailable ? 'connected' : 'disconnected');
-          const geminiStatus = geminiAvailable ? 'connected' : (conn.geminiInstalled ? 'warning' : 'disconnected');
-          setProviderStatus('gemini', geminiStatus);
-          if (claudeAvailable) {
-            const parts = [];
-            if (conn.claudeEmail) parts.push(conn.claudeEmail);
-            if (conn.claudeSubscription) parts.push(conn.claudeSubscription.toUpperCase());
-            setAccountInfo(connAccountClaude, parts.length ? parts.join(' · ') : '');
-          } else {
-            setAccountInfo(connAccountClaude, '');
-          }
-          setAccountInfo(connAccountGemini, geminiAvailable && conn.geminiEmail ? conn.geminiEmail : '');
           const errors = [];
-          if (!claudeAvailable && conn.claudeError) errors.push(conn.claudeError);
-          if (!geminiAvailable && conn.geminiError) errors.push(conn.geminiError);
+          PROVIDER_NAMES.forEach(p => {
+            const ps = providerState[p];
+            ps.checkDone = true;
+            ps.available = !!conn[p + 'Available'];
+            const tier = conn[p + 'Tier'];
+            if (tier) ps.tier = p === 'claude' ? tier.toLowerCase() : tier;
+            const installed = conn[p + 'Installed'];
+            const status = ps.available ? 'connected' : (installed ? 'warning' : 'disconnected');
+            setProviderStatus(p, status);
+            const email = conn[p + 'Email'];
+            const sub = conn[p + 'Subscription'];
+            const parts = [];
+            if (ps.available) {
+              if (email) parts.push(email);
+              if (sub) parts.push(sub.toUpperCase());
+            }
+            setAccountInfo(p, parts.join(' · '));
+            const err = conn[p + 'Error'];
+            if (!ps.available && err) errors.push(err);
+          });
+          isConnected = PROVIDER_NAMES.some(k => providerState[k].available);
           connInfo.textContent = errors.join(' | ');
           updateProviderOptions();
+          updateModelOptions(providerASelect, modelASelect);
+          updateModelOptions(providerBSelect, modelBSelect);
           updateStartBtnState();
         } else {
-          // disconnected
-          claudeCheckDone = true;
-          geminiCheckDone = true;
-          setProviderStatus('claude', 'disconnected');
-          setProviderStatus('gemini', 'disconnected');
+          resetAllProviders('done');
           isConnected = false;
-          claudeAvailable = false;
-          geminiAvailable = false;
-          setAccountInfo(connAccountClaude, '');
-          setAccountInfo(connAccountGemini, '');
           const errors = [];
-          if (conn.claudeError) errors.push(conn.claudeError);
-          if (conn.geminiError) errors.push(conn.geminiError);
+          PROVIDER_NAMES.forEach(p => {
+            const err = conn[p + 'Error'];
+            if (err) errors.push(err);
+          });
           connInfo.textContent = errors.join(' | ') || '';
           updateProviderOptions();
           updateStartBtnState();
@@ -1743,13 +1927,9 @@
       }
       case 'error': {
         const errorDiv = document.createElement('div');
-        errorDiv.className = 'chat-message agent-a';
-        errorDiv.style.alignSelf = 'center';
-        errorDiv.style.maxWidth = '100%';
+        errorDiv.className = 'chat-message error-message';
         const errorBubble = document.createElement('div');
-        errorBubble.className = 'speech-bubble';
-        errorBubble.style.background = '#4a1a1a';
-        errorBubble.style.outlineColor = '#ef5350';
+        errorBubble.className = 'speech-bubble error-bubble';
         const errorContent = document.createElement('div');
         errorContent.className = 'bubble-content';
         errorContent.style.color = '#ef5350';

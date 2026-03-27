@@ -132,7 +132,7 @@ function extractEmailFromIdToken(idToken: string): string | undefined {
 }
 
 /** Check Gemini CLI installation and authentication */
-export async function checkGeminiAuth(): Promise<{ loggedIn: boolean; installed?: boolean; email?: string; error?: string }> {
+export async function checkGeminiAuth(): Promise<{ loggedIn: boolean; installed?: boolean; email?: string; tier?: string; error?: string }> {
   const log = getLog();
   let geminiPath: string;
   try {
@@ -165,7 +165,7 @@ export async function checkGeminiAuth(): Promise<{ loggedIn: boolean; installed?
   // Check env vars first
   if (process.env.GEMINI_API_KEY || process.env.GOOGLE_GENAI_USE_VERTEXAI || process.env.GOOGLE_GENAI_USE_GCA) {
     log.appendLine('[GeminiAuth] Auth found via environment variable');
-    return { loggedIn: true, installed: true };
+    return { loggedIn: true, installed: true, tier: 'paid' };
   }
 
   // Check settings.json for auth type
@@ -193,12 +193,12 @@ export async function checkGeminiAuth(): Promise<{ loggedIn: boolean; installed?
       const email = creds.id_token ? extractEmailFromIdToken(creds.id_token) : undefined;
       if (creds.refresh_token) {
         log.appendLine('[GeminiAuth] OAuth credentials valid (refresh_token present)');
-        return { loggedIn: true, installed: true, email };
+        return { loggedIn: true, installed: true, email, tier: 'free' };
       }
       // No refresh_token — check if access_token is still valid
       if (creds.access_token && creds.expiry_date && creds.expiry_date > Date.now()) {
         log.appendLine('[GeminiAuth] OAuth access_token still valid');
-        return { loggedIn: true, installed: true, email };
+        return { loggedIn: true, installed: true, email, tier: 'free' };
       }
       log.appendLine('[GeminiAuth] OAuth credentials expired');
       return { loggedIn: false, installed: true, error: 'Gemini auth expired. Run: gemini' };
@@ -214,7 +214,7 @@ export async function checkGeminiAuth(): Promise<{ loggedIn: boolean; installed?
 
   // Non-OAuth auth (API key in settings, etc.)
   log.appendLine(`[GeminiAuth] Auth found in settings.json: ${authType}`);
-  return { loggedIn: true, installed: true };
+  return { loggedIn: true, installed: true, tier: 'paid' };
 }
 
 export class GeminiAgent implements AIAgent {
@@ -225,7 +225,7 @@ export class GeminiAgent implements AIAgent {
   constructor(
     public readonly name: string,
     public readonly persona: Persona,
-    public readonly model: GeminiModelAlias = 'gemini-2.5-flash',
+    public readonly model: GeminiModelAlias = 'gemini-3-flash',
     public readonly opponentName: string = 'Agent B',
     public readonly seekConsensus: boolean = false,
     public readonly allowConcession: boolean = true,

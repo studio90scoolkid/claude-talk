@@ -164,17 +164,11 @@ html[data-lang="fa"] .btn-group {
 .conn-label.warning { color: var(--accent-yellow); }
 
 .conn-account {
-  font-size: 9px;
-  color: var(--text-secondary);
-  opacity: 0.7;
-  max-width: 120px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: none;
 }
 
-.conn-account:empty {
-  display: none;
+.conn-label[title]:not([title=""]) {
+  cursor: default;
 }
 
 .conn-divider {
@@ -256,7 +250,7 @@ html[data-lang="fa"] .btn-group {
   box-shadow: 2px 2px 0 #bf360c;
 }
 
-.ctrl-pause.ctrl-resume {
+.ctrl-play.ctrl-resume {
   background: #1565c0;
   border-color: #42a5f5;
   box-shadow: 2px 2px 0 #0d47a1;
@@ -364,8 +358,9 @@ html[data-lang="fa"] .btn-group {
   padding: 6px 10px;
   background: rgba(0,0,0,0.2);
   border: 2px solid #4a4a6a;
-  min-width: 180px;
+  width: 280px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .agent-config-label {
@@ -421,13 +416,17 @@ html[data-lang="fa"] .btn-group {
   display: flex;
   align-items: center;
   gap: 6px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .persona-group label {
   font-size: 10px;
   color: var(--text-secondary);
   letter-spacing: 1px;
-  min-width: 55px;
+  width: 75px;
+  flex-shrink: 0;
+  text-align: right;
 }
 
 .persona-select {
@@ -440,10 +439,19 @@ html[data-lang="fa"] .btn-group {
   outline: none;
   cursor: pointer;
   flex: 1;
+  min-width: 0;
+  width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .persona-select:focus {
   border-color: var(--accent-blue);
+}
+
+.persona-select option:disabled {
+  color: #666;
+  font-style: italic;
 }
 
 .conn-info {
@@ -1040,6 +1048,22 @@ html[data-lang="fa"] .btn-group {
   font-size: 10px;
   color: var(--text-primary);
   font-family: 'Courier New', monospace;
+}
+
+/* ===== Error Message Bubble ===== */
+.chat-message.error-message {
+  align-self: center;
+  max-width: 100%;
+}
+
+.speech-bubble.error-bubble {
+  background: #4a1a1a;
+  outline-color: #ef5350;
+}
+
+.speech-bubble.error-bubble::before,
+.speech-bubble.error-bubble::after {
+  display: none;
 }
 
 /* Character idle animation handled by sprite sheet frames in JS */

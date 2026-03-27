@@ -77,6 +77,12 @@ export function getWebviewContent(
         <span class="conn-label" id="connLabelGemini">Gemini</span>
         <span class="conn-account" id="connAccountGemini"></span>
       </span>
+      <span class="conn-divider">|</span>
+      <span class="conn-provider">
+        <span class="conn-dot" id="connDotCodex"></span>
+        <span class="conn-label" id="connLabelCodex">Codex</span>
+        <span class="conn-account" id="connAccountCodex"></span>
+      </span>
       <button class="conn-refresh" id="connRefresh" title="Refresh">&#x21bb;</button>
     </div>
   </div>
@@ -121,6 +127,7 @@ export function getWebviewContent(
             <select id="providerA" class="persona-select provider-select">
               <option value="claude" selected>Claude</option>
               <option value="gemini">Gemini</option>
+              <option value="codex">Codex</option>
             </select>
           </div>
           <div class="persona-group">
@@ -161,6 +168,7 @@ export function getWebviewContent(
             <select id="providerB" class="persona-select provider-select">
               <option value="claude" selected>Claude</option>
               <option value="gemini">Gemini</option>
+              <option value="codex">Codex</option>
             </select>
           </div>
           <div class="persona-group">
