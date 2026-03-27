@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.7.1] - 2026-03-27
+
+### Changed
+- Remove Gemini 3 Flash from model selection (unstable); revert default Gemini model to 2.5 Flash
+- Update screenshots to reflect v0.7.0 UI with Codex provider
+
 ## [0.7.0] - 2026-03-27
 
 ### Added

@@ -225,7 +225,7 @@ export class GeminiAgent implements AIAgent {
   constructor(
     public readonly name: string,
     public readonly persona: Persona,
-    public readonly model: GeminiModelAlias = 'gemini-3-flash',
+    public readonly model: GeminiModelAlias = 'gemini-2.5-flash',
     public readonly opponentName: string = 'Agent B',
     public readonly seekConsensus: boolean = false,
     public readonly allowConcession: boolean = true,
