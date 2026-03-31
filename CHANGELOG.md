@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.4] - 2026-03-31
+
+### Fixed
+- Fix Gemini CLI compatibility with older versions (v0.1.x) by removing empty `-p ''` flag; use stdin-only prompt delivery
+- Remove Gemini 3 Pro from model selection (invalid model name without `-preview` suffix)
+- Fix summary generation using non-existent `gemini-3-pro` model; now uses `gemini-2.5-pro`
+
 ## [0.7.3] - 2026-03-27
 
 ### Changed

@@ -41,7 +41,7 @@ export interface DebateState {
 export type Provider = 'claude' | 'gemini' | 'codex';
 
 export type ClaudeModelAlias = 'haiku' | 'sonnet' | 'opus';
-export type GeminiModelAlias = 'gemini-2.5-flash' | 'gemini-2.5-pro' | 'gemini-3-pro';
+export type GeminiModelAlias = 'gemini-2.5-flash' | 'gemini-2.5-pro';
 export type CodexModelAlias = 'gpt-5.4' | 'gpt-5.4-mini' | 'o4-mini' | 'o3-mini';
 export type ModelAlias = ClaudeModelAlias | GeminiModelAlias | CodexModelAlias;
 
@@ -91,7 +91,6 @@ export const CLAUDE_MODEL_LABELS: Record<ClaudeModelAlias, string> = {
 };
 
 export const GEMINI_MODEL_LABELS: Record<GeminiModelAlias, string> = {
-  'gemini-3-pro': 'Gemini 3 Pro',
   'gemini-2.5-flash': 'Gemini 2.5 Flash',
   'gemini-2.5-pro': 'Gemini 2.5 Pro',
 };

@@ -351,7 +351,7 @@ ${transcript}
     } else if (hasGeminiProvider) {
       cliPath = findGeminiPath();
       env = { ...process.env, PATH: `${process.env.PATH}:/usr/local/bin:/opt/homebrew/bin` };
-      args = ['-p', prompt, '--output-format', 'json', '-m', 'gemini-3-pro'];
+      args = ['-p', prompt, '--output-format', 'json', '-m', 'gemini-2.5-pro'];
     } else {
       // Both agents use Codex
       cliPath = findCodexPath();

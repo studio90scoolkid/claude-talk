@@ -289,8 +289,10 @@ export class GeminiAgent implements AIAgent {
       const geminiPath = findGeminiPath();
       const env = makeCleanEnv();
 
-      // Pass prompt via stdin to avoid ARG_MAX limits and special-char parsing issues
-      const args = ['-p', '', '-m', this.model];
+      // Pass prompt via stdin to avoid ARG_MAX limits and special-char parsing issues.
+      // Omit -p flag entirely — old CLI versions (<=0.1.x) reject -p with an empty string.
+      // stdin alone is sufficient: the CLI reads from stdin when no -p is given.
+      const args = ['-m', this.model];
       if (this.mode === 'code') {
         args.push('--sandbox');
       }

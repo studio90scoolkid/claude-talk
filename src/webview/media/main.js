@@ -1115,8 +1115,6 @@
       { value: 'opus', i18n: 'modelOpus', tiers: ['pro', 'max', 'team', 'enterprise'] },
     ],
     gemini: [
-      { value: 'gemini-3-flash', i18n: 'modelGemini3Flash', tiers: ['free', 'paid'] },
-      { value: 'gemini-3-pro', i18n: 'modelGemini3Pro', tiers: ['paid'] },
       { value: 'gemini-2.5-flash', i18n: 'modelGeminiFlash', tiers: ['free', 'paid'] },
       { value: 'gemini-2.5-pro', i18n: 'modelGeminiPro', tiers: ['paid'] },
     ],
